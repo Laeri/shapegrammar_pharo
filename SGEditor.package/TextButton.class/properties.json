@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Button",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textElement"
+	],
+	"name" : "TextButton",
+	"type" : "normal"
+}

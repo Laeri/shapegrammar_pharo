@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ChangeShapeCommand",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RemovePointCommand",
+	"type" : "normal"
+}

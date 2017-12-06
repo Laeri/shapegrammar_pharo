@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Command",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"movedPoint",
+		"oldPosition",
+		"newPosition",
+		"widget"
+	],
+	"name" : "MovePointCommand",
+	"type" : "normal"
+}

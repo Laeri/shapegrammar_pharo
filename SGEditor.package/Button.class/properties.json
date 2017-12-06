@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElement",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Button",
+	"type" : "normal"
+}

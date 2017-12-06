@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "Command",
+	"category" : "SGEditor",
+	"classinstvars" : [
+		"p"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shape",
+		"addedPoints",
+		"addedLines",
+		"removedPoints",
+		"removedLines",
+		"newPositionsDict",
+		"oldPositionsDict",
+		"widget",
+		"removedLinesAfterActionDo"
+	],
+	"name" : "ChangeShapeCommand",
+	"type" : "normal"
+}

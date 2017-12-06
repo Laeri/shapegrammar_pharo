@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "BlShape",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"grammar",
+		"currentRule"
+	],
+	"name" : "FinalBlShape",
+	"type" : "normal"
+}

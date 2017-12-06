@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElement",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"match",
+		"shape",
+		"firstSelectedPoint",
+		"secondSelectedPoint",
+		"dragSelected",
+		"commandBuffer"
+	],
+	"name" : "BlShape",
+	"type" : "normal"
+}

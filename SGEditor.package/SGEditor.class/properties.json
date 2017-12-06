@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"window",
+		"ruleColumn",
+		"grammar",
+		"matchUsed"
+	],
+	"name" : "SGEditor",
+	"type" : "normal"
+}

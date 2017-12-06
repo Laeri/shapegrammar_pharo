@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Command",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"addedPoint",
+		"shape",
+		"widget"
+	],
+	"name" : "AddPointCommand",
+	"type" : "normal"
+}
