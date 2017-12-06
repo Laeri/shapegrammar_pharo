@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SGMode",
+	"category" : "SGShapeGrammar-Modes and Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bestMatch",
+		"bestDistance"
+	],
+	"name" : "SGDistanceOfNewToAllScoreMode",
+	"type" : "normal"
+}

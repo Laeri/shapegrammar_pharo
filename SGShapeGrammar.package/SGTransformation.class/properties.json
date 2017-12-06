@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scaleX",
+		"scaleY",
+		"rot",
+		"translX",
+		"translY"
+	],
+	"name" : "SGTransformation",
+	"type" : "normal"
+}

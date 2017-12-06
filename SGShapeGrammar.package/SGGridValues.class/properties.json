@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values",
+		"numberOfBins",
+		"extentX",
+		"extentY"
+	],
+	"name" : "SGGridValues",
+	"type" : "normal"
+}

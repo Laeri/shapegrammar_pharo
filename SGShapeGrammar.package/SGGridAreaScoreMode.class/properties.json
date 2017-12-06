@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SGMode",
+	"category" : "SGShapeGrammar-Modes and Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"gridValues",
+		"bestMatch",
+		"bestScore"
+	],
+	"name" : "SGGridAreaScoreMode",
+	"type" : "normal"
+}

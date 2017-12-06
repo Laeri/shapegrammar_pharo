@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "OrderedCollection",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"xTmp",
+		"yTmp",
+		"zTmp",
+		"age",
+		"areaScore",
+		"ageOfCreation"
+	],
+	"name" : "SGVector",
+	"type" : "normal"
+}

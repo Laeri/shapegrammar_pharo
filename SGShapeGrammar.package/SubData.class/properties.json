@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alphaToBase",
+		"lineMatch",
+		"baseToLocalMatrix",
+		"subToLocalTransform",
+		"betaToBase",
+		"p1",
+		"p2",
+		"p3"
+	],
+	"name" : "SubData",
+	"type" : "normal"
+}

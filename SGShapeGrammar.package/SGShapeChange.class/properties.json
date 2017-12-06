@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentAge",
+		"addedVertices",
+		"addedLines",
+		"removedVertices",
+		"removedLines",
+		"movePointToDict",
+		"shape"
+	],
+	"name" : "SGShapeChange",
+	"type" : "normal"
+}

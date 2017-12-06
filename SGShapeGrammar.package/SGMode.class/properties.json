@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar-Modes and Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shouldCheckIntersections",
+		"equalityRange",
+		"currentAge",
+		"preventRotations",
+		"preventNegativeScale",
+		"preventShear"
+	],
+	"name" : "SGMode",
+	"type" : "normal"
+}

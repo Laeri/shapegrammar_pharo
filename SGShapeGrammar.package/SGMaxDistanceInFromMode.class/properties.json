@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SGMode",
+	"category" : "SGShapeGrammar-Modes and Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SGMaxDistanceInFromMode",
+	"type" : "normal"
+}

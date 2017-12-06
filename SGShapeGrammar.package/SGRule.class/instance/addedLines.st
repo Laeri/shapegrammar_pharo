@@ -1,0 +1,3 @@
+accessing
+addedLines
+	^ addedLines

@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fromShape",
+		"toShape",
+		"alphaToBeta",
+		"removedVertices",
+		"removedLines",
+		"addedVertices",
+		"addedLines",
+		"movedVertices",
+		"betaToAlpha",
+		"gridValues",
+		"mode"
+	],
+	"name" : "SGRule",
+	"type" : "normal"
+}
