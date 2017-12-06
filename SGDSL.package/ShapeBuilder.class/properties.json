@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGDSL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"idToPoints",
+		"currentIdIndex",
+		"lines",
+		"shape"
+	],
+	"name" : "ShapeBuilder",
+	"type" : "normal"
+}

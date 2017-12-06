@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGDSL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ruleBuilders",
+		"grammar",
+		"alphabetIdentifiers",
+		"numericalIdentifiers",
+		"name"
+	],
+	"name" : "SGDSL",
+	"type" : "normal"
+}
