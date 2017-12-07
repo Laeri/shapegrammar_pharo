@@ -1,5 +1,5 @@
 hook
 applyOn: shape givenMatch: matchUsed
 	| shapeChangeDelta |
-	shapeChangeDelta := self shapeDeltaFromShape: shape GivenMatch: matchUsed.
+	shapeChangeDelta := self shapeDeltaFrom: shape withMatch: matchUsed.
 	shapeChangeDelta simpleApply

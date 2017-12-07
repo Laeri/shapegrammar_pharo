@@ -6,14 +6,15 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"currentAge",
-		"addedVertices",
-		"addedLines",
-		"removedVertices",
-		"removedLines",
-		"movePointToDict",
-		"shape"
+		"alphaToBase",
+		"lineMatch",
+		"baseToLocalMatrix",
+		"subToLocalTransform",
+		"betaToBase",
+		"p1",
+		"p2",
+		"p3"
 	],
-	"name" : "SGShapeChange",
+	"name" : "SGShapeMatch",
 	"type" : "normal"
 }

@@ -1,0 +1,3 @@
+accessing
+filterReflections
+	^ filterReflections

@@ -1,3 +1,3 @@
 testing
-isPointPresent: point
+hasPoint: point
 ^ self points includes: point.

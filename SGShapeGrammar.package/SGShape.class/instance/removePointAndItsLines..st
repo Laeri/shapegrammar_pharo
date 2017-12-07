@@ -1,4 +1,4 @@
 removing
-removePoint: p
+removePointAndItsLines: p
 self points remove: p.
 self removeLinesFromOrTo: p.

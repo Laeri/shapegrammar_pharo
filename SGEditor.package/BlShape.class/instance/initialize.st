@@ -30,7 +30,7 @@ initialize
 				ifTrue: [ (firstSelectedPoint isNotNil and: secondSelectedPoint isNotNil)
 						ifTrue: [
 							 l:= SGLine from: firstSelectedPoint to: secondSelectedPoint.
-							(shape isLinePresent:l) ifFalse:[  
+							(shape hasLine:l) ifFalse:[  
 							addLCommand := AddLineCommand addLine: l inShape: shape inWidget: self.
 							commandBuffer add: addLCommand.
 							addLCommand do.
@@ -91,7 +91,7 @@ initialize
 			tmpP := shape pointAt: pos inRange: rangeToSelect.
 			tmpP ifNil:[ 
 				
-				(shape isPointPresent: tmpP) ifFalse: [addPCommand := AddPointCommand
+				(shape hasPoint: tmpP) ifFalse: [addPCommand := AddPointCommand
 						addPoint: (SGVector x: pos x y: pos y)
 						inShape: shape
 						inWidget: self.

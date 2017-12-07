@@ -1,7 +1,7 @@
 accessing
 filterIntersections: matches shape: shape toShape: toShape andRule: rule
 	| tmpP1 tmpP2 localToBaseMatrix subToLocalMatrix |
-	shouldCheckIntersections
+	filterIntersections 
 		ifTrue: [ ^ matches
 				reject: [ :match | 
 					toShape lines

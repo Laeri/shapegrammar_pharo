@@ -1,3 +1,3 @@
 testing
-isLinePresent: line
+hasLine: line
 ^ self isPoint: line from connectedTo: line to.

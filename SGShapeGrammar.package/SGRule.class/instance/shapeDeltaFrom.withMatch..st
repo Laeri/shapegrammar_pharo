@@ -1,7 +1,7 @@
 match calculation
-shapeDeltaFromShape: shape GivenMatch: matchUsed
-	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeChangeDelta lineToRemove removedLinesInBase blMatrix blDecomposition |
-	shapeChangeDelta := SGShapeChange new.
+shapeDeltaFrom: shape withMatch: matchUsed
+	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition |
+	shapeDelta := SGShapeDelta new.
 	mode increaseAge .
 	
 	self update.
@@ -18,7 +18,7 @@ shapeDeltaFromShape: shape GivenMatch: matchUsed
 	"Remove Lines"
 		removedVertices do:[:removedV|
 		tmpP := (matchUsed alphaToBase at: removedV).
-		removedLinesInBase addAll: (shape allLinesFromOrTo: tmpP).
+		removedLinesInBase addAll: (shape linesFromOrTo: tmpP).
 		].
 	removedLines
 		do: [ :removedLine | 
@@ -28,14 +28,14 @@ shapeDeltaFromShape: shape GivenMatch: matchUsed
 			removedLinesInBase addIfNotPresent: lineToRemove .
 			 ].
 		removedLinesInBase do:[:removedLine|
-				shapeChangeDelta removeLine: removedLine.
+				shapeDelta removeLine: removedLine.
 			].
 
 		
 
 	"Remove Vertices"
 	removedVertices
-		do: [ :removed | shapeChangeDelta removeVertex: (matchUsed alphaToBase at: removed) ].
+		do: [ :removed | shapeDelta removeVertex: (matchUsed alphaToBase at: removed) ].
 	transf := baseToLocalMatrix decomposition.
 	blMatrix := BlMatrix2D new.
 	blMatrix sx: (baseToLocalMatrix at: 1 at: 1).
@@ -49,7 +49,7 @@ shapeDeltaFromShape: shape GivenMatch: matchUsed
 		tmpP := movedPoint deepCopy.
 		subToLocalMatrix transform: tmpP.
 		localToBaseMatrix transform: tmpP.
-		shapeChangeDelta movePoint: (matchUsed betaToBase at: movedPoint) toPosition: tmpP. 
+		shapeDelta movePoint: (matchUsed betaToBase at: movedPoint) toPosition: tmpP. 
 		].
 	
 	"Add vertices"
@@ -63,7 +63,7 @@ shapeDeltaFromShape: shape GivenMatch: matchUsed
 			subToLocalMatrix transform: tmpP.
 			localToBaseMatrix transform: tmpP.
 			tmpP ageOfCreation: mode currentAge .
-			shapeChangeDelta addVertex: tmpP ].
+			shapeDelta addVertex: tmpP ].
 
 	"Then finally add the new lines"
 	"self halt."
@@ -71,8 +71,8 @@ shapeDeltaFromShape: shape GivenMatch: matchUsed
 		do: [ :addedLine | 
 			tmpP1 := fromBetaToBase at: addedLine from.
 			tmpP2 := fromBetaToBase at: addedLine to.
-			shapeChangeDelta addLine: (SGLine from: tmpP1 to: tmpP2) ].
+			shapeDelta addLine: (SGLine from: tmpP1 to: tmpP2) ].
 
-	shapeChangeDelta shape: shape.
+	shapeDelta shape: shape.
 
-	^ shapeChangeDelta .
+	^ shapeDelta .

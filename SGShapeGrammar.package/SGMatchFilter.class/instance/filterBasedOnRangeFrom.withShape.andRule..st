@@ -2,7 +2,6 @@ as yet unclassified
 filterBasedOnRangeFrom: matchings withShape: shape andRule: rule
 | usableRules localToBaseMatrix subToLocalMatrix tmpP |
 	"or if any vertex is already present"
-	self halt.
 	usableRules := matchings
 		reject: [ :match | 
 			rule addedVertices anySatisfy: [:matchPoint|

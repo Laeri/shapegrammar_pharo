@@ -1,4 +1,4 @@
 initialization
 initialize
 mode := SGBinBalanceRandom new.
-mode checkIntersections: true.
+filter := SGMatchFilter new.

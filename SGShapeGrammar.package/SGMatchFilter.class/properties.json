@@ -6,9 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"equalityRange",
-		"currentAge"
+		"filterIntersections",
+		"filterPointsInsideBeta",
+		"filterRotations",
+		"filterReflections",
+		"filterAlreadyPresentPoints"
 	],
-	"name" : "SGMode",
+	"name" : "SGMatchFilter",
 	"type" : "normal"
 }

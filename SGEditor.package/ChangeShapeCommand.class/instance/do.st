@@ -5,7 +5,7 @@ shape points addAll: addedPoints.
 shape lines addAll: addedLines.
 
 removedPoints do: [ :removedPoint|
-		removedLinesAfterActionDo addAll: (shape allLinesFromOrTo: removedPoint).
+		removedLinesAfterActionDo addAll: (shape linesFromOrTo: removedPoint).
 	].
 removedLines do:[:removedLine|
 	removedLinesAfterActionDo addIfNotPresent: removedLine.

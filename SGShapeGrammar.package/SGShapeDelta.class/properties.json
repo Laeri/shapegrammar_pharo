@@ -6,15 +6,14 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"alphaToBase",
-		"lineMatch",
-		"baseToLocalMatrix",
-		"subToLocalTransform",
-		"betaToBase",
-		"p1",
-		"p2",
-		"p3"
+		"currentAge",
+		"addedVertices",
+		"addedLines",
+		"removedVertices",
+		"removedLines",
+		"movePointToDict",
+		"shape"
 	],
-	"name" : "SubData",
+	"name" : "SGShapeDelta",
 	"type" : "normal"
 }

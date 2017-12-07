@@ -6,6 +6,6 @@ self assert:[
 
 self assert:[
 		(self points anySatisfy: [ :pointInShape|
-			(pointInShape x = point x) and: (pointInShape y = point y)]) not.
+			(pointInShape equalTo: point inRange: SGMode equalityRange)]) not.
 	].
 self points add: point.

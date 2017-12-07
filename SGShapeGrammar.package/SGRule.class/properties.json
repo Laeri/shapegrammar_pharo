@@ -16,7 +16,8 @@
 		"movedVertices",
 		"betaToAlpha",
 		"gridValues",
-		"mode"
+		"mode",
+		"filter"
 	],
 	"name" : "SGRule",
 	"type" : "normal"

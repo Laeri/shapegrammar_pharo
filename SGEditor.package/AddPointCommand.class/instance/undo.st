@@ -1,5 +1,5 @@
 undo-undo
 undo
-shape removePoint: addedPoint .
+shape removePointAndItsLines: addedPoint .
 widget removeSelectionOfPoint: addedPoint.
 widget invalidate.

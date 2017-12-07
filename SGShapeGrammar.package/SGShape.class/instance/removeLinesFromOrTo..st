@@ -1,5 +1,5 @@
 removing
 removeLinesFromOrTo: point
 | linesToRemove |
-linesToRemove := self allLinesFromOrTo: point.
+linesToRemove := self linesFromOrTo: point.
 self lines removeAll: linesToRemove .

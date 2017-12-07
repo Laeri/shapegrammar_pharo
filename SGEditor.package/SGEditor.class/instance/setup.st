@@ -75,7 +75,7 @@ setup
 	applyRuleButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-			shapeDelta := grammar rules first shapeDeltaFromShape: shape GivenMatch: matchUsed.
+			shapeDelta := grammar rules first shapeDeltaFrom: shape withMatch: matchUsed.
 			command := ChangeShapeCommand fromShapeDelta: shapeDelta inWidget: showShape.
 			command do.
 			showShape commandBuffer add: command.
@@ -105,7 +105,7 @@ setup
 	getNextMatchButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-			matchUsed := grammar rules first selectMatchUsedInShape: shape.
+			matchUsed := grammar rules first selectMatchUsedIn: shape.
 			showShape visualizeMatch: matchUsed.
 			showShape invalidate ].
 		
