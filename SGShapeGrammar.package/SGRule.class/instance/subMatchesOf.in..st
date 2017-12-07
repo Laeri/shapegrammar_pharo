@@ -1,12 +1,9 @@
 testing
 subMatchesOf: subShape in: baseShape
-	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch |
+	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch fromBetaToBase |
 	subPoints := subShape points.
 	basePoints := baseShape points.
-	subTransform := SGMatrix
-		p1: (subPoints at: 1)
-		p2: (subPoints at: 2)
-		p3: (subPoints at: 3).
+	subTransform := SGMatrix p1: (subPoints at: 1) p2: (subPoints at: 2) p3: (subPoints at: 3).
 	subTransform invert.
 	subTransform transformAllTmp: subPoints.
 	matchings := OrderedCollection new.
@@ -19,12 +16,13 @@ subMatchesOf: subShape in: baseShape
 				ifFalse: [ baseToLocalMatrix invert.
 					baseToLocalMatrix transformAllTmp: basePoints.
 					pointMatching := Dictionary new.
-					doPointsMatch := SGShape
-						allPointsTmpMatch: subPoints
-						in: basePoints
-						storeIn: pointMatching.
+					doPointsMatch := SGShape allPointsTmpMatch: subPoints in: basePoints storeIn: pointMatching.
 					doPointsMatch
 						ifTrue: [ match alphaToBase: pointMatching.
+							fromBetaToBase := Dictionary new.
+							self alphaToBeta
+								keysAndValuesDo: [ :key :value | fromBetaToBase at: value put: (match alphaToBase at: key) ].
+							match betaToBase: fromBetaToBase.
 							lineMatching := Dictionary new.
 							allLinesMatch := subShape lines
 								allSatisfy: [ :line | 

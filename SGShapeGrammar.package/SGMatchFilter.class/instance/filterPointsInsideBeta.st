@@ -1,3 +1,0 @@
-accessing
-filterPointsInsideBeta
-	^ filterPointsInsideBeta

@@ -1,5 +1,10 @@
 initialization
 initialize
-filterIntersections := true.
-filterPointsInsideBeta := true.
-filterAlreadyPresentPoints := true.
+intersection  := true.
+pointsInsideBeta  := true.
+somePresentPoints := true.
+allPresentPoints := false. "either filter allPresentPoints or somePresentPoints"
+pointsInsideBeta := false. "maybe opt in"
+rotations := false.
+reflections := false.
+shearing := false.

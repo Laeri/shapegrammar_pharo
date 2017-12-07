@@ -6,11 +6,13 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"filterIntersections",
-		"filterPointsInsideBeta",
-		"filterRotations",
-		"filterReflections",
-		"filterAlreadyPresentPoints"
+		"intersection",
+		"somePresentPoints",
+		"allPresentPoints",
+		"pointsInsideBeta",
+		"rotations",
+		"reflections",
+		"shearing"
 	],
 	"name" : "SGMatchFilter",
 	"type" : "normal"

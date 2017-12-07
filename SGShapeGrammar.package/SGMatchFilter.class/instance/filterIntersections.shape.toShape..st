@@ -1,8 +1,7 @@
 accessing
 filterIntersections: matches shape: shape toShape: toShape
 	| tmpP1 tmpP2 localToBaseMatrix subToLocalMatrix tmpP3 tmpP4 |
-	filterIntersections 
-		ifTrue: [ ^ matches
+	 ^ matches
 				reject: [ :match | 
 					toShape lines
 						anySatisfy: [ :toLine | 
@@ -35,5 +34,4 @@ filterIntersections: matches shape: shape toShape: toShape
 										doesLineFrom: tmpP1
 										to: tmpP2
 										intersectWithLineFrom: tmpP3
-										to: tmpP4 ]. ] ] ]
-		ifFalse: [ ^ matches ]
+										to: tmpP4 ]. ] ] 
