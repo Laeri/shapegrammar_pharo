@@ -43,7 +43,6 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	blMatrix shx: (baseToLocalMatrix at: 1 at: 2).
 	blMatrix shy: (baseToLocalMatrix at: 2 at: 2).
 	blDecomposition := blMatrix decomposition .
-	self halt.
 	"If point in base which is in beta changed coords change it in base"
 	movedVertices do:[:movedPoint|
 		tmpP := movedPoint deepCopy.
