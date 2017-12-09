@@ -2,6 +2,11 @@ initialization
 initialize
 	| pos tmpP rangeToSelect addPCommand addLCommand l currentDragCommand removeCommand |
 	super initialize.
+	
+	gridX := 10.
+	gridY := 10.
+	snapToGrid := true.
+	
 	commandBuffer := OrderedCollection new.
 	rangeToSelect := 0.05.
 

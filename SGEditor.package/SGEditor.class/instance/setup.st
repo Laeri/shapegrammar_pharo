@@ -75,12 +75,14 @@ setup
 	applyRuleButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-			shapeDelta := grammar rules first shapeDeltaFrom: shape withMatch: matchUsed.
+			[shapeDelta := grammar rules first shapeDeltaFrom: shape withMatch: matchUsed.
 			command := ChangeShapeCommand fromShapeDelta: shapeDelta inWidget: showShape.
 			command do.
 			showShape commandBuffer add: command.
 			showShape invalidate.
-			matchUsed := nil ].
+			matchUsed := nil
+			] fork.
+			 ].
 	addNewRuleButton := TextButton fromString: 'add new rule'.
 	addNewRuleButton background: Color magenta muchDarker.
 	addNewRuleButton  size: 70@25.
@@ -105,9 +107,9 @@ setup
 	getNextMatchButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-			matchUsed := grammar rules first selectMatchUsedIn: shape.
+			[matchUsed := grammar rules first selectMatchUsedIn: shape.
 			showShape visualizeMatch: matchUsed.
-			showShape invalidate ].
+			showShape invalidate] fork. ].
 		
 	ruleColumn addChild: addNewRuleButton .
 	

@@ -1,3 +1,10 @@
 as yet unclassified
 parentToShapePoint: point
-	^ (self globalPointToLocal: point) / self extent
+|widgetPos|
+
+widgetPos := self globalPointToLocal: point.
+
+snapToGrid ifTrue:[
+	^ (self snapToGrid: widgetPos) / self extent.
+	] ifFalse:[
+	^ widgetPos / self extent].

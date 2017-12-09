@@ -11,7 +11,10 @@
 		"firstSelectedPoint",
 		"secondSelectedPoint",
 		"dragSelected",
-		"commandBuffer"
+		"commandBuffer",
+		"gridX",
+		"gridY",
+		"snapToGrid"
 	],
 	"name" : "BlShape",
 	"type" : "normal"
