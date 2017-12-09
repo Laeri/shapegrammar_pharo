@@ -1,17 +1,12 @@
 as yet unclassified
 setup
-	| test shape mainRow showShape ruleRep applyRuleButton  resetShapeButton getNextMatchButton shapeDelta command r rightColumn buttonRow |
+	| test shape mainRow showShape ruleRep applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command r rightColumn buttonRow |
 	test := SGTest new.
 	shape := test triangle.
 	grammar := test triangleInlayGrammar .
 	BlUniverse reset.
 	window := BlSpace new.
 	window extent: 750 @ 500.
-	
-	window addEventHandlerOn: BlKeyDownEvent do:[:event|
-			self load: (DSLExamples new triangleInlayConfig).
-			
-		].
 	
 	mainRow := BlElement new
 		layout: BlLinearLayout horizontal;

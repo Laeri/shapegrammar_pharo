@@ -9,8 +9,7 @@
 		"window",
 		"ruleColumn",
 		"grammar",
-		"matchUsed",
-		"addNewRuleButton"
+		"matchUsed"
 	],
 	"name" : "SGEditor",
 	"type" : "normal"
