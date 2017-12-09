@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"window",
-		"grammar",
-		"matchUsed",
-		"leftColumn",
-		"grammarContainer"
-	],
-	"name" : "SGEditor",
+	"instvars" : [ ],
+	"name" : "SampleConfigurations",
 	"type" : "normal"
 }

@@ -1,17 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "BlElement",
 	"category" : "SGEditor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"window",
-		"grammar",
-		"matchUsed",
-		"leftColumn",
-		"grammarContainer"
+		"grammar"
 	],
-	"name" : "SGEditor",
+	"name" : "SGGrammarContainer",
 	"type" : "normal"
 }
