@@ -6,7 +6,9 @@ initialize
 	gridX := 10.
 	gridY := 10.
 	snapToGrid := true.
-	
+	useUniformGrid := true.
+	bg := BlImageBackground new.
+	self background: bg.
 	commandBuffer := OrderedCollection new.
 	rangeToSelect := 0.05.
 
@@ -31,6 +33,13 @@ initialize
 	self
 		addEventHandlerOn: BlKeyDownEvent
 		do: [ :e | 
+			
+				(e key = Key e) ifTrue:[
+					
+			(ImageMorph withForm: self background image) openInWorld.
+			
+			].
+		
 			e key = Key leftControl
 				ifTrue: [ (firstSelectedPoint isNotNil and: secondSelectedPoint isNotNil)
 						ifTrue: [
@@ -59,7 +68,13 @@ initialize
 					commandBuffer add:removeCommand.
 					removeCommand do.
 				].
-			].].
+			].
+		
+	
+		].
+	
+		
+		
 			self invalidate.
 ].
 	"Drag a point: if a point is selected for dragging, move it around"

@@ -48,7 +48,7 @@ setup
 		
 	grammar rules
 		do: [ :rule | 
-			ruleRep := self createRuleFromToWidgetFromRule: rule.
+			ruleRep := SGRuleWidget fromRule: rule.
 			ruleColumn addChild: ruleRep ].
 	mainRow addChild: ruleColumn.
 	showShape := FinalBlShape new.
@@ -90,7 +90,7 @@ setup
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
 			r := SGRule emptyRule.
-			ruleRep := self createRuleFromToWidgetFromRule: r.
+			ruleRep := SGRuleWidget fromRule: r.
 			ruleColumn addChild: ruleRep at: (grammar rules size+1)].
 	resetShapeButton := TextButton fromString: 'reset shape'.
 	resetShapeButton background: Color magenta muchDarker muchDarker.

@@ -1,13 +1,20 @@
 drawing
 drawOnSpartaCanvas: aCanvas
-	| circle point p1 p2 linePath defaultCircleColor firstSelectedColor secondSelectedColor usedColor visualizeMatchColorPoints visualizeMatchColorLines tmpPoints lineColor transf point2D point1 point2 |
+	| circle point p1 p2 linePath defaultCircleColor firstSelectedColor secondSelectedColor usedColor visualizeMatchColorPoints visualizeMatchColorLines tmpPoints lineColor transf point2D point1 point2 gridMaxX girdMaxY gridMaxY |
 	transf := BlScalingTransformation new.
 	transf scale: self extent x , self extent y.
 	point1 := BlPoint2D new.
 	point2 := BlPoint2D new.
 	lineColor := Color black.
 	"Draw Grid"
-	1 to: gridY do: [ :y | 
+	
+	gridMaxX := gridX.
+	gridMaxY := gridY.
+	useUniformGrid ifTrue:[
+		gridMaxX := self extent x / self gridWidth .
+		gridMaxY := self extent y / self gridHeight .
+		].
+	1 to: gridMaxY do: [ :y | 
 			linePath := aCanvas path
 				moveTo: (0 @ y * self gridHeight );
 				lineTo: (self extent x) @ (y * self gridHeight );
@@ -18,7 +25,7 @@ drawOnSpartaCanvas: aCanvas
 				paint: lineColor;
 				width: 0.5;
 				draw.
-		1 to: gridX do: [ :x | 
+		1 to: gridMaxX do: [ :x | 
 			linePath := aCanvas path
 				moveTo: (x * self gridWidth) @ 0;
 				lineTo: (x * self gridWidth) @ self extent y;

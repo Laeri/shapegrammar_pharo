@@ -1,3 +1,11 @@
 as yet unclassified
 gridHeight
-^ (self extent y / gridY).
+
+| min |
+useUniformGrid ifTrue:[
+		min := self extent min.
+		^ (min /gridY).
+	] ifFalse:[
+	^ (self extent y / gridY).
+].
+

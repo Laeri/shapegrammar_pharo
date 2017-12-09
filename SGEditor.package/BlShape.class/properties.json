@@ -14,7 +14,10 @@
 		"commandBuffer",
 		"gridX",
 		"gridY",
-		"snapToGrid"
+		"snapToGrid",
+		"useUniformGrid",
+		"mapSelected",
+		"bg"
 	],
 	"name" : "BlShape",
 	"type" : "normal"

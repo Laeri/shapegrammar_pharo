@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElement",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alpha",
+		"beta",
+		"alphaColumn",
+		"betaColumn"
+	],
+	"name" : "SGRuleWidget",
+	"type" : "normal"
+}
