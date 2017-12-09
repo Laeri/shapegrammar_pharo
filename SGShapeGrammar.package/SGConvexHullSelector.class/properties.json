@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "SGMode",
+	"super" : "SGMatchSelector",
 	"category" : "SGShapeGrammar-Modes and Filters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "SGMaxAreaInFromMode",
+	"name" : "SGConvexHullSelector",
 	"type" : "normal"
 }

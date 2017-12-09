@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "SGMode",
+	"super" : "SGMatchSelector",
 	"category" : "SGShapeGrammar-Modes and Filters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "SGMaxDistanceInFromMode",
+	"instvars" : [
+		"random"
+	],
+	"name" : "SGRandomSelector",
 	"type" : "normal"
 }

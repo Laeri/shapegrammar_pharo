@@ -1,14 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "SGMode",
+	"super" : "SGMatchSelector",
 	"category" : "SGShapeGrammar-Modes and Filters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"gridValues",
 		"bestMatch",
-		"bestDistance"
+		"bestScore"
 	],
-	"name" : "SGDistanceOfNewToAllScoreMode",
+	"name" : "SGGridSelector",
 	"type" : "normal"
 }

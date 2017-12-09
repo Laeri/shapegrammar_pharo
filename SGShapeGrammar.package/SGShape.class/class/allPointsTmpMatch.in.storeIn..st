@@ -1,7 +1,7 @@
 convenience
 allPointsTmpMatch: points in: otherPoints storeIn: matching
 	| epsilon matchedPoints tmp1 tmp2|
-	epsilon := SGMode equalityRange.
+	epsilon := SGMatchSelector equalityRange.
 	tmp1 := SGVector new.
 	tmp2 := SGVector new.
 	points

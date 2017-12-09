@@ -1,11 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "SGMode",
+	"super" : "SGMatchSelector",
 	"category" : "SGShapeGrammar-Modes and Filters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "SGBinBalanceRandom",
+	"instvars" : [
+		"bestMatch",
+		"bestDistance"
+	],
+	"name" : "SGDistanceSelector",
 	"type" : "normal"
 }

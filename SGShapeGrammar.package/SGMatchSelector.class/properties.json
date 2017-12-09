@@ -9,6 +9,6 @@
 		"equalityRange",
 		"currentAge"
 	],
-	"name" : "SGMode",
+	"name" : "SGMatchSelector",
 	"type" : "normal"
 }

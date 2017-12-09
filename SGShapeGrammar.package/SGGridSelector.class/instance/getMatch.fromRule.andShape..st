@@ -1,5 +1,5 @@
-as yet unclassified
-getMatch: matches fromRule: rule
+filtering
+getMatch: matches fromRule: rule andShape: shape
 bestMatch := matches first.
 matches do:[:match|
 	self storeMatchIfBest: match fromRule: rule.

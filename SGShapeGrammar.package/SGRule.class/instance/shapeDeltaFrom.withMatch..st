@@ -2,11 +2,10 @@ match calculation
 shapeDeltaFrom: shape withMatch: matchUsed
 	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition |
 	shapeDelta := SGShapeDelta new.
-	mode increaseAge .
-	
+	matchSelector  increaseAge .
 	self update.
-	"Do custom tagging on shape or some other calculations based on the mode"
-	mode applyModeOnShape: shape withUsedMatch: matchUsed.
+	"Do custom tagging on shape or some other calculations based on the match selector"
+	matchSelector  applyModeOnShape: shape withUsedMatch: matchUsed.
 	fromBetaToBase := matchUsed betaToBase.
 	localToBaseMatrix := matchUsed baseToLocalMatrix.
 	baseToLocalMatrix := localToBaseMatrix deepCopy.
@@ -61,7 +60,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			tmpP z: 1.
 			subToLocalMatrix transform: tmpP.
 			localToBaseMatrix transform: tmpP.
-			tmpP ageOfCreation: mode currentAge .
+			tmpP ageOfCreation: matchSelector currentAge .
 			shapeDelta addVertex: tmpP ].
 
 	"Then finally add the new lines"

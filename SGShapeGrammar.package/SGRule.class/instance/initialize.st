@@ -1,4 +1,4 @@
 initialization
 initialize
-mode := SGBinBalanceRandom new.
+matchSelector := SGLineLenghtSelector new.
 filter := SGMatchFilter new.
