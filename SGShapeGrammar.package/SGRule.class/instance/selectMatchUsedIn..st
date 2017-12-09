@@ -1,7 +1,6 @@
 match calculation
 selectMatchUsedIn: shape
 	| matchings usableRules matchUsed |
-	self halt.
 	self update.
 	matchings := self matchingsIn: shape.
 	matchings ifEmpty: [ self error: 'No matchings found for rule' ].

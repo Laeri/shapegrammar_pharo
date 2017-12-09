@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"window",
-		"ruleColumn",
-		"grammar",
-		"matchUsed",
-		"addNewRuleButton"
-	],
-	"name" : "SGEditor",
+	"instvars" : [ ],
+	"name" : "GrammarWidget",
 	"type" : "normal"
 }

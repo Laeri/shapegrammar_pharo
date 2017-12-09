@@ -1,17 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "SGEditor",
+	"category" : "SGDSL",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"window",
-		"ruleColumn",
-		"grammar",
-		"matchUsed",
-		"addNewRuleButton"
+		"grammarBuilder",
+		"baseBuilder"
 	],
-	"name" : "SGEditor",
+	"name" : "ConfigurationBuilder",
 	"type" : "normal"
 }

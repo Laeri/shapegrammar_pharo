@@ -1,12 +1,17 @@
 as yet unclassified
 setup
-	| test shape mainRow showShape ruleRep applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command r rightColumn buttonRow |
+	| test shape mainRow showShape ruleRep applyRuleButton  resetShapeButton getNextMatchButton shapeDelta command r rightColumn buttonRow |
 	test := SGTest new.
 	shape := test triangle.
 	grammar := test triangleInlayGrammar .
 	BlUniverse reset.
 	window := BlSpace new.
 	window extent: 750 @ 500.
+	
+	window addEventHandlerOn: BlKeyDownEvent do:[:event|
+			self load: (DSLExamples new triangleInlayConfig).
+			
+		].
 	
 	mainRow := BlElement new
 		layout: BlLinearLayout horizontal;
@@ -75,13 +80,22 @@ setup
 	applyRuleButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
+			matchUsed ifNil: [  
+				[
+				command := ChangeShapeCommand fromShapeDelta:(grammar rules first getDeltaOn: shape)  inWidget: showShape  .
+				command do.
+				showShape commandBuffer add: command.
+				showShape invalidate.
+				matchUsed := nil.] fork.
+				
+				] ifNotNil:[
 			[shapeDelta := grammar rules first shapeDeltaFrom: shape withMatch: matchUsed.
 			command := ChangeShapeCommand fromShapeDelta: shapeDelta inWidget: showShape.
 			command do.
 			showShape commandBuffer add: command.
 			showShape invalidate.
 			matchUsed := nil
-			] fork.
+			] fork.].
 			 ].
 	addNewRuleButton := TextButton fromString: 'add new rule'.
 	addNewRuleButton background: Color magenta muchDarker.

@@ -6,7 +6,6 @@ filter: matches withRule: rule onShape: shape
 	somePresentPoints 
 		ifTrue: [ usableRules := self filterPresentPointsInRangeOn: usableRules withShape: shape andRule: rule.
 			usableRules ifEmpty: [ self error: 'no match present after filtering based on range' ] ].
-	self halt.
 	intersection
 		ifTrue:
 			[ usableRules := self filterIntersections: usableRules shape: shape toShape: rule toShape.
