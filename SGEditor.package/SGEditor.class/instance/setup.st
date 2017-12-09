@@ -19,7 +19,7 @@ setup
 	
 	ruleColumn := BlElement new
 		layout: BlLinearLayout vertical;
-		background: Color green.
+		background: (Color fromString: 'FFFF00').
 		
 	ruleColumn
 		constraintsDo: [ :c | 

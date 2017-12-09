@@ -73,7 +73,7 @@ drawOnSpartaCanvas: aCanvas
 	secondSelectedColor := Color red darker darker.
 	shape points
 		do: [ :p | 
-			usedColor := defaultCircleColor.
+			usedColor := pointToColor at: p ifAbsent:[defaultCircleColor].
 			match
 				ifNotNil: [ "color points"
 					(tmpPoints includes: p)
@@ -82,6 +82,7 @@ drawOnSpartaCanvas: aCanvas
 				ifTrue: [ usedColor := firstSelectedColor ].
 			secondSelectedPoint = p
 				ifTrue: [ usedColor := secondSelectedColor ].
+				
 			point := p x @ p y.
 			point := point * self extent.
 			circle := aCanvas shape circleAt: point radius: 4.

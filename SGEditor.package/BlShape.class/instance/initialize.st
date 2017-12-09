@@ -2,7 +2,7 @@ initialization
 initialize
 	| pos tmpP rangeToSelect addPCommand addLCommand l currentDragCommand removeCommand |
 	super initialize.
-	
+	pointToColor := Dictionary new.
 	gridX := 10.
 	gridY := 10.
 	snapToGrid := true.

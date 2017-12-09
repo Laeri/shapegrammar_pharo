@@ -1,9 +1,11 @@
 instance creation
-fromRule: rule
-	| widget border alpha beta |
+fromRule: aRule
+	| widget alpha beta |
 	widget := self new.
-	alpha := BlShape fromShape: rule fromShape.
-	beta := BlShape fromShape: rule toShape.
+	widget rule: aRule.
+	widget setupWidgets .
+	alpha := BlShape fromShape: aRule fromShape.
+	beta := BlShape fromShape: aRule toShape.
 	alpha
 		border:
 			(BlBorder builder

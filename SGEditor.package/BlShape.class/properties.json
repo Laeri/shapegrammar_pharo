@@ -17,7 +17,8 @@
 		"snapToGrid",
 		"useUniformGrid",
 		"mapSelected",
-		"bg"
+		"bg",
+		"pointToColor"
 	],
 	"name" : "BlShape",
 	"type" : "normal"

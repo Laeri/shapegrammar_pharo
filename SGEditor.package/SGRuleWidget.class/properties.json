@@ -9,7 +9,10 @@
 		"alpha",
 		"beta",
 		"alphaColumn",
-		"betaColumn"
+		"betaColumn",
+		"rule",
+		"colors",
+		"colorIndex"
 	],
 	"name" : "SGRuleWidget",
 	"type" : "normal"
