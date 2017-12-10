@@ -4,6 +4,7 @@ fromGrammar: aGrammar
 
 widget := self new.
 widget background: Color magenta .
+widget layout: BlLinearLayout vertical.
 widget constraintsDo:[:c|
 	c horizontal matchParent.
 	c vertical matchParent.

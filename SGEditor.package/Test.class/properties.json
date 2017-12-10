@@ -1,14 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "SGDSL",
+	"category" : "SGEditor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"ruleBuilders",
-		"name"
-	],
-	"name" : "GrammarBuilder",
+	"instvars" : [ ],
+	"name" : "Test",
 	"type" : "normal"
 }

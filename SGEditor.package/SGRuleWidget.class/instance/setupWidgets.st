@@ -1,6 +1,6 @@
 as yet unclassified
 setupWidgets
-	| mainRow buttonRowAlpha buttonRowBeta resetAlpha resetBeta map col |
+	| mainRow  resetAlpha resetBeta map col |
 	self 	constraintsDo: [ :c | 
 			c horizontal matchParent.
 			c vertical matchParent ].

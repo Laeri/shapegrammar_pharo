@@ -5,6 +5,6 @@ resetWidget
 	grammar rules
 		do: [ :rule | 
 			ruleRep := SGRuleWidget fromRule: rule.
-			self addChild: ruleRep ].
-		
-	self invalidate.
+			self addChild: ruleRep
+			].
+		self invalidate.

@@ -20,4 +20,11 @@ fromRule: aRule
 				build).
 	widget addAlpha: alpha.
 	widget addBeta: beta.
+	alpha constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ].
+		beta constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ].
+		
 	^ widget

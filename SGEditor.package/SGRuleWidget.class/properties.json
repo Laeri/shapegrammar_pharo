@@ -12,7 +12,9 @@
 		"betaColumn",
 		"rule",
 		"colors",
-		"colorIndex"
+		"colorIndex",
+		"buttonRowAlpha",
+		"buttonRowBeta"
 	],
 	"name" : "SGRuleWidget",
 	"type" : "normal"

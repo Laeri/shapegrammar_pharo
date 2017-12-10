@@ -1,5 +1,5 @@
 examples
-triangleInlayConfig2
+squareConfig
 | dsl rule grammar config |
 
 

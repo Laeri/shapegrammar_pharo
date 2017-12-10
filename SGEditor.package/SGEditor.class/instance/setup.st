@@ -1,9 +1,10 @@
 as yet unclassified
 setup
-	| test shape mainRow showShape ruleRep applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command r rightColumn buttonRow |
+	| test shape mainRow showShape  applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow |
 	test := SGTest new.
 	shape := test triangle.
 	grammar := test triangleInlayGrammar.
+	grammar addRule: test squareRule .
 	BlUniverse reset.
 	window := BlSpace new.
 	window extent: 750 @ 500.
@@ -26,7 +27,7 @@ setup
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
 			c vertical matchParent ].
-	grammarContainer := SGGrammarContainer fromGrammar: SGTest new triangleInlayGrammar.
+	grammarContainer := SGGrammarContainer fromGrammar: grammar.
 	leftColumn addChild: grammarContainer.
 	rightColumn := BlElement new
 		layout: BlLinearLayout vertical;
@@ -81,9 +82,8 @@ setup
 	addNewRuleButton
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-			r := SGRule emptyRule.
-			ruleRep := SGRuleWidget fromRule: r.
-			leftColumn addChild: ruleRep at: grammar rules size + 1 ].
+			grammar addRule: SGRule emptyRule.
+			self loadGrammar: grammar.  ].
 	resetShapeButton := TextButton fromString: 'reset shape'.
 	resetShapeButton background: Color magenta muchDarker muchDarker.
 	resetShapeButton size: 70 @ 25.
