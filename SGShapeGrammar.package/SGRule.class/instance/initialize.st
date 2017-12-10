@@ -1,4 +1,4 @@
 initialization
 initialize
-matchSelector := SGLineLenghtSelector new.
+matchSelector := SGBalancedSelector new.
 filter := SGMatchFilter new.
