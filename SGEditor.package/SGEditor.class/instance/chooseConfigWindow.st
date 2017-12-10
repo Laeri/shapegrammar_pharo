@@ -10,7 +10,7 @@ chooseConfigWindow
 			c vertical matchParent.
 			c linear weight: 1 ];
 		yourself.	
-		SampleConfigurations  selectors doWithIndex: [:selector :i|
+		(SampleConfigurations  allSelectorsInProtocol: 'grammars') doWithIndex: [:selector :i|
 			config := SampleConfigurations new perform: selector.
 			configList add: config.
 			shapeHolder := BlElement new.

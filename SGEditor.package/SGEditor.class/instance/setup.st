@@ -1,6 +1,6 @@
 as yet unclassified
 setup
-	| test shape mainRow showShape applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow intersectionBox rotationBox shearingBox reflectionBox somePointsPresent |
+	| test  mainRow applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow intersectionBox rotationBox shearingBox reflectionBox somePointsPresent |
 	BlUniverse reset.
 	test := SGTest new.
 	shape := test triangle.
@@ -13,7 +13,9 @@ setup
 		addEventHandlerOn: BlKeyDownEvent
 		do: [ :event | 
 			event key = Key c
-				ifTrue: [ self chooseConfigWindow ] ].
+				ifTrue: [ self chooseConfigWindow ].
+				
+				event key = Key v ifTrue:[self chooseBaseShapeWindow ] ].
 	mainRow := BlElement new
 		layout: BlLinearLayout horizontal;
 		background: Color blue.

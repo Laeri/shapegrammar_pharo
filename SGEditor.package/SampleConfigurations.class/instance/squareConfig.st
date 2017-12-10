@@ -1,4 +1,4 @@
-examples
+grammars
 squareConfig
 | dsl rule grammar config |
 

@@ -31,7 +31,6 @@ filter: matches withRule: rule onShape: shape
 	(reflections and: (decomposition scale x < 0  or: decomposition scale y < 0 ) )ifTrue:[reject := true].
 	reject
 	].
-	
 	].
 	
 	
