@@ -1,5 +1,6 @@
 as yet unclassified
 simpleApply
+self halt.
 shape points removeAll: removedVertices.
 shape lines removeAll: removedLines .
 shape points addAll: addedVertices .

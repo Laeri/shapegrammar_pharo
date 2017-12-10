@@ -10,7 +10,7 @@ initialize
 	bg := BlImageBackground new.
 	self background: bg.
 	commandBuffer := OrderedCollection new.
-	rangeToSelect := 0.05.
+	rangeToSelect := 0.005.
 
 	"Request focus when widget is entered"
 	self addEventHandlerOn: BlMouseEnterEvent do: [ :e | self requestFocus ].

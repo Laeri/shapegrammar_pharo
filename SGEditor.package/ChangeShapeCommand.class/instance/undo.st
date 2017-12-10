@@ -1,15 +1,12 @@
 undo-undo
 undo
-| pos |
 shape points removeAll: addedPoints .
 shape lines removeAll: addedLines.
 
 shape lines addAll: removedLinesAfterActionDo.
 shape points addAll: removedPoints .
-shape points do:[:shapeP|
-	(oldPositionsDict includes: shapeP) ifTrue:[
-	pos := oldPositionsDict at: shapeP.
-	].
-	].
+oldPositionsDict associationsDo: [ :assoc|
+	assoc key set: assoc value.
+	 ].
 
 widget invalidate.
