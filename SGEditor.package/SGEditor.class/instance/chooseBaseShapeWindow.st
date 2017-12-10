@@ -25,5 +25,5 @@ chooseBaseShapeWindow
 			container addChild: tmpShape.
 			].
 	
-container forceLayout .
+container forceLayout.
 	window root addChild: container.

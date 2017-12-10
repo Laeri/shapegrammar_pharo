@@ -104,7 +104,6 @@ setup
 		shearingBox := NamedCheckbox fromText: 'shearing' onToggleDo: [ :checked | 
 				grammar rules first filter shearing: checked.
 			].
-		
 		reflectionBox  := NamedCheckbox fromText: 'reflection' onToggleDo: [ :checked | 
 				grammar rules first filter reflections: checked.
 			].
