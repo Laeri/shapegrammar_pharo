@@ -6,11 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"checked",
-		"onToggleBlock",
 		"textElement",
-		"text"
+		"text",
+		"box"
 	],
-	"name" : "Checkbox",
+	"name" : "NamedCheckbox",
 	"type" : "normal"
 }

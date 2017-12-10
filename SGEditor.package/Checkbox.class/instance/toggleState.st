@@ -1,3 +1,4 @@
-as yet unclassified
+switching
 toggleState
-checked ifTrue: [ checked := false ] ifFalse:[checked := true.].
+checked := checked not.
+self setState: checked.

@@ -1,6 +1,6 @@
 as yet unclassified
 setupWidgets
-	| mainRow  resetAlpha resetBeta map col |
+	| mainRow  resetAlpha resetBeta map col removeRule |
 	self 	constraintsDo: [ :c | 
 			c horizontal matchParent.
 			c vertical matchParent ].
@@ -77,6 +77,15 @@ setupWidgets
 				beta removePointsAndLines .
 			].
 		
+		
+		removeRule := TextButton fromString: 'remove rule'.
+	removeRule background: Color magenta muchDarker.
+	removeRule  size: 70@25.
+	removeRule
+		addEventHandlerOn: BlClickEvent
+		do: [ :e | 
+			].
+		
 		map := TextButton fromString: 'map'.
 	map background: Color magenta muchDarker.
 	map  size: 70@25.
@@ -97,6 +106,8 @@ setupWidgets
 		
 		buttonRowAlpha addChild: resetAlpha .
 		buttonRowBeta addChild: resetBeta.
+		buttonRowBeta addChild: removeRule.
+		
 		buttonRowAlpha addChild: map.
 		
 		

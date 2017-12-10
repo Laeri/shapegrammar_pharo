@@ -1,16 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "SGVector",
 	"category" : "SGShapeGrammar",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"points",
-		"lines",
-		"geometryLabels",
-		"labels"
-	],
-	"name" : "SGShape",
+	"instvars" : [ ],
+	"name" : "LabelPoint",
 	"type" : "normal"
 }

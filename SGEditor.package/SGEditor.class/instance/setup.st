@@ -1,11 +1,12 @@
 as yet unclassified
 setup
-	| test shape mainRow showShape  applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow |
+	| test shape mainRow showShape applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow intersectionBox rotationBox shearingBox reflectionBox somePointsPresent |
+	BlUniverse reset.
 	test := SGTest new.
 	shape := test triangle.
 	grammar := test triangleInlayGrammar.
-	grammar addRule: test squareRule .
-	BlUniverse reset.
+	grammar addRule: test squareRule.
+	grammarContainer := SGGrammarContainer fromGrammar: grammar.
 	window := BlSpace new.
 	window extent: 750 @ 500.
 	window
@@ -27,7 +28,6 @@ setup
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
 			c vertical matchParent ].
-	grammarContainer := SGGrammarContainer fromGrammar: grammar.
 	leftColumn addChild: grammarContainer.
 	rightColumn := BlElement new
 		layout: BlLinearLayout vertical;
@@ -83,7 +83,7 @@ setup
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
 			grammar addRule: SGRule emptyRule.
-			self loadGrammar: grammar.  ].
+			self loadGrammar: grammar ].
 	resetShapeButton := TextButton fromString: 'reset shape'.
 	resetShapeButton background: Color magenta muchDarker muchDarker.
 	resetShapeButton size: 70 @ 25.
@@ -93,6 +93,24 @@ setup
 			shape points removeAll.
 			shape lines removeAll.
 			showShape invalidate ].
+	intersectionBox := NamedCheckbox fromText: 'intersection' onToggleDo: [ :checked | 
+				grammar rules first filter intersection: checked.
+			].
+		rotationBox := NamedCheckbox fromText: 'rotation' onToggleDo: [ :checked | 
+				grammar rules first filter rotations: checked.
+			].
+		shearingBox := NamedCheckbox fromText: 'shearing' onToggleDo: [ :checked | 
+				grammar rules first filter shearing: checked.
+			].
+		
+		reflectionBox  := NamedCheckbox fromText: 'reflection' onToggleDo: [ :checked | 
+				grammar rules first filter reflections: checked.
+			].
+		somePointsPresent   := NamedCheckbox fromText: 'present points' onToggleDo: [ :checked | 
+				grammar rules first filter somePresentPoints: checked.
+			].
+			
+			
 	getNextMatchButton := TextButton fromString: 'next match'.
 	getNextMatchButton background: Color magenta muchLighter.
 	getNextMatchButton size: 70 @ 25.
@@ -106,6 +124,11 @@ setup
 	buttonRow addChild: resetShapeButton.
 	buttonRow addChild: getNextMatchButton.
 	buttonRow addChild: applyRuleButton.
+	rightColumn  addChild: intersectionBox .
+	rightColumn addChild: shearingBox .
+	rightColumn addChild: rotationBox.
+	rightColumn addChild: reflectionBox.
+	rightColumn addChild: somePointsPresent.
 	rightColumn addChild: buttonRow.
 	window root addChild: mainRow.
 	window show
