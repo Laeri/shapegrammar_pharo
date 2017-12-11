@@ -11,7 +11,9 @@ removedLines do:[:removedLine|
 	removedLinesAfterActionDo addIfNotPresent: removedLine.
 	].
 
-shape lines removeAll: removedLinesAfterActionDo .
+removedLinesAfterActionDo  do:[:line|
+			shape lines remove: line ifAbsent:[Transcript show: 'remove line which is already removed'].
+	].
 
 shape points removeAll: removedPoints .
 
