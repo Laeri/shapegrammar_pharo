@@ -1,22 +1,22 @@
 as yet unclassified
-convexHull: shape
-	| start points polygon index polPoint1 polPoint2 currentPoint finished toP1 toP2 angle1 angle2 |
+convexHull: points
+	| start  polygon index polPoint1 polPoint2 currentPoint finished toP1 toP2 angle1 angle2 |
 	"from https://en.wikipedia.org/wiki/Graham_scan"
-	self halt.
-	points := shape points.
 	start := self findStart: points.
 	polygon := OrderedCollection new.
 	polygon add: start.
-	points sort: [ :p1 :p2 | p1 = start or: [
-			toP1 := p1 - start.
+	points sort: [ :p1 :p2 |
+		(p1 = start) ifTrue: [ true ] ifFalse:[p2 = start ifTrue:[false] ifFalse:[
+					toP1 := p1 - start.
 			toP1 normalize.
-			angle1 := (toP1 length) arcTan.
+			angle1 := (toP1 x) arcCos.
 			toP2 := p2 - start.
 			toP2 normalize.
-			angle2 := (toP2 length) arcCos.
+			angle2 := (toP2 x) arcCos.
 			angle1  < angle2.
-			] ].
-	self halt.
+				
+				]].
+			 ].
 	index := 3.
 	polygon add: points second.
 	[ index <= points size ]

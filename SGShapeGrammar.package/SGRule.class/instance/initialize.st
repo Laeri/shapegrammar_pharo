@@ -1,4 +1,4 @@
 initialization
 initialize
-matchSelector := SGBalancedSelector new.
+matchSelector := SGConvexHullSelector new.
 filter := SGMatchFilter new.
