@@ -98,19 +98,23 @@ setup
 	intersectionBox := NamedCheckbox fromText: 'intersection' onToggleDo: [ :checked | 
 				grammar rules first filter intersection: checked.
 			].
+		intersectionBox size: 150@25.
 		rotationBox := NamedCheckbox fromText: 'rotation' onToggleDo: [ :checked | 
 				grammar rules first filter rotations: checked.
 			].
+		rotationBox size: 150@25.
 		shearingBox := NamedCheckbox fromText: 'shearing' onToggleDo: [ :checked | 
 				grammar rules first filter shearing: checked.
 			].
+		shearingBox size: 150@25.
 		reflectionBox  := NamedCheckbox fromText: 'reflection' onToggleDo: [ :checked | 
 				grammar rules first filter reflections: checked.
 			].
+		reflectionBox size: 150@25.
 		somePointsPresent   := NamedCheckbox fromText: 'present points' onToggleDo: [ :checked | 
 				grammar rules first filter somePresentPoints: checked.
 			].
-			
+			somePointsPresent size: 150@25.
 			
 	getNextMatchButton := TextButton fromString: 'next match'.
 	getNextMatchButton background: Color magenta muchLighter.
