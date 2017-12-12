@@ -18,7 +18,8 @@
 		"useUniformGrid",
 		"mapSelected",
 		"bg",
-		"pointToColor"
+		"pointToColor",
+		"drawPolygons"
 	],
 	"name" : "BlShape",
 	"type" : "normal"

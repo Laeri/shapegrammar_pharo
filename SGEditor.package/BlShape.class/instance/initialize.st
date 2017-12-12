@@ -2,6 +2,7 @@ initialization
 initialize
 	| pos tmpP rangeToSelect addPCommand addLCommand l currentDragCommand removeCommand |
 	super initialize.
+	drawPolygons := false.
 	pointToColor := Dictionary new.
 	gridX := 10.
 	gridY := 10.
