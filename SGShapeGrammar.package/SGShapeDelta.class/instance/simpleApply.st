@@ -7,3 +7,8 @@ shape lines addAll: addedLines .
 movePointToDict keysAndValuesDo: [ :point : pos|
 		point set: pos.
 	 ].
+
+self shouldBeImplemented .
+"shape labels do:[:label|
+	(labelTransforms at: label class) cull: label.
+	]."

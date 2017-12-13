@@ -7,3 +7,5 @@ addedLines := OrderedCollection new.
 newPositionsDict := Dictionary new.
 removedLinesAfterActionDo := OrderedCollection new.
 oldPositionsDict := Dictionary new.
+labelTransforms := Dictionary new.
+oldLabels := OrderedCollection new.

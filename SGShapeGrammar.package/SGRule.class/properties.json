@@ -17,7 +17,9 @@
 		"betaToAlpha",
 		"gridValues",
 		"matchSelector",
-		"filter"
+		"filter",
+		"labelTransforms",
+		"alphaToBetaLabels"
 	],
 	"name" : "SGRule",
 	"type" : "normal"

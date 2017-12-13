@@ -12,9 +12,9 @@ inside: aPoint
 	points
 		doWithIndex: [ :point :index | 
 			(SGLine
-				doesLineFrom: point
+				lineFrom: point
 				to: (points at: index + 1)
-				intersectWithLineFrom: startPos
+				intersectsFrom: startPos
 				to: aPoint)
 				ifTrue: [ numIntersections := numIntersections + 1 ] ].
 	^ numIntersections even not. "if uneven number point is inside polygon"	

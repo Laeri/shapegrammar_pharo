@@ -1,5 +1,5 @@
 lineIntersection
-doesLineFrom: p1 to: p2 intersectWithLineFrom: p3 to: p4
+lineFrom: p1 to: p2 intersectsFrom: p3 to: p4
 |equalityRange|
 equalityRange := SGMatchSelector equalityRange .
 "No intersection if any point is shared between lines"

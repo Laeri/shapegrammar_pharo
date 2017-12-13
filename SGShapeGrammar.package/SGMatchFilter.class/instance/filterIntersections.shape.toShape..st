@@ -31,7 +31,7 @@ filterIntersections: matches shape: shape toShape: toShape
 												].
 										 ]. 
 									SGLine
-										doesLineFrom: tmpP1
+										lineFrom: tmpP1
 										to: tmpP2
-										intersectWithLineFrom: tmpP3
+										intersectsFrom: tmpP3
 										to: tmpP4 ]. ] ] 

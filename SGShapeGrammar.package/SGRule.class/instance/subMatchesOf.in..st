@@ -37,5 +37,7 @@ subMatchesOf: subShape in: baseShape
 									match subToLocalMatrix: subTransform.
 									match lineMatch: lineMatching.
 									match p1: p1 p2: p2 p3: p3.
-									matchings add: match ] ] ] ].
+									matchings add: match.
+									match alphaToBaseLabels: (self collectLabelMatchesOf: match in: baseShape).
+									 ] ] ] ].
 	^ matchings

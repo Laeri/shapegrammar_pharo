@@ -12,7 +12,10 @@
 		"removedVertices",
 		"removedLines",
 		"movePointToDict",
-		"shape"
+		"shape",
+		"labelTransforms",
+		"addedLabels",
+		"removedLabels"
 	],
 	"name" : "SGShapeDelta",
 	"type" : "normal"

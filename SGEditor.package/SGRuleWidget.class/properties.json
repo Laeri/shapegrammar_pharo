@@ -14,7 +14,8 @@
 		"colors",
 		"colorIndex",
 		"buttonRowAlpha",
-		"buttonRowBeta"
+		"buttonRowBeta",
+		"labelTransforms"
 	],
 	"name" : "SGRuleWidget",
 	"type" : "normal"

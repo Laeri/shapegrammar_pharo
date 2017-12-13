@@ -16,7 +16,9 @@
 		"newPositionsDict",
 		"oldPositionsDict",
 		"widget",
-		"removedLinesAfterActionDo"
+		"removedLinesAfterActionDo",
+		"labelTransforms",
+		"oldLabels"
 	],
 	"name" : "ChangeShapeCommand",
 	"type" : "normal"

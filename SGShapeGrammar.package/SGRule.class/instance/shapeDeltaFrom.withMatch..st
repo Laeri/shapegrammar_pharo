@@ -73,5 +73,6 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			shapeDelta addLine: (SGLine from: tmpP1 to: tmpP2) ].
 
 	shapeDelta shape: shape.
+	shapeDelta labelTransforms: self labelTransforms.
 
 	^ shapeDelta .

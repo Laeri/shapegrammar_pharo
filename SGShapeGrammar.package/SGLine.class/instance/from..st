@@ -1,3 +1,3 @@
 accessing
-from: p1
-from := p1
+from: aPoint
+from := aPoint

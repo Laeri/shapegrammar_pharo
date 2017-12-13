@@ -1,13 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "BlElement",
+	"super" : "Object",
 	"category" : "SGShapeGrammar",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"grammar"
+		"polygonPoints",
+		"color",
+		"id"
 	],
-	"name" : "SGGrammarWidget",
+	"name" : "SGPolygonLabel",
 	"type" : "normal"
 }

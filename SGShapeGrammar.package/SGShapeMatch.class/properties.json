@@ -13,7 +13,8 @@
 		"betaToBase",
 		"p1",
 		"p2",
-		"p3"
+		"p3",
+		"alphaToBaseLabels"
 	],
 	"name" : "SGShapeMatch",
 	"type" : "normal"

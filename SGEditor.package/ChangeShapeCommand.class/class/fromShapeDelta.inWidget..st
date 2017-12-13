@@ -9,4 +9,5 @@ command removedLines: shapeDelta removedLines.
 command newPositionsDict: shapeDelta movePointToDict .
 command shape: shapeDelta shape.
 command widget: widget.
+command labelTransforms: shapeDelta labelTransforms.
 ^ command.
