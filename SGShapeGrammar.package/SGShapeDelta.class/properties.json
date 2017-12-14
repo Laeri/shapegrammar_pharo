@@ -15,7 +15,8 @@
 		"shape",
 		"labelTransforms",
 		"addedLabels",
-		"removedLabels"
+		"removedLabels",
+		"oldToNewLabels"
 	],
 	"name" : "SGShapeDelta",
 	"type" : "normal"

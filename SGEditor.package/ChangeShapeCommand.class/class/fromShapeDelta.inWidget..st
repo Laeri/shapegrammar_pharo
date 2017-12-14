@@ -11,5 +11,6 @@ command shape: shapeDelta shape.
 command widget: widget.
 command labelTransforms: shapeDelta labelTransforms.
 command oldLabels: shapeDelta removedLabels .
-command addedLabels: shapeDelta addedLabels .
+command addedLabels: shapeDelta addedLabels.
+command oldToNewLabels: shapeDelta oldToNewLabels .
 ^ command.

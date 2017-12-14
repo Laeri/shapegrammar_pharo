@@ -9,3 +9,4 @@ removedLinesAfterActionDo := OrderedCollection new.
 oldPositionsDict := Dictionary new.
 labelTransforms := Dictionary new.
 oldLabels := OrderedCollection new.
+oldToNewLabels := Dictionary new.

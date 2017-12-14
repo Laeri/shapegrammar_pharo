@@ -10,6 +10,7 @@ triangleWithLabel
 	points add:pb.
 	points add: pc.
 	label := SGPolygonLabel new.
+	label color: (Color red).
 	label polygonPoints add: pa;add: pb; add: pc.
 	lines add: (SGLine from: (points at: 1) to: (points at: 2)).
 	lines add: (SGLine from: (points at: 2) to: (points at: 3)).

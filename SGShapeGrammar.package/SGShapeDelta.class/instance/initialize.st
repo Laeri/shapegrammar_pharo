@@ -7,3 +7,4 @@ removedVertices := OrderedCollection new.
 movePointToDict := Dictionary new.
 addedLabels := OrderedCollection new.
 removedLabels := OrderedCollection new.
+oldToNewLabels := Dictionary new.

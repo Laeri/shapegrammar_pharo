@@ -69,11 +69,12 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			tmpP2 := fromBetaToBase at: addedLine to.
 			shapeDelta addLine: (SGLine from: tmpP1 to: tmpP2) ].
 	shapeDelta shape: shape.
-	shapeDelta labelTransforms: self labelTransforms.
+
 
 	"Figure out removed labels (label in shape which is in alpha)"
 	"Figure out added labels (label in beta which are added to base)"
 	self halt.
+	shapeDelta labelTransforms: self labelTransforms.
 	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels values.
 	self toShape labels
 		do: [ :betaLabel | 
@@ -82,6 +83,12 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			betaLabel polygonPoints
 				do: [ :polygonPoint | basePolygonPoints add: (fromBetaToBase at: polygonPoint) ].
 			newBaseLabel polygonPoints: basePolygonPoints.
-			shapeDelta addLabel: newBaseLabel ].
+			shapeDelta addLabel: newBaseLabel.
+			self alphaToBetaLabels keysAndValuesDo: [ :oldLabelAlpha :mappedLabelsBeta|
+					(mappedLabelsBeta includes: betaLabel) ifTrue:[
+							shapeDelta oldToNewLabels at: (matchUsed alphaToBaseLabels at: oldLabelAlpha ) put: (newBaseLabel ).
+						].
+				 ].
+			].
 		shapeDelta labelTransforms: (self labelTransforms ).
 	^ shapeDelta

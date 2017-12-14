@@ -21,5 +21,10 @@ do
 	"Transform labels"
 	shape labels removeAll: (self oldLabels).
 	shape labels addAll: (self addedLabels ).
-	shape labels do: [ :label | (labelTransforms at: label class) cull: label ].
+	oldToNewLabels keysAndValuesDo: [ :oldLabel :newLabels| 
+		newLabels do:[:newLabel|
+				newLabels color: oldLabel color.
+				labelTransforms cull: newLabels .
+			].
+		].
 	widget invalidate

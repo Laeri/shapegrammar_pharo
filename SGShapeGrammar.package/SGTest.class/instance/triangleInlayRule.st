@@ -1,6 +1,6 @@
 TriangleInlayGrammar
 triangleInlayRule
-	|   pointMap pointsR1 linesR1 pointsR2 linesR2 rule |
+	|   pointMap pointsR1 linesR1 pointsR2 linesR2 rule alphaToBetaLabels |
 pointMap := Dictionary new.
 	pointsR1 := OrderedCollection new.
 	linesR1 := OrderedCollection new.
@@ -29,4 +29,5 @@ pointMap := Dictionary new.
 		fromShape: (SGShape points: pointsR1 lines: linesR1)
 		toShape: (SGShape points: pointsR2 lines: linesR2) mapping: pointMap.
 	rule alphaToBeta: pointMap.
+
 	^ rule

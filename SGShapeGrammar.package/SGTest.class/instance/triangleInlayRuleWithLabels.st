@@ -1,6 +1,6 @@
 TriangleInlayGrammar
 triangleInlayRuleWithLabels
-	|   pointMap pointsR1 linesR1 pointsR2 linesR2 rule pa pb pc pd label1 label2 label3 polygonPoints label |
+	|   pointMap pointsR1 linesR1 pointsR2 linesR2 rule pa pb pc pd label1 label2 label3 polygonPoints label alphaToBetaLabels betaLabels |
 pointMap := Dictionary new.
 	pointsR1 := OrderedCollection new.
 	linesR1 := OrderedCollection new.
@@ -50,5 +50,11 @@ pointMap := Dictionary new.
 	rule fromShape addLabel: label.
 	rule toShape addLabel: label1; addLabel: label2; addLabel: label3.
 	
-	rule onLabel: SGPolygonLabel  do: [ :l|Transcript show: 'transform label '; show: l; cr ]. 
+	rule onLabel: SGPolygonLabel  do: [ :l|Transcript show: 'transform label '; show: l; cr.
+				l color: (l color lighter).
+		 ]. 
+	alphaToBetaLabels := Dictionary new.
+	betaLabels := OrderedCollection new.
+	alphaToBetaLabels at: label put: betaLabels .
+	rule alphaToBetaLabels: alphaToBetaLabels.
 	^ rule

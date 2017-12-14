@@ -19,7 +19,8 @@
 		"removedLinesAfterActionDo",
 		"labelTransforms",
 		"oldLabels",
-		"addedLabels"
+		"addedLabels",
+		"oldToNewLabels"
 	],
 	"name" : "ChangeShapeCommand",
 	"type" : "normal"
