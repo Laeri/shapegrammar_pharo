@@ -1,3 +1,3 @@
 initialization
 initialize
-alphaToBaseLabels := OrderedCollection new.
+alphaToBaseLabels := Dictionary new.

@@ -19,6 +19,7 @@ do
 			oldPositionsDict at: point put: point x @ point y.
 			point set: (newPositionsDict at: point) ].
 	"Transform labels"
-	shape labels do: [ :label | oldLabels add: label deepCopy ].
+	shape labels removeAll: (self oldLabels).
+	shape labels addAll: (self addedLabels ).
 	shape labels do: [ :label | (labelTransforms at: label class) cull: label ].
 	widget invalidate

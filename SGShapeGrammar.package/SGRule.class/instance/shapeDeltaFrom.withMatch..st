@@ -74,7 +74,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Figure out removed labels (label in shape which is in alpha)"
 	"Figure out added labels (label in beta which are added to base)"
 	self halt.
-	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels.
+	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels values.
 	self toShape labels
 		do: [ :betaLabel | 
 			newBaseLabel := SGPolygonLabel new.
@@ -82,5 +82,6 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			betaLabel polygonPoints
 				do: [ :polygonPoint | basePolygonPoints add: (fromBetaToBase at: polygonPoint) ].
 			newBaseLabel polygonPoints: basePolygonPoints.
-			shapeDelta addedLabels: newBaseLabel ].
+			shapeDelta addLabel: newBaseLabel ].
+		shapeDelta labelTransforms: (self labelTransforms ).
 	^ shapeDelta

@@ -18,7 +18,8 @@
 		"widget",
 		"removedLinesAfterActionDo",
 		"labelTransforms",
-		"oldLabels"
+		"oldLabels",
+		"addedLabels"
 	],
 	"name" : "ChangeShapeCommand",
 	"type" : "normal"
