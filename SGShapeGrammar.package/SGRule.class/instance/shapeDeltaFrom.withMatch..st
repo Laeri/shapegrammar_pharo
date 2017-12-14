@@ -1,12 +1,12 @@
 match calculation
 shapeDeltaFrom: shape withMatch: matchUsed
-	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition |
+	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition newBaseLabel basePolygonPoints |
 	shapeDelta := SGShapeDelta new.
-	matchSelector  increaseAge .
+	matchSelector increaseAge.
 	self update.
 
 	"Do custom tagging on shape or some other calculations based on the match selector"
-	matchSelector applyModeOnShape: shape withUsedMatch: matchUsed .
+	matchSelector applyModeOnShape: shape withUsedMatch: matchUsed.
 	fromBetaToBase := matchUsed betaToBase.
 	localToBaseMatrix := matchUsed baseToLocalMatrix.
 	baseToLocalMatrix := localToBaseMatrix deepCopy.
@@ -16,22 +16,19 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Add and remove Vertices/Lines"
 	removedLinesInBase := OrderedCollection new.
 	"Remove Lines"
-		removedVertices do:[:removedV|
-		tmpP := (matchUsed alphaToBase at: removedV).
-		removedLinesInBase addAll: (shape linesFromOrTo: tmpP).
-		].
+	removedVertices
+		do: [ :removedV | 
+			tmpP := matchUsed alphaToBase at: removedV.
+			removedLinesInBase addAll: (shape linesFromOrTo: tmpP) ].
 	removedLines
 		do: [ :removedLine | 
 			tmpP1 := matchUsed alphaToBase at: removedLine from.
 			tmpP2 := matchUsed alphaToBase at: removedLine to.
 			lineToRemove := shape getLineFrom: tmpP1 to: tmpP2.
-			removedLinesInBase addIfNotPresent: lineToRemove .
-			 ].
-		removedLinesInBase do:[:removedLine|
-				shapeDelta removeLine: removedLine.
-			].
+			removedLinesInBase addIfNotPresent: lineToRemove ].
+	removedLinesInBase do: [ :removedLine | shapeDelta removeLine: removedLine ].
 
-		
+
 
 	"Remove Vertices"
 	removedVertices
@@ -42,15 +39,15 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	blMatrix sy: (baseToLocalMatrix at: 2 at: 2).
 	blMatrix shx: (baseToLocalMatrix at: 1 at: 2).
 	blMatrix shy: (baseToLocalMatrix at: 2 at: 2).
-	blDecomposition := blMatrix decomposition .
+	blDecomposition := blMatrix decomposition.
 	"If point in base which is in beta changed coords change it in base"
-	movedVertices do:[:movedPoint|
-		tmpP := movedPoint deepCopy.
-		subToLocalMatrix transform: tmpP.
-		localToBaseMatrix transform: tmpP.
-		shapeDelta movePoint: (matchUsed betaToBase at: movedPoint) toPosition: tmpP. 
-		].
-	
+	movedVertices
+		do: [ :movedPoint | 
+			tmpP := movedPoint deepCopy.
+			subToLocalMatrix transform: tmpP.
+			localToBaseMatrix transform: tmpP.
+			shapeDelta movePoint: (matchUsed betaToBase at: movedPoint) toPosition: tmpP ].
+
 	"Add vertices"
 	addedVertices
 		do: [ :pAdded | 
@@ -61,7 +58,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			tmpP z: 1.
 			subToLocalMatrix transform: tmpP.
 			localToBaseMatrix transform: tmpP.
-			tmpP ageOfCreation: matchSelector currentAge .
+			tmpP ageOfCreation: matchSelector currentAge.
 			shapeDelta addVertex: tmpP ].
 
 	"Then finally add the new lines"
@@ -71,8 +68,19 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			tmpP1 := fromBetaToBase at: addedLine from.
 			tmpP2 := fromBetaToBase at: addedLine to.
 			shapeDelta addLine: (SGLine from: tmpP1 to: tmpP2) ].
-
 	shapeDelta shape: shape.
 	shapeDelta labelTransforms: self labelTransforms.
 
-	^ shapeDelta .
+	"Figure out removed labels (label in shape which is in alpha)"
+	"Figure out added labels (label in beta which are added to base)"
+	self halt.
+	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels.
+	self toShape labels
+		do: [ :betaLabel | 
+			newBaseLabel := SGPolygonLabel new.
+			basePolygonPoints := OrderedCollection new.
+			betaLabel polygonPoints
+				do: [ :polygonPoint | basePolygonPoints add: (fromBetaToBase at: polygonPoint) ].
+			newBaseLabel polygonPoints: basePolygonPoints.
+			shapeDelta addedLabels: newBaseLabel ].
+	^ shapeDelta

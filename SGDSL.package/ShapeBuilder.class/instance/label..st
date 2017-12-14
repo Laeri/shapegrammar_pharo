@@ -1,3 +1,3 @@
 accessing
-label: anAssoc
-self shouldBeImplemented .
+label: aLabel
+labels add: aLabel.

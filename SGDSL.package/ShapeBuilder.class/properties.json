@@ -9,7 +9,8 @@
 		"idToPoints",
 		"currentIdIndex",
 		"lines",
-		"shape"
+		"shape",
+		"labels"
 	],
 	"name" : "ShapeBuilder",
 	"type" : "normal"

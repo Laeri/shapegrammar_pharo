@@ -3,9 +3,8 @@ setup
 	| test  mainRow applyRuleButton addNewRuleButton resetShapeButton getNextMatchButton shapeDelta command rightColumn buttonRow intersectionBox rotationBox shearingBox reflectionBox somePointsPresent |
 	BlUniverse reset.
 	test := SGTest new.
-	shape := test triangle.
-	grammar := test triangleInlayGrammar.
-	grammar addRule: test squareRule.
+	shape := test triangleWithLabel.
+	grammar := test triangleInlayGrammarWithLabels .
 	grammarContainer := SGGrammarContainer fromGrammar: grammar.
 	window := BlSpace new.
 	window extent: 750 @ 500.
@@ -43,7 +42,7 @@ setup
 		background: Color blue.
 	buttonRow constraintsDo: [ :c | c horizontal matchParent ].
 	mainRow addChild: leftColumn.
-	showShape := FinalBlShape new.
+	showShape := SGFinalShapeWidget new.
 	showShape currentRule: grammar rules first.
 	showShape requestFocus.	"!!!!!"
 	showShape shape: shape.

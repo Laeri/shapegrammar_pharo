@@ -21,6 +21,6 @@
 		"pointToColor",
 		"drawPolygons"
 	],
-	"name" : "BlShape",
+	"name" : "SGShapeWidget",
 	"type" : "normal"
 }

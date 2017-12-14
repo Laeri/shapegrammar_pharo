@@ -108,11 +108,14 @@ initialize
 			Transcript
 				show: 'Mouse click';
 				cr.
-			pos := self parentToShapePoint:  e position.
+			pos := self parentToShapePoint:  e position snapToGrid: false.
 			tmpP := shape pointAt: pos inRange: rangeToSelect.
 			tmpP ifNil:[ 
-				
-				(shape hasPoint: tmpP) ifFalse: [addPCommand := AddPointCommand
+				pos := self parentToShapePoint:  e position.
+				tmpP := shape pointAt: pos inRange: rangeToSelect.
+				(shape hasPoint: tmpP) ifFalse: [
+					
+					addPCommand := AddPointCommand
 						addPoint: (SGVector x: pos x y: pos y)
 						inShape: shape
 						inWidget: self.

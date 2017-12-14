@@ -13,7 +13,7 @@ chooseBaseShapeWindow
 		(SampleConfigurations  allSelectorsInProtocol: 'shapes') doWithIndex: [:selector :i|
 			sgShape := SampleConfigurations new perform: selector.
 			shapesToChoose add: sgShape.
-			tmpShape := BlShape fromShape:sgShape.
+			tmpShape := SGShapeWidget fromShape:sgShape.
 			tmpShape allChildrenBreadthFirstDo: [ :child|
 				child removeEventHandlersSuchThat: [:handler|true].
 				 ].
