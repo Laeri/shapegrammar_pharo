@@ -1,6 +1,6 @@
 as yet unclassified
 findPolygonFrom: aPoint withFirstEdge: firstEdge inSortedEdges: sortedEdges
-	| start polygonPoints sortedEdgesOfPoint currentEdge currentPoint stop polygon|
+	| start polygonPoints sortedEdgesOfPoint currentEdge currentPoint stop polygon |
 	start := aPoint.
 	polygonPoints := OrderedCollection new.
 	polygonPoints add: start.
@@ -13,10 +13,11 @@ findPolygonFrom: aPoint withFirstEdge: firstEdge inSortedEdges: sortedEdges
 		whileTrue: [ polygonPoints add: currentPoint.
 			(sortedEdges at: currentPoint) size <= 1
 				ifTrue: [ stop := true	"there is no other edge beside the one we used to get to current point" ]
-				ifFalse: [ currentEdge := self previousEdgeOf: currentEdge in: (sortedEdges at: currentPoint).
-					currentPoint := currentEdge connectionOf: currentPoint ] ].
+				ifFalse: [ (self hasLeftTurnInPoint: currentPoint ofEdge: currentEdge in: (sortedEdges at: currentPoint ))
+						ifTrue: [ currentEdge := self previousEdgeOf: currentEdge in: (sortedEdges at: currentPoint).
+							currentPoint := currentEdge connectionOf: currentPoint ]
+						ifFalse: [ stop := true ] ] ].
 	stop
-		ifFalse: [ "We stopped because we found the starting point again after turning left everytime"
-			polygon := SGPolygon fromPoints: polygonPoints.
-].
-^ polygon
+		ifFalse:
+			[ "We stopped because we found the starting point again after turning left everytime" polygon := SGPolygon fromPoints: polygonPoints ].
+	^ polygon

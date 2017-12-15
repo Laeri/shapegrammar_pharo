@@ -9,10 +9,10 @@ polygonsFromShape: aShape
 	"for every point we follow the first edge and always go to the left until we reach the starting point again or there are no more edges"
 	aShape points
 		do: [ :aPoint | 
-			(sortedEdges at: aPoint) do: [ :firstEdge|
-					polygon := self findPolygonFrom: aPoint withFirstEdge: firstEdge   inSortedEdges: sortedEdges .
-					self halt. 
-				 ].
-			].
-			
-		^ polygons.
+			(sortedEdges at: aPoint)
+				do: [ :firstEdge | 
+					polygon := self findPolygonFrom: aPoint withFirstEdge: firstEdge inSortedEdges: sortedEdges.
+					polygon
+						ifNotNil: [ (polygons anySatisfy: [ :alreadyFoundPolygon | alreadyFoundPolygon samePointsAs: polygon ])
+								ifFalse: [ polygons add: polygon ] ] ] ].
+	^ polygons
