@@ -12,6 +12,7 @@ pointMap := Dictionary new.
 	pointsR1 add: pc.
 	label := SGPolygonLabel new.
 	label polygonPoints add: pa; add: pb; add: pc.
+	label color: Color blue.
 	linesR1 add: (SGLine from: (pointsR1 at: 1) to: (pointsR1 at: 2)).
 	linesR1 add: (SGLine from: (pointsR1 at: 2) to: (pointsR1 at: 3)).
 	linesR1 add: (SGLine from: (pointsR1 at: 1) to: (pointsR1 at: 3)).
@@ -34,6 +35,9 @@ pointMap := Dictionary new.
 	label3 := SGPolygonLabel new.
 	label3 polygonPoints add: pc; add: pa; add: pd.
 
+label1 color:Color yellow.
+label2 color:Color yellow.
+label3 color:Color yellow.
 	linesR2 add: (SGLine from: (pointsR2 at: 1) to: (pointsR2 at: 2)).
 	linesR2 add: (SGLine from: (pointsR2 at: 2) to: (pointsR2 at: 3)).
 	linesR2 add: (SGLine from: (pointsR2 at: 1) to: (pointsR2 at: 3)).
@@ -55,6 +59,7 @@ pointMap := Dictionary new.
 		 ]. 
 	alphaToBetaLabels := Dictionary new.
 	betaLabels := OrderedCollection new.
+	betaLabels add: label1; add: label2; add:label3.
 	alphaToBetaLabels at: label put: betaLabels .
 	rule alphaToBetaLabels: alphaToBetaLabels.
 	^ rule

@@ -1,3 +1,3 @@
 initialization
 initialize
-polygonPoints := OrderedCollection new.
+polygon := SGPolygon new.

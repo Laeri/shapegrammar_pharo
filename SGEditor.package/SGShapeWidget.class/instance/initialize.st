@@ -2,7 +2,7 @@ initialization
 initialize
 	| pos tmpP rangeToSelect addPCommand addLCommand l currentDragCommand removeCommand |
 	super initialize.
-	drawPolygons := false.
+	drawPolygons := true.
 	pointToColor := Dictionary new.
 	gridX := 10.
 	gridY := 10.
@@ -12,7 +12,10 @@ initialize
 	self background: bg.
 	commandBuffer := OrderedCollection new.
 	rangeToSelect := 0.005.
-
+	
+	self addEventHandlerOn: BlKeyDownEvent  do: [ :event|
+			event key = Key s ifTrue:[drawPolygons := (drawPolygons not).]
+		 ].
 	"Request focus when widget is entered"
 	self addEventHandlerOn: BlMouseEnterEvent do: [ :e | self requestFocus ].
 	self addEventHandlerOn: BlDragStartEvent do: [ :e | 
@@ -134,4 +137,4 @@ initialize
 			Transcript
 				show: 'local: ';
 				show: pos;
-				cr ]
+				cr ] .

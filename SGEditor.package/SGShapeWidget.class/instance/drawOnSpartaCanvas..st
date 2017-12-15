@@ -1,9 +1,27 @@
 drawing
 drawOnSpartaCanvas: aCanvas
-	| circle point p1 p2 linePath defaultCircleColor firstSelectedColor secondSelectedColor usedColor visualizeMatchColorPoints visualizeMatchColorLines tmpPoints lineColor transf point2D point1 point2 gridMaxX girdMaxY gridMaxY polygons |
+	| circle point p1 p2 linePath defaultCircleColor firstSelectedColor secondSelectedColor usedColor visualizeMatchColorPoints visualizeMatchColorLines tmpPoints lineColor transf point2D point1 point2 gridMaxX girdMaxY gridMaxY polygons path polygonPoints fillColor |
 	drawPolygons
 		ifTrue: [ 
-			polygons := shape extractPolygons.
+			polygons := SGPolygon polygonsFromShape: shape.
+			
+			polygons do:[:aPolygon|
+				path := aCanvas path.
+				polygonPoints := aPolygon points.
+				path moveTo: (polygonPoints first x @ polygonPoints first y) * self extent.
+				polygonPoints doWithIndex:[:p :i|
+					((i = 1) not) ifTrue:[
+							path lineTo: (p x @ p y) * self extent.
+						].
+					].
+				path close.
+				path := path finish.
+				fillColor := Color red.
+				shape labels detect: [ :label| 
+						label polygon samePointsAs: aPolygon.
+					] ifFound: [ :label| fillColor  := label color.]. 
+				aCanvas fill paint: fillColor; path: path;draw.
+				].
 			]
 		ifFalse: [ transf := BlScalingTransformation new.
 			transf scale: self extent x , self extent y.

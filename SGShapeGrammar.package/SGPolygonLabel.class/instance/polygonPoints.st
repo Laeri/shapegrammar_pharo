@@ -1,3 +1,3 @@
 accessing
 polygonPoints
-	^ polygonPoints
+	^ polygon points

@@ -1,3 +1,3 @@
 accessing
 polygonPoints: anObject
-	polygonPoints := anObject
+polygon points: anObject.

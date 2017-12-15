@@ -19,12 +19,13 @@ do
 			oldPositionsDict at: point put: point x @ point y.
 			point set: (newPositionsDict at: point) ].
 	"Transform labels"
-	shape labels removeAll: (self oldLabels).
+	self oldLabels do:[:oldLabel|
+		shape labels remove: oldLabel ifAbsent:[Transcript show: 'Tried to remove label which is not there';cr.]].
 	shape labels addAll: (self addedLabels ).
 	oldToNewLabels keysAndValuesDo: [ :oldLabel :newLabels| 
 		newLabels do:[:newLabel|
-				newLabels color: oldLabel color.
-				labelTransforms cull: newLabels .
+				newLabel color: oldLabel color.
+				(labelTransforms at: (newLabel class) )cull: newLabel .
 			].
 		].
 	widget invalidate

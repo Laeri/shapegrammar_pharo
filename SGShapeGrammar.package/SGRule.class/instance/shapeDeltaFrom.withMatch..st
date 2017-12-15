@@ -1,6 +1,6 @@
 match calculation
 shapeDeltaFrom: shape withMatch: matchUsed
-	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition newBaseLabel basePolygonPoints |
+	| tmpP1 tmpP2 tmpP subToLocalMatrix fromBetaToBase transf localToBaseMatrix baseToLocalMatrix shapeDelta lineToRemove removedLinesInBase blMatrix blDecomposition newBaseLabel basePolygonPoints newLabels |
 	shapeDelta := SGShapeDelta new.
 	matchSelector increaseAge.
 	self update.
@@ -73,7 +73,6 @@ shapeDeltaFrom: shape withMatch: matchUsed
 
 	"Figure out removed labels (label in shape which is in alpha)"
 	"Figure out added labels (label in beta which are added to base)"
-	self halt.
 	shapeDelta labelTransforms: self labelTransforms.
 	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels values.
 	self toShape labels
@@ -86,7 +85,9 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			shapeDelta addLabel: newBaseLabel.
 			self alphaToBetaLabels keysAndValuesDo: [ :oldLabelAlpha :mappedLabelsBeta|
 					(mappedLabelsBeta includes: betaLabel) ifTrue:[
-							shapeDelta oldToNewLabels at: (matchUsed alphaToBaseLabels at: oldLabelAlpha ) put: (newBaseLabel ).
+							newLabels := shapeDelta oldToNewLabels at: (matchUsed alphaToBaseLabels at: oldLabelAlpha ) ifAbsent:[OrderedCollection new].
+							newLabels add: newBaseLabel .
+							shapeDelta oldToNewLabels at:(matchUsed alphaToBaseLabels at: oldLabelAlpha) put: newLabels.
 						].
 				 ].
 			].
