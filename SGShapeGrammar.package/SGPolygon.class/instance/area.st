@@ -1,2 +1,3 @@
 accessing
 area
+self shouldBeImplemented .
