@@ -78,6 +78,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	self toShape labels
 		do: [ :betaLabel | 
 			newBaseLabel := SGPolygonLabel new.
+			newBaseLabel id: (betaLabel id).
 			basePolygonPoints := OrderedCollection new.
 			betaLabel polygonPoints
 				do: [ :polygonPoint | basePolygonPoints add: (fromBetaToBase at: polygonPoint) ].

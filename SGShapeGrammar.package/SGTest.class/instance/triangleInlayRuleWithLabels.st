@@ -54,8 +54,15 @@ label3 color:Color yellow.
 	rule fromShape addLabel: label.
 	rule toShape addLabel: label1; addLabel: label2; addLabel: label3.
 	
+	label1 id: 1.
+	label2 id: 2.
+	label3 id: 3.
 	rule onLabel: SGPolygonLabel  do: [ :l|Transcript show: 'transform label '; show: l; cr.
-				l color: (l color lighter).
+			Transcript show: l  id ; cr.
+				l id = 1 ifTrue:[l color: (l color muchLighter).].
+				l id = 2 ifTrue:[].
+				l id = 3 ifTrue:[l color: (l color muchDarker)].
+				
 		 ]. 
 	alphaToBetaLabels := Dictionary new.
 	betaLabels := OrderedCollection new.
