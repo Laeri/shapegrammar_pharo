@@ -1,6 +1,6 @@
 initialization
 initialize
-matchSelector := SGAgeSelector new.
+matchSelector := SGConvexHullSelector new.
 filter := SGMatchFilter new.
 labelTransforms := Dictionary new.
 alphaToBetaLabels := Dictionary new.

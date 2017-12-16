@@ -28,4 +28,5 @@ do
 				(labelTransforms at: (newLabel class) )cull: newLabel .
 			].
 		].
-	widget invalidate
+	widget ifNotNil:[
+	widget invalidate].
