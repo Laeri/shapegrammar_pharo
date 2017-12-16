@@ -1,11 +1,12 @@
-as yet unclassified
-getMatch: matches fromRule: rule fromBaseShape: shape
-	| addedVertices distanceSqrt x y currentDistance dx dy |
+filtering
+getMatch: matches fromRule: rule andShape: shape
+	| addedVertices distanceSqrt x y currentDistance dx dy distances bestDifference |
 	
-	bestDistance := 10000000000000000000000.
+	bestDifference := 10000000000000000000000.
 	bestMatch := nil.
 	matches do:[:match|
-		currentDistance := 0.
+		bestDifference := 0.
+		distances := OrderedCollection new.
 		match alphaToBase values do:[:baseP1|
 				match alphaToBase values do:[:baseP2|
 						dx := baseP1 x - baseP2 x.

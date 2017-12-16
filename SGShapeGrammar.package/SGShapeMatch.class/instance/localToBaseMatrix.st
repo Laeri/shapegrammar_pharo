@@ -1,0 +1,3 @@
+accessing
+localToBaseMatrix
+^ baseToLocalMatrix getInv.   

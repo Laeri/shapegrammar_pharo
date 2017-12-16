@@ -12,7 +12,10 @@
 		"pointsInsideBeta",
 		"rotations",
 		"reflections",
-		"shearing"
+		"shearing",
+		"bounds",
+		"filterAllOutside",
+		"filterSomeOutside"
 	],
 	"name" : "SGMatchFilter",
 	"type" : "normal"
