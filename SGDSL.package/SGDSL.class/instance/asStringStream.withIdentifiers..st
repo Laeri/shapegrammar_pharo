@@ -2,8 +2,8 @@ converting
 asStringStream: rule withIdentifiers: tmpList
 	| alpha beta alphaToBeta stream idAlpha idBeta from to idListAlpha idListBeta |
 	stream := WriteStream on: String new.
-	alpha := rule fromShape.
-	beta := rule toShape.
+	alpha := rule alpha.
+	beta := rule beta.
 	idListAlpha := OrderedCollection new.
 	idListBeta := OrderedCollection new.
 	tmpList

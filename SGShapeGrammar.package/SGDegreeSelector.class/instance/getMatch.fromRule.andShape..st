@@ -7,7 +7,7 @@ matchToDegree := Dictionary new.
 matches do:[:match|
 	score := 0.
 		match alphaToBase valuesDo: [ :point|
-			score := score + (rule fromShape degreeOf: point).
+			score := score + (rule alpha degreeOf: point).
 			matchToDegree at: match put: score.
 			 ].
 	].

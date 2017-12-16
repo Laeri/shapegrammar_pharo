@@ -51,8 +51,8 @@ label3 color:Color yellow.
 		toShape: (SGShape points: pointsR2 lines: linesR2) mapping: pointMap.
 	rule alphaToBeta: pointMap.
 	
-	rule fromShape addLabel: label.
-	rule toShape addLabel: label1; addLabel: label2; addLabel: label3.
+	rule alpha addLabel: label.
+	rule beta addLabel: label1; addLabel: label2; addLabel: label3.
 	
 	label1 id: 1.
 	label2 id: 2.

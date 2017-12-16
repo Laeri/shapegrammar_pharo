@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "lw 12/16/2017 18:09",
 	"super" : "Object",
 	"category" : "SGShapeGrammar-Modes and Filters",
 	"classinstvars" : [ ],
@@ -15,7 +15,8 @@
 		"shearing",
 		"bounds",
 		"filterAllOutside",
-		"filterSomeOutside"
+		"filterSomeOutside",
+		"shouldFilterBounds"
 	],
 	"name" : "SGMatchFilter",
 	"type" : "normal"

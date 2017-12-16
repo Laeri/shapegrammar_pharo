@@ -10,3 +10,4 @@ oldPositionsDict := Dictionary new.
 labelTransforms := Dictionary new.
 oldLabels := OrderedCollection new.
 oldToNewLabels := Dictionary new.
+addedLabels := OrderedCollection new.

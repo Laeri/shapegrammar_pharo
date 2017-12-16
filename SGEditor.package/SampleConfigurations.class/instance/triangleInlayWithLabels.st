@@ -16,8 +16,8 @@ config :=  config create.
 self halt.
 grammar := config grammar.
 rule := config grammar rules first.
-alpha := rule fromShape.
-beta := rule toShape.
+alpha := rule alpha.
+beta := rule beta.
 label := SGPolygonLabel new.
 polygonPoints := OrderedCollection new addAll: alpha points; yourself.
 label polygonPoints: polygonPoints.

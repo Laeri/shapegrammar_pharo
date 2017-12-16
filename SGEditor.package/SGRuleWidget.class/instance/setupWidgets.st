@@ -65,7 +65,8 @@ setupWidgets
 	resetAlpha
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
-				alpha removePointsAndLines .
+				alpha removePointsAndLines.
+				alpha removeLabels.
 			].
 		
 		resetBeta := TextButton fromString: 'reset'.
@@ -75,6 +76,7 @@ setupWidgets
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
 				beta removePointsAndLines .
+				beta removeLabels.
 			].
 		
 		

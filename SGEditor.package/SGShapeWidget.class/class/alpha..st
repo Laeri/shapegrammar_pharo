@@ -1,5 +1,5 @@
 instance creation
-fromShape: shape
+alpha: shape
 |tmp|
 tmp := SGShapeWidget new.
 tmp shape: shape.

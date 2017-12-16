@@ -1,14 +1,14 @@
 as yet unclassified
 filterOnBounds: matches withRule: aRule onShape: aShape
 	| tmpP allOutside someOutside |
-	filterAllOutside := true.
-	filterSomeOutside := false.
+	filterAllOutside := false.
+	filterSomeOutside := true.
 	(bounds isNotNil and: (filterAllOutside or: filterSomeOutside))
 		ifTrue: [ ^ matches
 				reject: [ :aMatch | 
 					allOutside := true.
 					someOutside := false.
-					aMatch beta points
+					aRule beta points
 						do: [ :betaP | 
 							tmpP := betaP deepCopy.
 							aMatch subToLocalMatrix transform: tmpP.

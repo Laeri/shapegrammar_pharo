@@ -4,8 +4,8 @@ fromRule: aRule
 	widget := self new.
 	widget rule: aRule.
 	widget setupWidgets .
-	alpha := SGShapeWidget fromShape: aRule fromShape.
-	beta := SGShapeWidget fromShape: aRule toShape.
+	alpha := SGShapeWidget alpha: aRule alpha.
+	beta := SGShapeWidget alpha: aRule beta.
 	alpha
 		border:
 			(BlBorder builder

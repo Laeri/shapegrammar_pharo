@@ -1,9 +1,9 @@
 converting
 asStringStream: rule
 	| maxSize identifiers |
-	maxSize := rule fromShape points size.
-	rule toShape points size > maxSize
-		ifTrue: [ maxSize := rule toShape points size ].
+	maxSize := rule alpha points size.
+	rule beta points size > maxSize
+		ifTrue: [ maxSize := rule beta points size ].
 
 	"identifiers := (OrderedCollection newFrom:(1 to:maxSize))."
 	identifiers := OrderedCollection newFrom: Character alphabet.

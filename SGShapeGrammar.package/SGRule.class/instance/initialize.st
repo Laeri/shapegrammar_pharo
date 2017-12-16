@@ -1,6 +1,14 @@
 initialization
 initialize
-matchSelector := SGLineLenghtSelector new.
+| bounds |
+matchSelector := SGBalancedSelector new.
 filter := SGMatchFilter new.
+bounds := SGPolygon new.
+bounds addPoint: (SGVector x:0.4 y: 0.4).
+bounds addPoint: (SGVector x:0.6 y: 0.4).
+bounds addPoint: (SGVector x:0.6 y: 0.6).
+bounds addPoint: (SGVector x:0.4 y: 0.6 ).
+filter bounds: bounds.
+filter bounds: bounds.
 labelTransforms := Dictionary new.
 alphaToBetaLabels := Dictionary new.

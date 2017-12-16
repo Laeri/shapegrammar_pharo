@@ -1,3 +1,3 @@
 instance creation
-toShape
-^ toShape 
+beta
+^ beta 

@@ -33,7 +33,6 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Remove Vertices"
 	removedVertices
 		do: [ :removed | shapeDelta removeVertex: (matchUsed alphaToBase at: removed) ].
-	transf := baseToLocalMatrix decomposition.
 	blMatrix := BlMatrix2D new.
 	blMatrix sx: (baseToLocalMatrix at: 1 at: 1).
 	blMatrix sy: (baseToLocalMatrix at: 2 at: 2).
@@ -75,7 +74,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Figure out added labels (label in beta which are added to base)"
 	shapeDelta labelTransforms: self labelTransforms.
 	shapeDelta removedLabels addAll: matchUsed alphaToBaseLabels values.
-	self toShape labels
+	self beta labels
 		do: [ :betaLabel | 
 			newBaseLabel := SGPolygonLabel new.
 			newBaseLabel id: (betaLabel id).

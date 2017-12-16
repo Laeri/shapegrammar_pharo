@@ -1,3 +1,3 @@
 match calculation
 matchingsIn: shape
-^ self subMatchesOf: fromShape in: shape.
+^ self subMatchesOf: alpha in: shape.

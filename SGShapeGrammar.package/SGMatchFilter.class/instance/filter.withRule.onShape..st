@@ -41,7 +41,8 @@ filter: matches withRule: rule onShape: shape
 				andRule: rule.
 			usableRules ifEmpty: [ self error: 'no match present after filtering based on range' ] ].
 	intersection
-		ifTrue: [ usableRules := self filterIntersections: usableRules shape: shape toShape: rule toShape.
+		ifTrue: [ usableRules := self filterIntersections: usableRules shape: shape toShape: rule beta.
 			usableRules
 				ifEmpty: [ self error: 'no match present after filtering based on intersection' ] ].
+			shouldFilterBounds ifTrue:[self filterOnBounds: matches withRule: rule  onShape: shape ].
 	^ usableRules
