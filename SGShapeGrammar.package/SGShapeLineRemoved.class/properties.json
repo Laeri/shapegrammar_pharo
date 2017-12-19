@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AliakseiSyrel 12/19/2017 23:53",
+	"super" : "SGShapeAnnouncement",
+	"category" : "SGShapeGrammar-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"line"
+	],
+	"name" : "SGShapeLineRemoved",
+	"type" : "normal"
+}

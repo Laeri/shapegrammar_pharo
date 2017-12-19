@@ -50,29 +50,21 @@ setupWidgets
 	mainRow addChild: betaColumn.
 	alphaColumn addChild: buttonRowAlpha .
 	betaColumn addChild: buttonRowBeta.
-		
-		
+
 	resetAlpha := SGButton fromString: 'reset'.
 	resetAlpha
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-				alpha removePointsAndLines.
-				alpha removeLabels.
-			].
+		do: [ self rule alpha removeAllPoints ].
 		
 	resetBeta := SGButton fromString: 'reset'.
 	resetBeta
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-				beta removePointsAndLines .
-				beta removeLabels.
-			].
-		
-		
+		do: [ self rule beta removeAllPoints ].
+
 	removeRule := SGButton fromString: 'remove rule'.
 	removeRule
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | ].
+		do: [  ].
 		
 	map := SGButton fromString: 'map'.
 	map

@@ -1,0 +1,1 @@
+Is sent when a line is removed from a shape

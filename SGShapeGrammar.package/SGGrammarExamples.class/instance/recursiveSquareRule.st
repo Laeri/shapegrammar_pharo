@@ -1,5 +1,6 @@
 RecursiveSquareGrammar
 recursiveSquareRule
+	<gtExample>
 	| pointMap pointsR1 linesR1 pointsR2 linesR2 rule |
 	pointsR1 := OrderedCollection new.
 	linesR1 := OrderedCollection new.

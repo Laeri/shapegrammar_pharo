@@ -1,16 +1,16 @@
 instance creation
-rule: aRule
+rule: aSGRule
 	| widget alpha beta alphaScalable betaScalable |
 	widget := self new.
-	widget rule: aRule.
+	widget rule: aSGRule.
 	widget setupWidgets.
 	
-	alpha := SGShapeElement shape: aRule alpha.
+	alpha := SGShapeElement shape: aSGRule alpha.
 	alpha padding: (BlInsets all: 10).
 	alpha margin: (BlInsets all: 20).
 	alpha background: Color white.
 
-	beta := SGShapeElement shape: aRule beta.
+	beta := SGShapeElement shape: aSGRule beta.
 	beta padding: (BlInsets all: 10).
 	beta margin: (BlInsets all: 10).
 	beta background: Color white.

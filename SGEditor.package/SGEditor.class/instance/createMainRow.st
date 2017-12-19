@@ -2,6 +2,7 @@ initialize-release
 createMainRow
 	| example mainRow rightColumn buttonRow applyRuleButton command shapeDelta addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton |
 	example := SGGrammarExamples new.
+	
 	shape := example triangleWithLabel.
 	grammar := example triangleInlayGrammarWithLabels.
 	
@@ -29,6 +30,7 @@ createMainRow
 			c vertical fitContent ].
 
 	mainRow addChild: leftColumn.
+
 	showShape := SGFinalShapeWidget new.
 	showShape currentRule: grammar rules first.
 	showShape requestFocus.	"!!!!!"
@@ -38,12 +40,9 @@ createMainRow
 			c horizontal matchParent.
 			c vertical matchParent ].
 
-
-	"mainRow addChild: showShape.
-	mainRow addChild: rightColumn .
-	rightColumn addChild: showShape ."
 	mainRow addChild: rightColumn.
 	rightColumn addChild: showShape.
+
 	applyRuleButton := SGButton fromString: 'apply rule'.
 	applyRuleButton
 		addEventHandlerOn: BlClickEvent

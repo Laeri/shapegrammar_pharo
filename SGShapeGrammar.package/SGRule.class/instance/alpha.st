@@ -1,3 +1,5 @@
-instance creation
+accessing
 alpha
-^ alpha 
+	<return: #SGShape>
+
+	^ alpha

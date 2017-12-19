@@ -1,3 +1,5 @@
-instance creation
+accessing
 beta
-^ beta 
+	<return: #SGShape>
+
+	^ beta

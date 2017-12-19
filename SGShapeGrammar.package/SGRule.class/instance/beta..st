@@ -1,3 +1,3 @@
-instance creation
+accessing
 beta: shape
-beta := shape
+	beta := shape

@@ -9,7 +9,8 @@
 		"points",
 		"lines",
 		"geometryLabels",
-		"labels"
+		"labels",
+		"announcer"
 	],
 	"name" : "SGShape",
 	"type" : "normal"

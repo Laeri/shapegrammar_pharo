@@ -1,6 +1,3 @@
 instance creation
 fromString: aString
-|tmp|
-tmp := self new.
-tmp text: aString.
-^ tmp.
+	^ self new text: aString asRopedText

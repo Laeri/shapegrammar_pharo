@@ -1,3 +1,3 @@
-instance creation
+accessing
 alpha: shape
 alpha  := shape

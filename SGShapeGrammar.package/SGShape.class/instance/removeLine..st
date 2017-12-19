@@ -1,3 +1,8 @@
 removing
-removeLine: line
-self lines remove: line.
+removeLine: aLine
+	self
+		assert: [ self lines includes: aLine ]
+		description: [ 'Line must exist' ].
+
+	self lines remove: aLine.
+	self notifyLineRemoved: aLine
