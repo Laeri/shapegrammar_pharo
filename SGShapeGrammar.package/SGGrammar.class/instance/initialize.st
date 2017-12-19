@@ -1,4 +1,4 @@
 initialization
 initialize
-rules := OrderedCollection new.
-name := ''.
+	rules := OrderedCollection new.
+	name := ''

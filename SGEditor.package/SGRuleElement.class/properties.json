@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElement",
+	"category" : "SGEditor-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alpha",
+		"beta",
+		"alphaColumn",
+		"betaColumn",
+		"rule",
+		"colors",
+		"colorIndex",
+		"buttonRowAlpha",
+		"buttonRowBeta",
+		"labelTransforms"
+	],
+	"name" : "SGRuleElement",
+	"type" : "normal"
+}

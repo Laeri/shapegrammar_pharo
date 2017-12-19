@@ -1,3 +1,3 @@
 accessing
-from: aPoint
-from := aPoint
+from: aSGVector
+	from := aSGVector

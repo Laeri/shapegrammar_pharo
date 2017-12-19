@@ -4,5 +4,5 @@ resetWidget
 	self removeChildren.
 	grammar rules
 		do: [ :rule | 
-			ruleRep := SGRuleWidget fromRule: rule.
+			ruleRep := SGRuleElement rule: rule.
 			self addChild: ruleRep ].

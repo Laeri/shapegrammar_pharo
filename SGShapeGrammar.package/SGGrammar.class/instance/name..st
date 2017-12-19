@@ -1,3 +1,3 @@
 accessing
 name: newName
-name := newName.
+	name := newName

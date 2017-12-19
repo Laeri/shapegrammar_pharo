@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "lw 12/16/2017 18:21",
 	"super" : "BlElement",
-	"category" : "SGEditor",
+	"category" : "SGEditor-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

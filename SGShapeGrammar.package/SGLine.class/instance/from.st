@@ -1,3 +1,5 @@
 accessing
 from
-^ from
+	<return: #SGVector>
+
+	^ from

@@ -14,7 +14,7 @@ chooseConfigWindow
 			config := SampleConfigurations new perform: selector.
 			configList add: config.
 			shapeHolder := BlElement new.
-			ruleWidget := SGRuleWidget fromRule: config grammar rules first.
+			ruleWidget := SGRuleElement rule: config grammar rules first.
 			ruleWidget removeButtons .
 			ruleWidget allChildrenBreadthFirstDo: [ :child|
 				child removeEventHandlersSuchThat: [:handler|true].

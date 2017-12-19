@@ -1,3 +1,3 @@
 grammars
 recursiveSquare
-^ SGConfiguration new grammar: (SGTest new recursiveSquareGrammar); yourself.
+^ SGConfiguration new grammar: (SGGrammarExamples new recursiveSquareGrammar); yourself.

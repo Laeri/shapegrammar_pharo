@@ -19,5 +19,4 @@ checked := aBool.
 						border: (BlBorder paint: Color red width: 4);
 						yourself) ]
 		ifFalse: [ self background: Color white.self removeChildren ].
-	self invalidate.
 	onToggleBlock ifNotNil: [ onToggleBlock cull: checked ]

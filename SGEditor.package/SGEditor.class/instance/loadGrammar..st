@@ -1,6 +1,6 @@
 as yet unclassified
 loadGrammar: aGrammar
 grammar := aGrammar.
-grammarContainer grammar: aGrammar.
-grammarContainer invalidate.
+grammarElement grammar: aGrammar.
+grammarElement invalidate.
 showShape grammar: aGrammar

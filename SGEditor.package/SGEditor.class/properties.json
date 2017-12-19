@@ -10,9 +10,9 @@
 		"grammar",
 		"matchUsed",
 		"leftColumn",
-		"grammarContainer",
 		"showShape",
-		"shape"
+		"shape",
+		"grammarElement"
 	],
 	"name" : "SGEditor",
 	"type" : "normal"
