@@ -1,3 +1,3 @@
 shapes
 square
-^ (SGGrammarExamples new square).
+	^ SGGrammarExamples new square

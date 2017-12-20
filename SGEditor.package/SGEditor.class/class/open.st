@@ -1,19 +1,21 @@
 instance creation
 open
 	<script: 'self open'>
-	| anEditorElement window |
-	
-	anEditorElement := self new.
-	
-	window := BlSpace new.
-	window extent: 750 @ 500.
-	window
-		addEventHandlerOn: BlKeyDownEvent
-		do: [ :event | 
-			event key = Key c
-				ifTrue: [ anEditorElement chooseConfigWindow ].
-				
-				event key = Key v ifTrue: [ anEditorElement chooseBaseShapeWindow ] ].
-	
-	window root addChild: anEditorElement createMainRow.
-	window show
+	| anEditor aWindow anEditorElement |
+
+	aWindow := BlSpace new.
+	aWindow extent: 750 @ 500.
+
+	anEditor := self new.
+	anEditorElement := anEditor createMainRow.
+	anEditorElement addShortcut: (BlShortcut new
+		action: [ anEditor chooseConfigWindow ];
+		combination: (BlKeyCombination builder key: Key c; build)).
+
+	anEditorElement addShortcut: (BlShortcut new
+		action: [ anEditor chooseBaseShapeIn: aWindow ];
+		combination: (BlKeyCombination builder key: Key v; build)).
+
+	anEditorElement requestFocus.
+	aWindow root addChild: anEditorElement.
+	aWindow show

@@ -1,3 +1,3 @@
 shapes
 triangle
-^ (SGGrammarExamples new triangle)
+	^ SGGrammarExamples new triangle
