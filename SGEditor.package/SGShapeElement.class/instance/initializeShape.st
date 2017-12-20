@@ -1,5 +1,5 @@
 initialization
-initializeElements
+initializeShape
 	| thePoints theLines |
 
 	thePoints := (self shape points collect: [ :aSGVector |

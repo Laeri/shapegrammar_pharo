@@ -1,3 +1,3 @@
 adding
 addLabel: aLabel
-labels add: aLabel.
+	labels add: aLabel

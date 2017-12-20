@@ -36,7 +36,10 @@ subMatchesOf: subShape in: baseShape
 								ifTrue: [ match baseToLocalMatrix: baseToLocalMatrix.
 									match subToLocalMatrix: subTransform.
 									match lineMatch: lineMatching.
-									match p1: p1 p2: p2 p3: p3.
+									match coordinates: (SGCoordinateSystem
+										origin: p1
+										x: p2 - p1
+										y: p3 - p1).
 									matchings add: match.
 									match alphaToBaseLabels: (self collectLabelMatchesOf: match in: baseShape).
 									 ] ] ] ].

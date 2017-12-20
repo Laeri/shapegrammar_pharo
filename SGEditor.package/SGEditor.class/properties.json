@@ -7,12 +7,13 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"window",
-		"grammar",
-		"matchUsed",
 		"leftColumn",
 		"showShape",
+		"grammarElement",
+		"ruleApplier",
+		"grammar",
 		"shape",
-		"grammarElement"
+		"shapeMatch"
 	],
 	"name" : "SGEditor",
 	"type" : "normal"

@@ -15,7 +15,7 @@ update
 	
 	"See which vertices are moved around"
 	alphaToBeta keysAndValuesDo: [ :alphaP :betaP|
-		(alphaP equalTo: betaP inRange: SGMatchSelector equalityRange) ifFalse:[movedVertices add: betaP].
+		(alphaP closeTo: betaP precision: SGMatchSelector equalityRange) ifFalse:[movedVertices add: betaP].
 		 ].
 	betaToAlpha := Dictionary new.
 	alphaToBeta keysAndValuesDo: [ :key :value | betaToAlpha at: value put: key ].

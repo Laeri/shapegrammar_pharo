@@ -11,10 +11,8 @@
 		"baseToLocalMatrix",
 		"subToLocalTransform",
 		"betaToBase",
-		"p1",
-		"p2",
-		"p3",
-		"alphaToBaseLabels"
+		"alphaToBaseLabels",
+		"coordinates"
 	],
 	"name" : "SGShapeMatch",
 	"type" : "normal"

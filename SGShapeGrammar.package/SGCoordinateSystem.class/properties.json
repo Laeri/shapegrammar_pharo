@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGShapeGrammar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"origin",
+		"xAxis",
+		"yAxis"
+	],
+	"name" : "SGCoordinateSystem",
+	"type" : "normal"
+}

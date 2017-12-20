@@ -1,6 +1,3 @@
 adding
-addPointAtPos: pos
-|p|
-p := (SGVector x: pos x y:  pos y z: 1).
-self addPoint: p.
-^ p.
+addPointAtPos: aPoint
+	self addPoint: (SGVector x: aPoint x y: aPoint y z: 1)

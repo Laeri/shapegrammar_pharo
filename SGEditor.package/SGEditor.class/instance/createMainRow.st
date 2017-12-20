@@ -1,6 +1,6 @@
 initialize-release
 createMainRow
-	| example mainRow rightColumn buttonRow applyRuleButton command shapeDelta addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton |
+	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton |
 	example := SGGrammarExamples new.
 	
 	shape := example triangleWithLabel.
@@ -31,36 +31,28 @@ createMainRow
 
 	mainRow addChild: leftColumn.
 
-	showShape := SGFinalShapeWidget new.
-	showShape currentRule: grammar rules first.
+	showShape := SGShapeElement shape: shape.
+	"showShape currentRule: grammar rules first."
 	showShape requestFocus.	"!!!!!"
-	showShape shape: shape.
 	showShape
 		constraintsDo: [ :c | 
-			c horizontal matchParent.
-			c vertical matchParent ].
+			c horizontal fitContent.
+			c vertical fitContent ].
 
 	mainRow addChild: rightColumn.
-	rightColumn addChild: showShape.
+	rightColumn addChild: (BlScalableElement new
+		constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ];
+		contentElement: showShape).
 
 	applyRuleButton := SGButton fromString: 'apply rule'.
+	applyRuleButton addEventHandler: ruleApplier.
 	applyRuleButton
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-			matchUsed
-				ifNil: [ [ command := ChangeShapeCommand
-						fromShapeDelta: (grammar rules first getDeltaOn: shape)
-						inWidget: showShape.
-					command do.
-					showShape commandBuffer add: command.
-					showShape invalidate.
-					matchUsed := nil ] fork ]
-				ifNotNil: [ [ shapeDelta := grammar rules first shapeDeltaFrom: shape withMatch: matchUsed.
-					command := ChangeShapeCommand fromShapeDelta: shapeDelta inWidget: showShape.
-					command do.
-					showShape commandBuffer add: command.
-					showShape invalidate.
-					matchUsed := nil ] fork ] ].
+		do: [ :e |
+			showShape match: SGShapeMatch new.
+			showShape ].
 	addNewRuleButton := SGButton fromString: 'add new rule'.
 	addNewRuleButton
 		addEventHandlerOn: BlClickEvent
@@ -70,10 +62,8 @@ createMainRow
 	resetShapeButton := SGButton fromString: 'reset shape'.
 	resetShapeButton
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-			shape points removeAll.
-			shape lines removeAll.
-			showShape invalidate ].
+		do: [ :e | shape removeAllPoints ].
+		
 	intersectionBox := NamedCheckbox fromText: 'intersection' onToggleDo: [ :checked | 
 				grammar rules first filter intersection: checked.
 			].
@@ -98,10 +88,13 @@ createMainRow
 	getNextMatchButton := SGButton fromString: 'next match'.
 	getNextMatchButton
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-			[ matchUsed := grammar rules first selectMatchUsedIn: shape.
-			showShape visualizeMatch: matchUsed.
-			showShape invalidate ] fork ].
+		do: [ :e |
+			shapeMatch := grammar rules first selectMatchUsedIn: shape.
+			showShape match: shapeMatch.
+			showShape showCoordinates.
+			"showShape visualizeMatch: aShapeMatch.
+			showShape invalidate" ].
+		
 	leftColumn addChild: addNewRuleButton.
 	buttonRow addChild: resetShapeButton.
 	buttonRow addChild: getNextMatchButton.

@@ -1,11 +1,9 @@
 adding
-addPoint: point
-self assert:[
-	(self points includes: point) not.
-	].
+addPoint: aPoint
+	self
+		assert: [ (self points includes: aPoint) not ]
+		description: [ 'Point must not exist' ].
+	self assert: [ (self points noneSatisfy: [ :aPointInShape | aPointInShape closeTo: aPoint precision: SGMatchSelector equalityRange]) ].
 
-self assert:[
-		(self points anySatisfy: [ :pointInShape|
-			(pointInShape equalTo: point inRange: SGMatchSelector equalityRange)]) not.
-	].
-self points add: point.
+	self points add: aPoint.
+	self notifyPointAdded: aPoint

@@ -1,3 +1,4 @@
 adding
-addLine: line
-self lines add: line.
+addLine: aLine
+	self lines add: aLine.
+	self notifyLineAdded: aLine

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AliakseiSyrel 12/20/2017 10:31",
+	"super" : "SGShapeAnnouncement",
+	"category" : "SGShapeGrammar-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"point"
+	],
+	"name" : "SGShapePointAdded",
+	"type" : "normal"
+}

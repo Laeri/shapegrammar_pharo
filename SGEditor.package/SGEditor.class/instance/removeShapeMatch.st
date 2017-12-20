@@ -1,0 +1,3 @@
+accessing
+removeShapeMatch
+	shapeMatch := nil

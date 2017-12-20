@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"shape"
+		"shape",
+		"match"
 	],
 	"name" : "SGShapeElement",
 	"type" : "normal"

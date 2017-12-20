@@ -1,3 +1,3 @@
 adding
 addGeometryLabel: aLabelPoint
-geometryLabels add: aLabelPoint.
+	geometryLabels add: aLabelPoint.

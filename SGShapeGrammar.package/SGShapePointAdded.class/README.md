@@ -1,0 +1,1 @@
+Is sent when a point is added to a shape

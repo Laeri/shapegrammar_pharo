@@ -11,7 +11,7 @@ filterPresentPointsInRangeOn: matchings withShape: shape andRule: rule
 							localToBaseMatrix := match baseToLocalMatrix getInv.
 							subToLocalMatrix transform: tmpP.
 							localToBaseMatrix transform: tmpP.
-							tmpP equalTo: shapeP inRange: SGMatchSelector equalityRange . 
+							tmpP closeTo: shapeP precision: SGMatchSelector equalityRange . 
 							 ].
 				  ].
 			somePresentPoints ifTrue:[rule addedVertices anySatisfy: testBlock ] ifFalse:[rule addedVertices allSatisfy: testBlock ].

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElementEventListener",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"editor"
+	],
+	"name" : "SGShapeRuleApplier",
+	"type" : "normal"
+}
