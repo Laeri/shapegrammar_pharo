@@ -1,5 +1,6 @@
 base shapes
 triangleWithLabel
+<gtExample>
 	| points lines shape pa pb pc label |
 	points := OrderedCollection new.
 	lines := OrderedCollection new.

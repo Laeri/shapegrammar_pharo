@@ -1,5 +1,6 @@
 RecursiveSquareGrammar
 recursiveSquareGrammarWithLabels
+<gtExample>
 | grammar rule |
 grammar := SGGrammar new.
 rule := self recursiveSquareRuleWithLabels.

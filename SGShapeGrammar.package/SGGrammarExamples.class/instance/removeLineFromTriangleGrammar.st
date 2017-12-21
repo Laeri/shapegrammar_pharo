@@ -1,5 +1,6 @@
 RemoveLineFromTriangleGrammar
 removeLineFromTriangleGrammar
+<gtExample>
 	|   pointMap pointsR1 linesR1 pointsR2 linesR2 rule grammar |
 pointMap := Dictionary new.
 	pointsR1 := OrderedCollection new.

@@ -1,5 +1,6 @@
 grammars
 triangleInlayConfig
+<gtExample>
 	| dsl rule grammar config |
 	config := SGDSL new config.
 	grammar := config grammar.

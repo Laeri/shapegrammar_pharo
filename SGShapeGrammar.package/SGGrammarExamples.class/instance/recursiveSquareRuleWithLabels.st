@@ -1,5 +1,6 @@
 RecursiveSquareGrammar
 recursiveSquareRuleWithLabels
+<gtExample>
 	| pointMap pointsR1 linesR1 pointsR2 linesR2 rule p1 p2 p3 p4 label p5 p6 p7 p8 label1 label2 label3 label4 label5 |
 	pointsR1 := OrderedCollection new.
 	linesR1 := OrderedCollection new.
