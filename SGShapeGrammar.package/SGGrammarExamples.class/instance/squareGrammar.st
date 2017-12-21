@@ -1,7 +1,4 @@
 SquareInlayGrammar
 squareGrammar
-|g|
-
-g:= SGGrammar new.
-g addRule: self squareRule.
-^ g.
+<gtExample>
+^ SGGrammar new addRule: self squareRule; yourself

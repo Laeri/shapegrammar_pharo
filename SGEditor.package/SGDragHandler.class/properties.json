@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "BlElementEventListener",
+	"category" : "SGEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dragStartPosition",
+		"originalPosition",
+		"shapeElement"
+	],
+	"name" : "SGDragHandler",
+	"type" : "normal"
+}

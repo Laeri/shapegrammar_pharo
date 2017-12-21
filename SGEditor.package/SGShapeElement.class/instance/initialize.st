@@ -7,3 +7,5 @@ initialize
 		c horizontal fitContent.
 		c vertical fitContent ].
 	self clipChildren: false.
+	dragHandler := SGDragHandler new.
+	dragHandler shapeElement: self.

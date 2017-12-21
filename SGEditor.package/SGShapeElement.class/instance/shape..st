@@ -6,5 +6,5 @@ shape: aSGShape
 	shape when: SGShapePointRemoved send: #onPointRemoved: to: self.
 	shape when: SGShapeLineAdded send: #onLineAdded: to: self.
 	shape when: SGShapePointAdded send: #onPointAdded: to: self.
-
+	shape when: SGShapePointMoved send: #onPointMoved: to: self.
 	self initializeShape

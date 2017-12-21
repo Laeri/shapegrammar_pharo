@@ -1,7 +1,6 @@
 SquareInlayGrammar
 squareRule
 	<gtExample>
-	
 	| points lines pointMap pointsR1 linesR1 pointsR2 linesR2 rule |
 	points := OrderedCollection new.
 	lines := OrderedCollection new.
