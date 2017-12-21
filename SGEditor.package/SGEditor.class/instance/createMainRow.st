@@ -84,7 +84,7 @@ createMainRow
 		do: [ :e | 
 			shapeMatch := grammar rules first selectMatchUsedIn: shape.
 			showShape match: shapeMatch.
-			showShape showCoordinates ].
+			showShape showCoordinates].
 		
 	leftColumn addChild: addNewRuleButton.
 	buttonRow addChild: resetShapeButton.

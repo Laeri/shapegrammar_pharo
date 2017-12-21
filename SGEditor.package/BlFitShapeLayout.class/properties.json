@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BlLayout",
+	"category" : "SGEditor-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BlFitShapeLayout",
+	"type" : "normal"
+}
