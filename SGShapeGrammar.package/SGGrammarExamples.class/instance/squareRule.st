@@ -49,6 +49,7 @@ squareRule
 	1 to: 4 do: [ :i | pointMap at: (pointsR1 at: i) put: (pointsR2 at: i) ].
 	rule := SGRule
 		fromShape: (SGShape points: pointsR1 lines: linesR1)
-		toShape: (SGShape points: pointsR2 lines: linesR2) mapping: pointMap.
+		toShape: (SGShape points: pointsR2 lines: linesR2)
+		mapping: pointMap.
 	rule alphaToBeta: pointMap.
 	^ rule

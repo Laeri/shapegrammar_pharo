@@ -1,7 +1,7 @@
 initialization
 initialize
+	|createLineShortCut |
 	super initialize.
-	
 	self layout: BlFitShapeLayout new.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
@@ -14,4 +14,24 @@ self addEventHandlerOn: BlClickEvent  do: [:anEvent|
 		 clickPos := (anEvent currentTarget globalPointToLocal: anEvent position).
 		aSGVector := SGVector x: clickPos x / self boundingSize y: clickPos y / self boundingSize.
 		shape addPoint: aSGVector.
+		clickSelectionHandler select: (self findPoints: aSGVector) first.
+		anEvent consumed: true.
 	  ]. 
+clickSelectionHandler := SGClickSelectionHandler new.
+
+	self addEventHandlerOn: BlMouseEnterEvent  do: [ :anEvent|
+			self requestFocus .
+		]. 
+	
+	createLineShortCut := BlShortcut new combination: (BlKeyCombination builder control; build);name: 'createLine';action:[
+			clickSelectionHandler bothSelected ifTrue:[
+					|first second|
+					first := clickSelectionHandler firstSelected userData at: #shapeGrammarPoint.
+					second := clickSelectionHandler secondSelected userData at: #shapeGrammarPoint.
+					shape addLine: (SGLine from: first to: second).
+					clickSelectionHandler deselectFirst.
+				].
+		
+		]; yourself.
+	self addShortcut: createLineShortCut .
+	

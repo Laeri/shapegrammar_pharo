@@ -1,18 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "BlElement",
+	"super" : "BlElementEventListener",
 	"category" : "SGEditor-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"shape",
-		"match",
-		"dragHandler",
 		"firstSelected",
-		"secondSelected",
-		"clickSelectionHandler"
+		"secondSelected"
 	],
-	"name" : "SGShapeElement",
+	"name" : "SGClickSelectionHandler",
 	"type" : "normal"
 }
