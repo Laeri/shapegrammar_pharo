@@ -69,17 +69,23 @@ setupWidgets
 	map := SGButton fromString: 'map'.
 	map
 		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-				(alpha onlyOneSelected and: beta onlyOneSelected ) ifTrue:[
-						rule mapPoint: alpha firstSelected  to: beta firstSelected.
-						col := self nextColor .
-						Transcript show: col; cr.
-						alpha mapPoint: alpha firstSelected toColor: col.
-						beta mapPoint: beta firstSelected toColor: col.  
-						alpha unselect: alpha firstSelected .
-						beta unselect: beta firstSelected .
-						self invalidate.
-					]
+		do: [ :e |
+				((self alphaShapeElement clickSelectionHandler onlyFirstSelected) and: (self betaShapeElement clickSelectionHandler onlyFirstSelected )) ifTrue:[
+					|anAlphaPoint aBetaPoint anAlphaBlElement aBetaBlElement|
+					anAlphaBlElement := self alphaShapeElement clickSelectionHandler firstSelected .
+					anAlphaPoint := anAlphaBlElement userData at: #shapeGrammarPoint.
+					aBetaBlElement := self betaShapeElement clickSelectionHandler firstSelected . 
+					aBetaPoint := aBetaBlElement userData at: #shapeGrammarPoint.
+					col := self nextColor.
+					  rule mapPoint: anAlphaPoint to: aBetaPoint .
+						self alphaShapeElement clickSelectionHandler deselect: anAlphaBlElement .
+						self betaShapeElement clickSelectionHandler deselect: aBetaBlElement .
+					self mapPoint: anAlphaBlElement  toColor: col.
+						self mapPoint: aBetaBlElement toColor: col.
+					
+					].
+				
+				
 			].
 		
 		buttonRowAlpha addChild: resetAlpha.
