@@ -11,7 +11,8 @@
 		"dragHandler",
 		"firstSelected",
 		"secondSelected",
-		"clickSelectionHandler"
+		"clickSelectionHandler",
+		"showPolygons"
 	],
 	"name" : "SGShapeElement",
 	"type" : "normal"
