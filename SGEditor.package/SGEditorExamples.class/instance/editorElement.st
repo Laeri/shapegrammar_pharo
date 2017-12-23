@@ -1,4 +1,4 @@
 instance creation
 editorElement
-	<gtExample>
+	<gtExample> 
 	^ SGEditor new createMainRow

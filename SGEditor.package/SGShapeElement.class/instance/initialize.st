@@ -1,6 +1,6 @@
 initialization
 initialize
-	| createLineShortCut showPolygonShortcut |
+	| createLineShortCut showPolygonShortcut exportPngShortcut |
 	super initialize.
 	
 	showPolygons := false.
@@ -47,5 +47,17 @@ initialize
 		name: 'showPolygon';
 		action: [ self switchPolygonDraw ];
 		yourself.
+		
+			exportPngShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key e;
+				build);
+		name: 'exportPng';
+		action: [ self chooseFileExportIn: self space root.
+			
+			self exportPngNamed: 'test' size: 1000@1000  ];
+		yourself.
 	self addShortcut: createLineShortCut.
-	self addShortcut: showPolygonShortcut
+	self addShortcut: showPolygonShortcut.
+	self addShortcut: exportPngShortcut .
