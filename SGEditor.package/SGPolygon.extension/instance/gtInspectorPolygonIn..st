@@ -1,4 +1,4 @@
-as yet unclassified
+*SGEditor
 gtInspectorPolygonIn: aComposite
 	<gtInspectorPresentationOrder: 0>
 

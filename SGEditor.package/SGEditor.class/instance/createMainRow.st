@@ -1,6 +1,6 @@
 initialize-release
 createMainRow
-	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton |
+	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut |
 	example := SGGrammarExamples new.
 	shape := example triangleWithLabel.
 	grammar := example triangleInlayGrammarWithLabels.
@@ -96,4 +96,37 @@ createMainRow
 	rightColumn addChild: reflectionBox.
 	rightColumn addChild: somePointsPresent.
 	rightColumn addChild: buttonRow.
+	
+		chooseShapeShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key c;
+				build);
+		name: 'chooseShape';
+		action: [ self chooseBaseShapeIn: mainRow space root ];
+		yourself.
+		
+		chooseGrammarShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key v;
+				build);
+		name: 'chooseGrammar';
+		action: [ self chooseGrammarIn: mainRow space root ];
+		yourself.
+		
+			chooseSelectorShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key b;
+				build);
+		name: 'chooseSelector';
+		action: [ self chooseMatchSelectionIn:mainRow space root.
+			 ];
+		yourself.
+		
+	
+	mainRow addShortcut: chooseGrammarShortcut .
+	mainRow addShortcut: chooseShapeShortcut .
+	mainRow addShortcut: chooseSelectorShortcut .
 	^ mainRow

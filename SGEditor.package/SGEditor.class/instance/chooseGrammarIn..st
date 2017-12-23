@@ -1,7 +1,6 @@
-as yet unclassified
-chooseConfigWindow
-	|container  shapeHolder ruleWidget configList config |	
-	configList := OrderedCollection new.
+dialog
+chooseGrammarIn: aWindow
+	|container  shapeHolder ruleWidget  |	
 		container := BlElement new
 		layout: (BlGridLayout new columnCount: 10; cellSpacing: 10);
 		background: Color yellow;
@@ -11,8 +10,8 @@ chooseConfigWindow
 			c linear weight: 1 ];
 		yourself.	
 		(SampleConfigurations  allSelectorsInProtocol: 'grammars') doWithIndex: [:selector :i|
+			|config|
 			config := SampleConfigurations new perform: selector.
-			configList add: config.
 			shapeHolder := BlElement new.
 			ruleWidget := SGRuleElement rule: config grammar rules first.
 			ruleWidget removeButtons .
@@ -20,12 +19,12 @@ chooseConfigWindow
 				child removeEventHandlersSuchThat: [:handler|true].
 				 ].
 			ruleWidget addEventHandlerOn: BlClickEvent  do: [:event| 
-					self loadGrammar: ((configList at: i) grammar).
-					window root removeChild: container.
+					self loadGrammar: (config grammar).
+					aWindow removeChild: container.
 				]. 
 			shapeHolder addChild: ruleWidget .
 			container addChild: shapeHolder .
 			].
 	
 container forceLayout .
-	window root addChild: container.
+	aWindow addChild: container.

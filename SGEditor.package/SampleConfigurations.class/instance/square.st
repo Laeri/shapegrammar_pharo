@@ -1,3 +1,3 @@
 shapes
 square
-	^ SGGrammarExamples new square
+	^ SGShapeExamples new square

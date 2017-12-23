@@ -1,3 +1,3 @@
 initialization
 initialize
-self random: Random new.
+random := Random new.

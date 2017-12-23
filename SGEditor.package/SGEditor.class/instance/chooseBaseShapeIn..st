@@ -1,9 +1,8 @@
-as yet unclassified
+dialog
 chooseBaseShapeIn: aWindow
 	| container |
-	
 	container := BlElement new
-		layout: (BlGridLayout new columnCount: 10; cellSpacing: 10);
+		layout: (BlGridLayout new columnCount: 5; cellSpacing: 10);
 		background: Color yellow;
 		constraintsDo: [ :c |
 			c horizontal matchParent.
@@ -15,15 +14,14 @@ chooseBaseShapeIn: aWindow
 
 		aShape := SampleConfigurations new perform: selector.
 
-		aShapeElement := SGShapeWidget alpha: aShape.
-		aShapeElement allChildrenBreadthFirstDo: [ :child|
-			child wantsMouse: false ].
-
+		aShapeElement := SGShapeElement shape: aShape.
+		aShapeElement constraintsDo:[:c|c horizontal fitContent . c vertical fitContent ].
+		aShapeElement removeEventHandlersSuchThat: [ :aHandler| true].
 		aShapeElement
 			addEventHandlerOn: BlClickEvent
 			do: [ :anEvent |
 				self loadShape: aShape.
-				aWindow root removeChild: container ]. 
+				aWindow removeChild: container ]. 
 		container addChild: aShapeElement ].
 
-	aWindow root addChild: container
+	aWindow addChild: container

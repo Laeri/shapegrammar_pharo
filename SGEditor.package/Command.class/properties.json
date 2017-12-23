@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "lw 12/16/2017 18:20",
 	"super" : "Object",
-	"category" : "SGEditor",
+	"category" : "SGEditor-Commands",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,4 +1,4 @@
-as yet unclassified
+loading
 loadShape: aShape
 	showShape shape: aShape.
 	shape := aShape

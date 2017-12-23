@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ChangeShapeCommand",
-	"category" : "SGEditor",
+	"category" : "SGEditor-Commands",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

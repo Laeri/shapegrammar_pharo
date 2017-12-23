@@ -5,7 +5,7 @@ initialize
 	
 	showPolygons := false.
 	
-	self layout: BlFitShapeLayout new.
+	self layout: BlFitLayout new .
 	self
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
