@@ -1,5 +1,6 @@
 dialog
 chooseMatchSelectionIn: aWindow
+
 	| container |
 	container := BlElement new
 		layout: (BlLinearLayout vertical);

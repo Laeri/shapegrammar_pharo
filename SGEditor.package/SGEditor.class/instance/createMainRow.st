@@ -1,6 +1,6 @@
 initialize-release
 createMainRow
-	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut |
+	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut chooseConfigShortcut |
 	example := SGGrammarExamples new.
 	shape := example triangleWithLabel.
 	grammar := example triangleInlayGrammarWithLabels.
@@ -84,7 +84,8 @@ createMainRow
 		do: [ :e | 
 			shapeMatch := grammar rules first selectMatchUsedIn: shape.
 			showShape match: shapeMatch.
-			showShape showCoordinates].
+			showShape showCoordinates
+			].
 		
 	leftColumn addChild: addNewRuleButton.
 	buttonRow addChild: resetShapeButton.
@@ -125,8 +126,19 @@ createMainRow
 			 ];
 		yourself.
 		
+			chooseConfigShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key x;
+				build);
+		name: 'chooseConfig';
+		action: [ self chooseSGConfigIn: mainRow space root.
+			 ];
+		yourself.
+		
 	
 	mainRow addShortcut: chooseGrammarShortcut .
 	mainRow addShortcut: chooseShapeShortcut .
 	mainRow addShortcut: chooseSelectorShortcut .
+	mainRow addShortcut: chooseConfigShortcut.
 	^ mainRow
