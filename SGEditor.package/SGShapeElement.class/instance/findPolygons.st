@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 findPolygons
 	<return: #SequenceableCollection of: #BlElement>
 

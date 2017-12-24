@@ -9,3 +9,4 @@ apply
 	
 	command := ChangeShapeCommand fromShapeDelta: shapeDelta.
 	command do.
+	editor onRuleApplied .

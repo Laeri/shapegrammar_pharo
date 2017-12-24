@@ -1,3 +1,3 @@
-as yet unclassified
+drawing-polygons
 switchPolygonDraw
 showPolygons ifTrue: [ self hidePolygons ] ifFalse:[self showPolygons].

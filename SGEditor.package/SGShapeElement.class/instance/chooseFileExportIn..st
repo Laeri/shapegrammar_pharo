@@ -1,4 +1,4 @@
-as yet unclassified
+export
 chooseFileExportIn: aWindow
 	| textElement container saveButton quickExportButton |
 	container := BlElement new

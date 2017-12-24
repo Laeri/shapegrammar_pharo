@@ -1,11 +1,9 @@
 initialization
 initialize
-	| createLineShortCut showPolygonShortcut exportPngShortcut |
+	| createLineShortCut showPolygonShortcut exportPngShortcut deleteShortcut |
 	super initialize.
-	
 	showPolygons := false.
-	
-	self layout: BlFitLayout new .
+	self layout: BlFitLayout new.
 	self
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
@@ -32,12 +30,13 @@ initialize
 				control;
 				build);
 		name: 'createLine';
-		action: [ clickSelectionHandler bothSelected
+		action: [ clickSelectionHandler areBothSelected
 				ifTrue: [ | first second |
 					first := clickSelectionHandler firstSelected userData at: #shapeGrammarPoint.
 					second := clickSelectionHandler secondSelected userData at: #shapeGrammarPoint.
+					(shape isPoint: first connectedTo: second) ifFalse:[ 
 					shape addLine: (SGLine from: first to: second).
-					clickSelectionHandler deselectFirst ] ];
+					clickSelectionHandler deselectFirst ] ]];
 		yourself.
 	showPolygonShortcut := BlShortcut new
 		combination:
@@ -47,17 +46,32 @@ initialize
 		name: 'showPolygon';
 		action: [ self switchPolygonDraw ];
 		yourself.
-		
-			exportPngShortcut := BlShortcut new
+	exportPngShortcut := BlShortcut new
 		combination:
 			(BlKeyCombination builder
 				key: Key e;
 				build);
 		name: 'exportPng';
 		action: [ self chooseFileExportIn: self space root.
-			
-			self exportPngNamed: 'test' size: 1000@1000  ];
+			self exportPngNamed: 'test' size: 1000 @ 1000 ];
+		yourself.
+	deleteShortcut := BlShortcut new
+		combination:
+			(BlKeyCombination builder
+				key: Key d;
+				build);
+		name: 'delete';
+		action: [ clickSelectionHandler areBothSelected
+				ifTrue: [ | first second |
+					first := clickSelectionHandler firstSelected userData at: #shapeGrammarPoint.
+					second := clickSelectionHandler secondSelected userData at: #shapeGrammarPoint.
+					(shape isPoint: first connectedTo: second)
+						ifTrue: [ shape removeLineFrom: first to: second ] ]
+				ifFalse: [ clickSelectionHandler firstSelected
+						ifNotNil: [ shape
+								removePoint: (clickSelectionHandler firstSelected userData at: #shapeGrammarPoint) ] ] ];
 		yourself.
 	self addShortcut: createLineShortCut.
 	self addShortcut: showPolygonShortcut.
-	self addShortcut: exportPngShortcut .
+	self addShortcut: exportPngShortcut.
+	self addShortcut: deleteShortcut

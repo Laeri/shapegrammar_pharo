@@ -11,7 +11,7 @@ triangleWithLabel
 	points add: pb.
 	points add: pc.
 	label := SGPolygonLabel new.
-	label color: Color red.
+	label color: Color random.
 	label polygonPoints
 		add: pa;
 		add: pb;

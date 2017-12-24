@@ -1,4 +1,4 @@
-as yet unclassified
+export
 exportPngNamed: aName size: aSize
 |exportElement exported folderPath fileEnding unusedIndex filePath |
 exportElement := SGShapeElement new.

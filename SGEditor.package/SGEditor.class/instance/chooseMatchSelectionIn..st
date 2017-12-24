@@ -3,7 +3,7 @@ chooseMatchSelectionIn: aWindow
 	| container |
 	container := BlElement new
 		layout: (BlLinearLayout vertical);
-		background: Color yellow;
+		background: (Color fromString: '7A8B8B');
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical matchParent ];

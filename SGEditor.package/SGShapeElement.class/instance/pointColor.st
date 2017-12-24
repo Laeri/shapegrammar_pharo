@@ -1,3 +1,3 @@
 instance creation
 pointColor
-	^ Color gray alpha: 0.5
+	^ Color gray alpha: 0.5 

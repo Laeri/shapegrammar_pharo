@@ -1,4 +1,4 @@
-as yet unclassified
+drawing-polygons
 hidePolygons
 |polygons|
 showPolygons := false.

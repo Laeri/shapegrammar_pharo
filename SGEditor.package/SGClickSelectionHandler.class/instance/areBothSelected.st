@@ -1,4 +1,4 @@
 select / deselect
-bothSelected
+areBothSelected
 <return: #Boolean>
 ^ firstSelected notNil and: secondSelected notNil.

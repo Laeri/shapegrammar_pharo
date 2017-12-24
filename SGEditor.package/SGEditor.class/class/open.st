@@ -9,7 +9,7 @@ open
 	anEditorElement
 		addShortcut:
 			(BlShortcut new
-				action: [ anEditor chooseGrammarIn: aWindow ];
+				action: [ anEditor chooseGrammarIn: aWindow root];
 				combination:
 					(BlKeyCombination builder
 						key: Key c;
@@ -17,7 +17,7 @@ open
 	anEditorElement
 		addShortcut:
 			(BlShortcut new
-				action: [ anEditor chooseBaseShapeIn: aWindow ];
+				action: [ anEditor chooseBaseShapeIn: aWindow root];
 				combination:
 					(BlKeyCombination builder
 						key: Key v;

@@ -9,7 +9,7 @@ createPolygon: aSGPolygon
 			blPoint := (self findPoints: aPolygonPoint) first.
 			blPointSize := blPoint width @ blPoint height.
 			blPointSize := (blPointSize /2) roundDownTo: 1.
-			blPoint position + blPointSize 
+			blPoint position + blPointSize
 			 ]).
 		
 	

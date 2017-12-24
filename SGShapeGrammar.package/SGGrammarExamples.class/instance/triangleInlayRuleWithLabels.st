@@ -59,13 +59,18 @@ label3 color:Color yellow.
 	label1 id: 1.
 	label2 id: 2.
 	label3 id: 3.
-	rule onLabel: SGPolygonLabel  do: [ :l|Transcript show: 'transform label '; show: l; cr.
+	"rule onLabel: SGPolygonLabel  do: [ :l|Transcript show: 'transform label '; show: l; cr.
 			Transcript show: l  id ; cr.
 				l id = 1 ifTrue:[l color: (l color muchLighter).].
 				l id = 2 ifTrue:[].
 				l id = 3 ifTrue:[l color: (l color muchDarker)].
 				
-		 ]. 
+		 ]." 
+	rule onLabel: SGPolygonLabel  do: [ :l|
+		|adjustValue col r g b|
+			 l color: ({(l color negated). (l color muchLighter ). (l color muchDarker ). (l color whiter) . (l color blacker).  } atRandom).
+			
+		 ].
 	alphaToBetaLabels := Dictionary new.
 	betaLabels := OrderedCollection new.
 	betaLabels add: label1; add: label2; add:label3.

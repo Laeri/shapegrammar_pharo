@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "lw 12/23/2017 11:01",
+	"super" : "Announcement",
+	"category" : "SGShapeGrammar-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shape",
+		"rule"
+	],
+	"name" : "SGRuleAnnouncement",
+	"type" : "normal"
+}

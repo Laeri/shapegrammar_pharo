@@ -6,4 +6,9 @@ dragStartEvent: anEvent
 	"element position in parent"
 	originalPosition := anEvent currentTarget position.
 
+	shapeElement clickSelectionHandler select: (anEvent currentTarget).
+	
 	anEvent consumed: true
+	
+
+	

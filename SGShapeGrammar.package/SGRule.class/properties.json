@@ -19,7 +19,8 @@
 		"labelTransforms",
 		"alphaToBetaLabels",
 		"alpha",
-		"beta"
+		"beta",
+		"announcer"
 	],
 	"name" : "SGRule",
 	"type" : "normal"

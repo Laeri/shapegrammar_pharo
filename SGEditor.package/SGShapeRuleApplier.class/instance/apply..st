@@ -1,4 +1,4 @@
 transformation
 apply: numberOfTimes
 
-numberOfTimes do: self apply.
+numberOfTimes do: [self apply].
