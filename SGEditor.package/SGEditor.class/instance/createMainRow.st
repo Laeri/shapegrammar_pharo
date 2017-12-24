@@ -1,9 +1,10 @@
 initialize-release
 createMainRow
-	| example mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut chooseConfigShortcut |
-	example := SGGrammarExamples new.
-	shape := example triangleWithLabel.
-	grammar := example triangleInlayGrammarWithLabels.
+	| exampleConfig mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut chooseConfigShortcut configurations |
+	configurations := SampleConfigurations new.
+	exampleConfig := configurations recursiveSquareConfig.
+	shape := exampleConfig shape.
+	grammar := exampleConfig grammar.
 	grammarElement := SGGrammarElement grammar: grammar.
 	mainRow := SGEditorElement new.
 	leftColumn := BlElement new layout: BlLinearLayout vertical.
@@ -40,11 +41,6 @@ createMainRow
 				contentElement: showShape).
 	applyRuleButton := SGButton fromString: 'apply rule'.
 	applyRuleButton addEventHandler: ruleApplier.
-	applyRuleButton
-		addEventHandlerOn: BlClickEvent
-		do: [ :e | 
-			showShape match: SGShapeMatch new.
-			showShape ].
 	addNewRuleButton := SGButton fromString: 'add new rule'.
 	addNewRuleButton
 		addEventHandlerOn: BlClickEvent
@@ -83,8 +79,8 @@ createMainRow
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
 			shapeMatch := grammar rules first selectMatchUsedIn: shape.
-			showShape match: shapeMatch.
-			showShape showCoordinates
+			"showShape match: shapeMatch.
+			showShape showCoordinates"
 			].
 		
 	leftColumn addChild: addNewRuleButton.

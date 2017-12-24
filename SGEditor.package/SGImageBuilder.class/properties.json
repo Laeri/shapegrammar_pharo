@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGEditor-Image",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"showPolygons",
+		"config",
+		"name",
+		"folder",
+		"from",
+		"to",
+		"by",
+		"filter",
+		"selector",
+		"size"
+	],
+	"name" : "SGImageBuilder",
+	"type" : "normal"
+}

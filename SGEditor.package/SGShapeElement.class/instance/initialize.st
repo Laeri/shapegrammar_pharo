@@ -2,6 +2,7 @@ initialization
 initialize
 	| createLineShortCut showPolygonShortcut exportPngShortcut deleteShortcut |
 	super initialize.
+	boundingSize := 500.
 	showPolygons := false.
 	self layout: BlFitLayout new.
 	self

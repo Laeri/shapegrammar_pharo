@@ -12,7 +12,8 @@
 		"firstSelected",
 		"secondSelected",
 		"clickSelectionHandler",
-		"showPolygons"
+		"showPolygons",
+		"boundingSize"
 	],
 	"name" : "SGShapeElement",
 	"type" : "normal"

@@ -1,3 +1,3 @@
-initialization
+accessing
 boundingSize
-	^ 500
+	^ boundingSize

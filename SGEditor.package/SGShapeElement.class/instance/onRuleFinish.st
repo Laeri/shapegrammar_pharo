@@ -1,4 +1,4 @@
 as yet unclassified
 onRuleFinish
-self hidePolygons.
-self showPolygons.
+"self hidePolygons.
+self showPolygons."
