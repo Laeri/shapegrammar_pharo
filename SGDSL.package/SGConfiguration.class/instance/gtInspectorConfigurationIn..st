@@ -1,5 +1,5 @@
 as yet unclassified
-gtInspectorGrammarIn: aComposite
+gtInspectorConfigurationIn: aComposite
 	<gtInspectorPresentationOrder: 0>
 
 	aComposite bloc

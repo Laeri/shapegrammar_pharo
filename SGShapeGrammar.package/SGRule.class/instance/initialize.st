@@ -1,7 +1,7 @@
 initialization
 initialize
 | bounds |
-matchSelector := SGBalancedSelector new.
+matchSelector := SGDegreeSelector  new.
 filter := SGMatchFilter new.
 bounds := SGPolygon new.
 bounds addPoint: (SGVector x:0.4 y: 0.4).

@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #SGDSL!
-SystemOrganization addCategory: 'SGDSL-Examples'!
+SystemOrganization addCategory: #'SGDSL-Examples'!

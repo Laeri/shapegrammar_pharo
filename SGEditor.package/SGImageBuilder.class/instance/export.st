@@ -44,6 +44,8 @@ export
 			(ChangeShapeCommand fromShapeDelta: delta) do.
 			stepsSinceApplication := stepsSinceApplication + 1.
 			(stepsSinceApplication >= by or: aStep = to)
-				ifTrue: [ baseElement updatePositions.
+				ifTrue: [
+					baseElement size: size.
+					baseElement updatePositions.
 					baseElement asSpartaForm writePNGFileNamed: path.
 					stepsSinceApplication := 0 ] ]
