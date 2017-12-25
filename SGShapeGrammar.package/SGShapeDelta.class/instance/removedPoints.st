@@ -1,0 +1,3 @@
+accessing
+removedPoints
+	^ removedShape points

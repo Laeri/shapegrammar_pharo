@@ -1,3 +1,3 @@
 accessing
-removedLines: anObject
-	removedLines := anObject
+removedLines: someLines
+	shapeDelta removed lines: someLines

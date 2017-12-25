@@ -14,7 +14,7 @@ storeMatchIfBest: match fromRule: rule
 		ifFalse: [ ^ self ].
 	bestScore := totalScore.
 	bestMatch := match"
-	rule addedVertices
+	rule addedPoints
 		do: [ :newP | 
 			match subToLocalMatrix transformTmp: newP.
 			match baseToLocalMatrix getInv transformTmp: newP.

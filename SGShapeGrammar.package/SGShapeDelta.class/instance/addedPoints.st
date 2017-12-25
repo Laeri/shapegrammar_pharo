@@ -1,0 +1,3 @@
+accessing
+addedPoints
+	^ addedShape points.

@@ -1,3 +1,3 @@
 accessing
 addedLines
-	^ addedLines
+	^ addedShape lines

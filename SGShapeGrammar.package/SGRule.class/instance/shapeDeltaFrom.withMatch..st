@@ -16,11 +16,11 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Add and remove Vertices/Lines"
 	removedLinesInBase := OrderedCollection new.
 	"Remove Lines"
-	removedVertices
+	self removedPoints
 		do: [ :removedV | 
 			tmpP := matchUsed alphaToBase at: removedV.
 			removedLinesInBase addAll: (shape linesFromOrTo: tmpP) ].
-	removedLines
+	self removedLines
 		do: [ :removedLine | 
 			tmpP1 := matchUsed alphaToBase at: removedLine from.
 			tmpP2 := matchUsed alphaToBase at: removedLine to.
@@ -31,8 +31,8 @@ shapeDeltaFrom: shape withMatch: matchUsed
 
 
 	"Remove Vertices"
-	removedVertices
-		do: [ :removed | shapeDelta removeVertex: (matchUsed alphaToBase at: removed) ].
+	self removedPoints
+		do: [ :removed | shapeDelta removePoint: (matchUsed alphaToBase at: removed) ].
 	blMatrix := BlMatrix2D new.
 	blMatrix sx: (baseToLocalMatrix at: 1 at: 1).
 	blMatrix sy: (baseToLocalMatrix at: 2 at: 2).
@@ -48,7 +48,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			shapeDelta movePoint: (matchUsed betaToBase at: movedPoint) toPosition: tmpP ].
 
 	"Add vertices"
-	addedVertices
+	self addedPoints
 		do: [ :pAdded | 
 			tmpP := SGVector new.
 			fromBetaToBase at: pAdded put: tmpP.	"new added points are also mapped to from beta points"
@@ -58,11 +58,11 @@ shapeDeltaFrom: shape withMatch: matchUsed
 			subToLocalMatrix transform: tmpP.
 			localToBaseMatrix transform: tmpP.
 			tmpP ageOfCreation: matchSelector currentAge.
-			shapeDelta addVertex: tmpP ].
+			shapeDelta addPoint: tmpP ].
 
 	"Then finally add the new lines"
 	"self halt."
-	addedLines
+	self addedLines
 		do: [ :addedLine | 
 			tmpP1 := fromBetaToBase at: addedLine from.
 			tmpP2 := fromBetaToBase at: addedLine to.

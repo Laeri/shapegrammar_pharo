@@ -15,7 +15,7 @@ allPointsTmpMatch: points in: otherPoints storeIn: matching
 					"self halt."
 					((matchedPoints size) > 1) ifTrue:[Transcript show:'More than one match found in point comparison'. ^false]
 					ifFalse:[(matchedPoints size) = 1 ifTrue:[
-							matching at: p1 put: (matchedPoints at: 1)]
+							matching at: p1 put: (matchedPoints first)]
 						ifFalse:[^ false]
 					 ]].
 			^ true

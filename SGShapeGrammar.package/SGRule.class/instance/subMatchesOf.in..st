@@ -41,6 +41,7 @@ subMatchesOf: subShape in: baseShape
 										x: p2 - p1
 										y: p3 - p1).
 									matchings add: match.
+									self newGeometryOf: match presentIn: baseShape givenRule: self.
 									match alphaToBaseLabels: (self collectLabelMatchesOf: match in: baseShape).
 									 ] ] ] ].
 	^ matchings

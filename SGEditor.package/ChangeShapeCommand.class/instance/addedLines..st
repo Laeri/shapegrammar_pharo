@@ -1,3 +1,3 @@
 accessing
-addedLines: anObject
-	addedLines := anObject
+addedLines: someLines
+	shapeDelta added lines: someLines

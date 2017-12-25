@@ -1,11 +1,11 @@
-instance creation
+as yet unclassified
 fromShapeDelta: shapeDelta
 	| command |
 
 	command := self new.
-	command addedPoints: shapeDelta addedVertices .
+	command addedPoints: shapeDelta addedPoints .
 	command addedLines: shapeDelta addedLines.
-	command removedPoints: shapeDelta removedVertices .
+	command removedPoints: shapeDelta removedPoints .
 	command removedLines: shapeDelta removedLines.
 	command newPositionsDict: shapeDelta movePointToDict .
 	command shape: shapeDelta shape.

@@ -1,3 +1,3 @@
 accessing
 removedLines
-	^ removedLines
+	^ removedShape lines

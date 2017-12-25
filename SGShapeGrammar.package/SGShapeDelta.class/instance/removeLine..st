@@ -1,3 +1,3 @@
 initialization
-removeLine: line
-removedLines add: line
+removeLine: aLine
+removedShape addLine: aLine

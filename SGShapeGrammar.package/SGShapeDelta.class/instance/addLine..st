@@ -1,3 +1,3 @@
 initialization
 addLine: line
-addedLines add:line.
+addedShape addLine: line.

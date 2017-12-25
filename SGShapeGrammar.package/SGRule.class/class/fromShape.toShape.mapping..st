@@ -1,4 +1,4 @@
-instance creation
+as yet unclassified
 fromShape: shape1 toShape: shape2 mapping: mapping
 |rule|
 rule := self new.

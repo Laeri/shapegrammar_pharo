@@ -7,10 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"currentAge",
-		"addedVertices",
-		"addedLines",
-		"removedVertices",
-		"removedLines",
+		"addedShape",
+		"removedShape",
 		"movePointToDict",
 		"shape",
 		"labelTransforms",

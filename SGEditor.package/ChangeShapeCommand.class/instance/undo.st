@@ -1,12 +1,11 @@
 undo-undo
 undo
-shape points removeAll: addedPoints .
-shape lines removeAll: addedLines.
+shape points removeAll: self addedPoints .
+shape lines removeAll: self addedLines.
 
-shape lines addAll: removedLinesAfterActionDo.
-shape points addAll: removedPoints .
+shape lines addAll: self removedLines.
+shape points addAll: self removedPoints .
 oldPositionsDict associationsDo: [ :assoc|
 	assoc key set: assoc value.
 	 ].
 
-widget invalidate.

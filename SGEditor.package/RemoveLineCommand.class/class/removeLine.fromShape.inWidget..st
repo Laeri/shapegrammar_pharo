@@ -1,4 +1,4 @@
-removing
+as yet unclassified
 removeLine: line fromShape: shape inWidget: widget
 |command|
 

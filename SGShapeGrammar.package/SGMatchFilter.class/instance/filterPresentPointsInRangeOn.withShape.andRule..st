@@ -14,6 +14,6 @@ filterPresentPointsInRangeOn: matchings withShape: shape andRule: rule
 							tmpP closeTo: shapeP precision: SGMatchSelector equalityRange . 
 							 ].
 				  ].
-			somePresentPoints ifTrue:[rule addedVertices anySatisfy: testBlock ] ifFalse:[rule addedVertices allSatisfy: testBlock ].
+			somePresentPoints ifTrue:[rule addedPoints anySatisfy: testBlock ] ifFalse:[rule addedPoints allSatisfy: testBlock ].
 			 ].
 	^ usableRules

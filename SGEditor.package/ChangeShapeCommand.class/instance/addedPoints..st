@@ -1,3 +1,3 @@
 accessing
-addedPoints: anObject
-	addedPoints := anObject
+addedPoints: somePoints
+	shapeDelta added points: somePoints

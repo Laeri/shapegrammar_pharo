@@ -1,4 +1,4 @@
-removing
+as yet unclassified
 removePoint: point fromShape: shape inWidget: widget
 |command|
 

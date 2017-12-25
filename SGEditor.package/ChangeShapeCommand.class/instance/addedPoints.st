@@ -1,3 +1,3 @@
 accessing
 addedPoints
-	^ addedPoints
+	^ shapeDelta added points
