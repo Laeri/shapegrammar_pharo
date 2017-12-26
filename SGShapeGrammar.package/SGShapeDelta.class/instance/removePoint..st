@@ -1,3 +1,3 @@
 initialization
 removePoint: aPoint
-removedShape add: aPoint.
+removedShape points add: aPoint.

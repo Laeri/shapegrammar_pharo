@@ -2,7 +2,7 @@ initialize-release
 createMainRow
 	| exampleConfig mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut chooseConfigShortcut configurations |
 	configurations := SampleConfigurations new.
-	exampleConfig := configurations recursiveSquareConfig.
+	exampleConfig := configurations hexagonTilingConfig.
 	shape := exampleConfig shape.
 	grammar := exampleConfig grammar.
 	grammarElement := SGGrammarElement grammar: grammar.

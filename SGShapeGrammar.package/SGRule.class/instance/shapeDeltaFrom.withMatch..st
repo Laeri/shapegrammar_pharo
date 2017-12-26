@@ -4,7 +4,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	tmpDelta := SGShapeDelta new.
 	matchSelector increaseAge.
 	self update.
-	
+
 	"Do custom tagging on shape or some other calculations based on the match selector"
 	matchSelector applyModeOnShape: shape withUsedMatch: matchUsed.
 	
