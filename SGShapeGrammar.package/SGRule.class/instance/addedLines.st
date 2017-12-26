@@ -1,3 +1,3 @@
 accessing
 addedLines
-	^ shapeDelta addedLines 
+	^ ruleDelta addedLines 

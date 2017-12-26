@@ -1,3 +1,3 @@
 removing
-removeLineFrom: p to: otherP
-	self removeLine: (self getLineFrom: p to: otherP)
+removeLineFrom: aPoint to: anotherPoint
+	self removeLine: (self getLineFrom: aPoint to: anotherPoint)

@@ -1,3 +1,3 @@
 accessing
 removedLines
-^ shapeDelta removed lines
+^ ruleDelta removed lines

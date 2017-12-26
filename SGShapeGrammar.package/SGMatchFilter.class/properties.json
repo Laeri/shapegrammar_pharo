@@ -7,8 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"intersection",
-		"somePresentPoints",
-		"allPresentPoints",
 		"pointsInsideBeta",
 		"rotations",
 		"reflections",
@@ -16,7 +14,8 @@
 		"bounds",
 		"filterAllOutside",
 		"filterSomeOutside",
-		"shouldFilterBounds"
+		"shouldFilterBounds",
+		"anyPresentGeometry"
 	],
 	"name" : "SGMatchFilter",
 	"type" : "normal"

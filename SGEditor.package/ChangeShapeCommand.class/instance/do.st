@@ -2,8 +2,9 @@ undo-undo
 do
 	shape addAllPoints: self addedPoints.
 	shape addAllLines: self addedLines.
+		shape removeAllLines: self removedLines.
 	shape removeAllPoints: self removedPoints.
-	shape removeAllLines: self removedLines.
+
 
 	newPositionsDict
 		keysAndValuesDo: [ :point :newPos | 

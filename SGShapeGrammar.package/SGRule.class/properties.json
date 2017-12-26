@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"alphaToBeta",
-		"shapeDelta",
 		"movedVertices",
 		"betaToAlpha",
 		"gridValues",
@@ -17,7 +16,8 @@
 		"alphaToBetaLabels",
 		"alpha",
 		"beta",
-		"announcer"
+		"announcer",
+		"ruleDelta"
 	],
 	"name" : "SGRule",
 	"type" : "normal"

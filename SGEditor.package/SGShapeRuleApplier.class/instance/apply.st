@@ -1,6 +1,5 @@
 transformation
 apply
-
 	| shapeDelta command |
 	shapeDelta := self editor hasShapeMatch
 		ifTrue: [ self editor grammar rules first shapeDeltaFrom: self editor shape withMatch: self editor shapeMatch ]

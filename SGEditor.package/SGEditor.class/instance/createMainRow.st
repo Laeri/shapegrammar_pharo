@@ -70,7 +70,7 @@ createMainRow
 	reflectionBox size: 150 @ 25.
 	somePointsPresent := NamedCheckbox
 		fromText: 'present points'
-		onToggleDo: [ :checked | grammar rules first filter somePresentPoints: checked ].
+		onToggleDo: [ :checked | grammar rules first filter anyPresentGeometry: checked ].
 	somePointsPresent size: 150 @ 25.
 	
 	
@@ -79,8 +79,8 @@ createMainRow
 		addEventHandlerOn: BlClickEvent
 		do: [ :e | 
 			shapeMatch := grammar rules first selectMatchUsedIn: shape.
-			"showShape match: shapeMatch.
-			showShape showCoordinates"
+			showShape match: shapeMatch.
+			showShape showCoordinates.
 			].
 		
 	leftColumn addChild: addNewRuleButton.

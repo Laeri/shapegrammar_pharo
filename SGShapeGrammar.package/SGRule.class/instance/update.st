@@ -1,7 +1,7 @@
 updating
 update
 |tmpP1 tmpP2|
-	shapeDelta := SGShapeDelta new.
+	ruleDelta := SGShapeDelta new.
 	movedVertices := OrderedCollection new.
 	"If a vertex was removed update the alphaToBeta, the entry of all alpha points to beta points
 	should be removed as well.

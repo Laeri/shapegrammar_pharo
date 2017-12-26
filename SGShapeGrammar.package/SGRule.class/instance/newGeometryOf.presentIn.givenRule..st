@@ -27,3 +27,4 @@ newGeometryOf: aSGShapeMatch presentIn: aSGShape givenRule: aSGRule
 					newToBaseLines at: aNewLine put: aMappedLine.
 				].
 		].
+	aSGShapeMatch lineMatch addAll: newToBaseLines.

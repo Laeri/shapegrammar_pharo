@@ -1,3 +1,3 @@
 accessing
 removedPoints: thePoints
-	shapeDelta removed points: thePoints.
+	ruleDelta removed points: thePoints.

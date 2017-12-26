@@ -1,3 +1,3 @@
 accessing
 removedPoints
-	^ shapeDelta removed points.
+	^ ruleDelta removed points.
