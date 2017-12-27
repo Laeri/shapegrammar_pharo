@@ -1,5 +1,6 @@
 config
 triangleInlayConfig
+<gtExample>
 	| config |
 	config := SGConfiguration new.
 	config grammar: SGGrammarExamples new triangleInlayGrammar.

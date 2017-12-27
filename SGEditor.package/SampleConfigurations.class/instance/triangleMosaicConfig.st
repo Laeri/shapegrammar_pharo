@@ -1,5 +1,6 @@
 config
 triangleMosaicConfig
+<gtExample>
 | dsl config grammar rule |
 dsl := SGDSL new.
 config := dsl config.

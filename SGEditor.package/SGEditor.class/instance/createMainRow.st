@@ -1,10 +1,13 @@
 initialize-release
 createMainRow
 	| exampleConfig mainRow rightColumn buttonRow applyRuleButton addNewRuleButton resetShapeButton intersectionBox rotationBox shearingBox reflectionBox somePointsPresent getNextMatchButton chooseShapeShortcut chooseGrammarShortcut chooseSelectorShortcut chooseConfigShortcut configurations |
+	
 	configurations := SampleConfigurations new.
 	exampleConfig := configurations hexagonTilingConfig.
-	shape := exampleConfig shape.
-	grammar := exampleConfig grammar.
+	shape ifNil: [ 
+	shape := exampleConfig shape.].
+	grammar ifNil: [
+	grammar := exampleConfig grammar.].
 	grammarElement := SGGrammarElement grammar: grammar.
 	mainRow := SGEditorElement new.
 	leftColumn := BlElement new layout: BlLinearLayout vertical.
