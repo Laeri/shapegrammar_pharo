@@ -17,7 +17,8 @@
 		"alpha",
 		"beta",
 		"announcer",
-		"ruleDelta"
+		"ruleDelta",
+		"optimization"
 	],
 	"name" : "SGRule",
 	"type" : "normal"

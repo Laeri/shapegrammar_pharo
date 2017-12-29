@@ -1,6 +1,6 @@
 config
 hexagonTilingConfig
-<gtExample> 
+<gtExample>  
 |config|
 config := SGConfiguration new.
 config shape: SGShapeExamples new hexagon.

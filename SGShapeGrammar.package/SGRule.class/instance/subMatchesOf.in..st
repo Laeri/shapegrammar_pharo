@@ -1,15 +1,14 @@
 testing
 subMatchesOf: subShape in: baseShape
-	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch fromBetaToBase |
+	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch fromBetaToBase testBlock |
 	subPoints := subShape points.
 	basePoints := baseShape points.
 	subTransform := SGMatrix p1: (subPoints at: 1) p2: (subPoints at: 2) p3: (subPoints at: 3).
 	subTransform invert.
 	subTransform transformAllTmp: subPoints.
 	matchings := OrderedCollection new.
-	self
-		forAllThreeDifferentIn: basePoints
-		do: [ :p1 :p2 :p3 | 
+	
+	testBlock := [ :p1 :p2 :p3 | 
 			match := SGShapeMatch new.
 			baseToLocalMatrix := SGMatrix p1: p1 p2: p2 p3: p3.
 			baseToLocalMatrix det = 0
@@ -44,4 +43,8 @@ subMatchesOf: subShape in: baseShape
 									self newGeometryOf: match presentIn: baseShape givenRule: self.
 									match alphaToBaseLabels: (self collectLabelMatchesOf: match in: baseShape).
 									 ] ] ] ].
+	
+	self
+		forAllThreeDifferentIn: basePoints
+		do: testBlock.
 	^ matchings

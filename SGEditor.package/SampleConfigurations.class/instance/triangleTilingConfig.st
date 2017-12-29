@@ -1,6 +1,6 @@
 config
 triangleTilingConfig
-<gtExample>
+<gtExample> 
 | dsl config grammar rule shape |
 dsl := SGDSL new.
 config := dsl config.
