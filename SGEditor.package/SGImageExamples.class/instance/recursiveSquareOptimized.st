@@ -1,17 +1,18 @@
 examples
 recursiveSquareOptimized
-<script: 'SGImageExamples new recursiveSquare'>
-| builder config |
-config := (SampleConfigurations new recursiveSquareConfig).
+<script: 'SGImageExamples new recursiveSquareOptimized'>
+| builder config|
+config := (SampleConfigurations new recursiveSquareHighRes).
+config grammar rules first matchSelector: (SGAgeSelector new).
 config grammar rules first optimization onlyNewPoints: true.
-"^ self minimumMaxAgeSelectionFrom: matches fromRule: rule  andShape: shape".
-config grammar rules matchSelector: (SGAgeSelector new).
 builder := SGImageBuilder new.
-builder from: 1 to: 5 by: 1;
+builder from: 1 to: 150 by: 1;
 		config: config;
 		doNotFilterIntersections;
-		name: 'recursive_square';
+		filterReflections ;
+		background: Color white;
+		name: 'recursive_square_optimized';
 		folder:'bsc-thesis/bsc-thesis/images/shapegrammars/';
-		size: 500@500;
-		selector: (SGBalancedSelector new);
+		size: 1000@1000;
+		selector: (SGAgeSelector new);
 		export.

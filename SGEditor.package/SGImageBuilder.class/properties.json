@@ -15,7 +15,8 @@
 		"by",
 		"filter",
 		"selector",
-		"size"
+		"size",
+		"backgroundColor"
 	],
 	"name" : "SGImageBuilder",
 	"type" : "normal"

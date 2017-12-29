@@ -1,0 +1,3 @@
+accessing
+newPoints
+	^ newPoints

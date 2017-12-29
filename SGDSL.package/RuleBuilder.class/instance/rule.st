@@ -2,6 +2,9 @@ accessing
 rule
 |pointMap|
 pointMap := Dictionary new.
+map ifEmpty: [ 
+	self error: 'No point mapping specified! in rule builder'
+	 ].
 map keysAndValuesDo: [ :alphaId :betaId|
 		pointMap at: (alpha pointOfId: alphaId ) put: (beta pointOfId: betaId ).
 	 ].

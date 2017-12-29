@@ -7,7 +7,9 @@ subMatchesOf: subShape in: baseShape
 	subTransform invert.
 	subTransform transformAllTmp: subPoints.
 	matchings := OrderedCollection new.
-	
+	optimization isInitialized ifFalse:[
+			optimization startWith: baseShape .
+		].
 	testBlock := [ :p1 :p2 :p3 | 
 			match := SGShapeMatch new.
 			baseToLocalMatrix := SGMatrix p1: p1 p2: p2 p3: p3.
@@ -44,7 +46,5 @@ subMatchesOf: subShape in: baseShape
 									match alphaToBaseLabels: (self collectLabelMatchesOf: match in: baseShape).
 									 ] ] ] ].
 	
-	self
-		forAllThreeDifferentIn: basePoints
-		do: testBlock.
+	optimization forAllThreeIn: baseShape  do: testBlock . 
 	^ matchings

@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"initialPoints",
+		"newPoints",
+		"onlyNewPoints",
+		"rule"
+	],
 	"name" : "SGRuleOptimization",
 	"type" : "normal"
 }
