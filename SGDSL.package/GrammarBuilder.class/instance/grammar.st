@@ -1,5 +1,5 @@
 operations
-create
+grammar
 |grammar|
 grammar := SGGrammar new.
 grammar name: name.

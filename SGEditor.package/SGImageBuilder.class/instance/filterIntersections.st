@@ -1,3 +1,3 @@
 accessing
 filterIntersections
-filter intersection: true.
+filter intersections: true.

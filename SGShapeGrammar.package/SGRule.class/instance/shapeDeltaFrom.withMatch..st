@@ -40,9 +40,7 @@ shapeDeltaFrom: shape withMatch: matchUsed
 	"Add vertices"
 	self addedPoints
 		do: [ :pAdded |
-			(matchUsed betaToBase includesKey: pAdded) ifTrue:[Transcript show: 'New point already in base shape'; cr.
-				"Reuse points which should be added but are already there"
-				
+			(matchUsed betaToBase includesKey: pAdded) ifTrue:[
 				] ifFalse: [  
 			tmpP := SGVector new.
 			fromBetaToBase at: pAdded put: tmpP.	"new added points are also mapped to from beta points"

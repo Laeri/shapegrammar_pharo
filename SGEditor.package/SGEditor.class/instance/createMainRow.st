@@ -57,7 +57,7 @@ createMainRow
 	
 	intersectionBox := NamedCheckbox
 		fromText: 'intersection'
-		onToggleDo: [ :checked | grammar rules first filter intersection: checked ].
+		onToggleDo: [ :checked | grammar rules first filter intersections: checked ].
 	intersectionBox size: 150 @ 25.
 	rotationBox := NamedCheckbox
 		fromText: 'rotation'

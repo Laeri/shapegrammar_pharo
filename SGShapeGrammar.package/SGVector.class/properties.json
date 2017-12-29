@@ -11,7 +11,8 @@
 		"zTmp",
 		"age",
 		"areaScore",
-		"ageOfCreation"
+		"ageOfCreation",
+		"data"
 	],
 	"name" : "SGVector",
 	"type" : "normal"

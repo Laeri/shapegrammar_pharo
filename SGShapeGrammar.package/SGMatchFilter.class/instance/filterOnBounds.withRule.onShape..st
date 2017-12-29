@@ -1,4 +1,4 @@
-as yet unclassified
+filters
 filterOnBounds: matches withRule: aRule onShape: aShape
 	| tmpP allOutside someOutside |
 	filterAllOutside := false.

@@ -14,7 +14,7 @@ allPointsTmpMatch: points in: otherPoints storeIn: matching
 					tmp2 x: p2 xTmp; y: p2 yTmp; z:1.
 					(tmp1 dist2D: tmp2) < epsilon ].
 			matchedPoints size > 1
-				ifTrue: [ Transcript show: 'More than one match found in point comparison'.
+				ifTrue: [ 
 					^ false ]
 				ifFalse: [ matchedPoints size = 1
 						ifTrue: [ matching at: p1 put: matchedPoints first ]

@@ -1,3 +1,3 @@
 as yet unclassified
 doNotFilterIntersections
-filter intersection: false.
+filter intersections: false.

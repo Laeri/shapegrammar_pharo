@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"averageAge",
+		"maxAge"
+	],
 	"name" : "SGAgeSelector",
 	"type" : "normal"
 }

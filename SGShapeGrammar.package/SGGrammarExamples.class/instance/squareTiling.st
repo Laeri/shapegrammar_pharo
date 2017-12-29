@@ -39,4 +39,4 @@ squareTiling
 			(#b -> #b).
 			(#c -> #c).
 			(#d -> #d)}.
-	^ grammar create
+	^ grammar grammar

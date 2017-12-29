@@ -1,6 +1,6 @@
 initialization
 initialize
-currentIdIndex := 0.
+currentIdIndex := 1.
 idToPoints := Dictionary new.
 lines := OrderedCollection new.
 labels := OrderedCollection new.

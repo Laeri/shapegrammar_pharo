@@ -1,4 +1,4 @@
-as yet unclassified
+filters
 filterPresentGeometryIn: matchings withShape: shape andRule: rule
 	| usableRules localToBaseMatrix subToLocalMatrix tmpP pointMatchBlock |
 	"or if any vertex is already present"

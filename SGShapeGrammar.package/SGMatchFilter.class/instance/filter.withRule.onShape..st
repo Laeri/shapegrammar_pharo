@@ -1,4 +1,4 @@
-accessing
+filters
 filter: matches withRule: rule onShape: shape
 	| usableRules decomposition sgMatrix blMatrix1 blMatrix2 reject |
 	usableRules := matches.

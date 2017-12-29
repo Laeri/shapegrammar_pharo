@@ -25,4 +25,4 @@ triangleInlayConfig
 		map: #a -> #a;
 		map: #b -> #b;
 		map: #c -> #c.
-	^ config create
+	^ config grammar

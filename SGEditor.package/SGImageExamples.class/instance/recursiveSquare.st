@@ -8,7 +8,7 @@ builder from: 1 to: 5 by: 1;
 		doNotFilterIntersections;
 		filterReflections;
 		name: 'recursive_square';
-		folder:'../Examples/';
+		folder:'bsc-thesis/bsc-thesis/images/shapegrammars/';
 		size: 500@500;
 		selector: (SGBalancedSelector new);
 		export.

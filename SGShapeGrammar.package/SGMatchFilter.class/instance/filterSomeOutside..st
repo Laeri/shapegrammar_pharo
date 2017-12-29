@@ -1,3 +1,3 @@
-accessing
+filtering-options
 filterSomeOutside: anObject
 	filterSomeOutside := anObject

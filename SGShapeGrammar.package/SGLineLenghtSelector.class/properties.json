@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"minLength"
+	],
 	"name" : "SGLineLenghtSelector",
 	"type" : "normal"
 }

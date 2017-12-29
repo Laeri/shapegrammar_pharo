@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 pointOfId: id
 ^ idToPoints at: id.

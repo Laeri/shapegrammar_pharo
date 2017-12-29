@@ -14,6 +14,7 @@ export
 	alphaElement shape: config grammar rules first alpha.
 	betaElement shape: config grammar rules first beta.
 	baseElement shape: config shape.
+	showPolygons ifTrue:[baseElement switchPolygonDraw ].
 	fileEnding := '.png'.
 	filePath := folder , name , '/'.
 	filePath asFileReference exists
@@ -29,6 +30,7 @@ export
 	path := '' , filePath , name , '_beta' , fileEnding.
 	betaElement updatePositions.
 	betaElement asSpartaForm writePNGFileNamed: path.
+
 	stepsSinceApplication := by.
 	from > 1
 		ifTrue: [ 1 to: from - 1 do: [ :aStep | 

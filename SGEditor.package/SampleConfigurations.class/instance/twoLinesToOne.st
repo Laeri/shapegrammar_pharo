@@ -11,4 +11,4 @@ rule alpha lines: {#a->#b . #b->#c}.
 rule beta points: {#a->(0.1@0.1). #b->(0.1@0.9)}.
 rule beta lines: { #a->#b }.
 rule map: {#a->#a. #b->#b  }. 
-^ config create.
+^ config grammar.

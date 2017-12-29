@@ -46,4 +46,4 @@ hexagonTiling
 			(#i -> #j).
 			(#j -> #d)}.
 	rule map: { #a -> #a. #b -> #b. #c -> #c. #d -> #d. #e -> #e. #f -> #f }.
-	^ grammar create
+	^ grammar grammar

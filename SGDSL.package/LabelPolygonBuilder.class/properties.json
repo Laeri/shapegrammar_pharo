@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SGDSL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"points",
+		"idToPoint"
+	],
+	"name" : "LabelPolygonBuilder",
+	"type" : "normal"
+}

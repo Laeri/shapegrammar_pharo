@@ -8,7 +8,7 @@ randomChoiceOnTriangleInlay
 		config: SampleConfigurations new triangleInlayConfig;
 		filterIntersections;
 		name: 'triangle_inlay_random';
-		folder: '../Examples/';
+		folder: 'bsc-thesis/bsc-thesis/images/shapegrammars/';
 		size: 500 @ 500;
 		selector: SGRandomSelector new;
 		export

@@ -1,7 +1,7 @@
 operations
-create
+config
 |config|
 config := SGConfiguration new.
-config grammar: (self grammar) create.
+config grammar: (self grammar) grammar.
 config shape: baseBuilder shape.
 ^ config.

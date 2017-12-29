@@ -1,4 +1,4 @@
-instance creation
+as yet unclassified
 new
 	|t|
 	t := super new.
