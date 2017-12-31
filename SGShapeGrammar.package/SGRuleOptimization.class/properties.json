@@ -9,7 +9,11 @@
 		"initialPoints",
 		"newPoints",
 		"onlyNewPoints",
-		"rule"
+		"rule",
+		"useTreeStructure",
+		"oldNodes",
+		"newNodes",
+		"betaNodeShapes"
 	],
 	"name" : "SGRuleOptimization",
 	"type" : "normal"

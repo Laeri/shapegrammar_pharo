@@ -12,5 +12,6 @@ filter bounds: bounds.
 filter bounds: bounds.
 labelTransforms := Dictionary new.
 alphaToBetaLabels := Dictionary new.
+alphaToBeta := Dictionary new.
 optimization := SGRuleOptimization new.
 optimization rule: self.

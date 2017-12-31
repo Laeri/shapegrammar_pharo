@@ -9,7 +9,8 @@
 		"alpha",
 		"beta",
 		"map",
-		"rule"
+		"rule",
+		"automap"
 	],
 	"name" : "RuleBuilder",
 	"type" : "normal"

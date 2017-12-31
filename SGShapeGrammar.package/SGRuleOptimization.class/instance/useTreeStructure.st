@@ -1,0 +1,3 @@
+accessing
+useTreeStructure
+	^ useTreeStructure

@@ -4,9 +4,9 @@ export
 	alphaElement := SGShapeElement new.
 	betaElement := SGShapeElement new.
 	baseElement := SGShapeElement new.
-	
+	backgroundColor ifNotNil: [
 	baseElement background: backgroundColor .
-	
+	].
 	config grammar rules first filter: filter.
 	alphaElement size: size.
 	betaElement size: size.

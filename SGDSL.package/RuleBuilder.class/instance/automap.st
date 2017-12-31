@@ -1,0 +1,3 @@
+accessing
+automap
+automap := true.

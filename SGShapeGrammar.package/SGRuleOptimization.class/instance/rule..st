@@ -1,3 +1,3 @@
 accessing
 rule: anObject
-	rule := anObject
+	rule := anObject.
