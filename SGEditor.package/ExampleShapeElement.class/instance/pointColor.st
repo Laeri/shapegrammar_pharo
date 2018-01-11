@@ -1,0 +1,3 @@
+initialization
+pointColor
+	^ Color red

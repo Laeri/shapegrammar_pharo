@@ -1,0 +1,3 @@
+accessing
+lineColor
+^ Color red

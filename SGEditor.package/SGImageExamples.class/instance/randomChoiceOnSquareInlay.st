@@ -8,7 +8,7 @@ randomChoiceOnSquareInlay
 		config: SampleConfigurations new squareConfig;
 		doNotFilterIntersections;
 		name: 'square_inlay_random';
-		folder: 'bsc-thesis/bsc-thesis/images/shapegrammars/';
+		folder: self baseFolder;
 		size: 500 @ 500;
 		selector: SGRandomSelector new;
 		export

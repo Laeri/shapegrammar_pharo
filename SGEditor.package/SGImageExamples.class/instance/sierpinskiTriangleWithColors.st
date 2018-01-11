@@ -8,7 +8,7 @@ builder from: 1 to: 5 by: 1;
 		doNotFilterIntersections;
 		filterReflections;
 		name: 'sierpinski_triangle_colors';
-		folder:'bsc-thesis/bsc-thesis/images/shapegrammars/';
+		folder: self baseFolder;
 		size: 500@500;
 		showPolygons ;
 		selector: (SGBalancedSelector new);

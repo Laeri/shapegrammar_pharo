@@ -3,7 +3,7 @@ sampleShapes
 <script: 'SGImageExamples new sampleShapes'>
 | builder shape blShape basePath name |
 builder := SGImageBuilder new.
-basePath := 'bsc-thesis/bsc-thesis/images/shapegrammars/sampleShapes/'.
+basePath := self baseFolder ,'example_shapes/'.
 builder recreateDirectory: basePath.
 
 shape := ShapeBuilder new.

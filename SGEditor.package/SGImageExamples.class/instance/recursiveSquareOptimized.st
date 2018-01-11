@@ -12,7 +12,7 @@ builder from: 1 to: 150 by: 1;
 		filterReflections ;
 		background: Color white;
 		name: 'recursive_square_optimized';
-		folder:'bsc-thesis/bsc-thesis/images/shapegrammars/';
+		folder: self baseFolder;
 		size: 1000@1000;
 		selector: (SGAgeSelector new);
 		export.

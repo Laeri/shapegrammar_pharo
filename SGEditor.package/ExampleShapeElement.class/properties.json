@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "BlElement",
 	"category" : "SGEditor-Examples",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"baseFolder"
+		"shape"
 	],
-	"name" : "SGImageExamples",
+	"name" : "ExampleShapeElement",
 	"type" : "normal"
 }

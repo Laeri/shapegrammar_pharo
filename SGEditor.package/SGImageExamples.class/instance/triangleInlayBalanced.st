@@ -8,7 +8,7 @@ builder from: 1 to: 35 by: 5;
 		doNotFilterIntersections;
 		filterReflections;
 		name: 'triangle_inlay_balanced';
-		folder:'bsc-thesis/bsc-thesis/images/shapegrammars/';
+		folder: self baseFolder;
 		size: 500@500;
 		selector: (SGBalancedSelector new);
 		export.
