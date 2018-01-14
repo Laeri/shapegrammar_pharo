@@ -11,7 +11,7 @@ sierpinskiColor
 			(#c -> (0.5 @ 0.75 sqrt))}.
 	rule alpha lines: {#a -> #b. #b ->#c. #c -> #a}.
 	labelAlpha := SGPolygonLabel new.
-	labelAlpha points: { rule alpha pointOfId: #a. rule alpha pointOfId: #b. rule alpha pointOfId: #c }.
+	labelAlpha polygonPoints: { rule alpha pointOfId: #a. rule alpha pointOfId: #b. rule alpha pointOfId: #c }.
 	label1 := SGPolygonLabel new.
 	label2 := SGPolygonLabel new.
 	label3 := SGPolygonLabel new.

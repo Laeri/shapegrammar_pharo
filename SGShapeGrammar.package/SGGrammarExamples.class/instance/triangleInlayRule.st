@@ -1,4 +1,4 @@
-TriangleInlayGrammar
+grammars
 triangleInlayRule
 	<gtExample>
 

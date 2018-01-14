@@ -1,3 +1,3 @@
 filtering
 getMatch: matches fromRule: rule andShape: anObject
-^ matches atRandom .
+^ matches atRandom: random .

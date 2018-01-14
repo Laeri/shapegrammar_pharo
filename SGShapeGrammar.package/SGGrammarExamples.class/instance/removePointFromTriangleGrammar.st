@@ -1,4 +1,4 @@
-removing
+grammars
 removePointFromTriangleGrammar
 	<gtExample>
 	| pointMap pointsR1 linesR1 pointsR2 linesR2 rule grammar |

@@ -2,7 +2,7 @@ examples
 triangleInlayTreeOptimized
 <script: 'SGImageExamples new triangleInlayTreeOptimized'>
 | builder config |
-builder := SGImageBuilder new.
+"builder := SGImageBuilder new.
 config := (SampleConfigurations new triangleInlayConfig ).
 config grammar rules first optimization useTreeStructure: true.
 config grammar rules first optimization onlyNewPoints: false.
@@ -14,4 +14,4 @@ builder from: 1 to: 5 by: 1;
 		folder: self baseFolder;
 		size: 500@500;
 		selector: (SGBalancedSelector new);
-		export.
+		export."

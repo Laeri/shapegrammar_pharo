@@ -8,6 +8,7 @@ export
 	baseElement background: backgroundColor .
 	].
 	config grammar rules first filter: filter.
+	config grammar rules first matchSelector: selector.
 	alphaElement size: size.
 	betaElement size: size.
 	baseElement size: size.
@@ -26,12 +27,18 @@ export
 			filePath asFileReference createDirectory ].
 	path := '' , filePath , name , '_' , 0 printString , fileEnding.
 	baseElement updatePositions.
+		colour ifTrue:[
+						baseElement showPolygons .
+						].
 	baseElement asSpartaForm writePNGFileNamed: path.
 	path := '' , filePath , name , '_alpha' , fileEnding.
 	alphaElement updatePositions.
 	alphaElement asSpartaForm writePNGFileNamed: path.
 	path := '' , filePath , name , '_beta' , fileEnding.
 	betaElement updatePositions.
+		colour ifTrue:[
+						baseElement showPolygons .
+						].
 	betaElement asSpartaForm writePNGFileNamed: path.
 
 	stepsSinceApplication := by.
@@ -52,5 +59,8 @@ export
 				ifTrue: [
 					baseElement size: size.
 					baseElement updatePositions.
+					colour ifTrue:[
+						baseElement showPolygons .
+						].
 					baseElement asSpartaForm writePNGFileNamed: path.
 					stepsSinceApplication := 0 ] ]

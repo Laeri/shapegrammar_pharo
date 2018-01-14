@@ -1,6 +1,6 @@
 examples
-triangleInlayAgeSelector
-<script: 'SGImageExamples new triangleInlayAgeSelector'>
+triangleInlayColoured1
+<script: 'SGImageExamples new triangleInlayColoured1'>
 | builder |
 builder := SGImageBuilder new.
 builder from: 1 to: 25 by: 5;

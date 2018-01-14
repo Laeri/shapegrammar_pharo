@@ -1,4 +1,4 @@
-RecursiveSquareGrammar
+grammars
 recursiveSquareGrammar
 <gtExample>
 | grammar rule |

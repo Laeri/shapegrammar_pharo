@@ -8,7 +8,9 @@
 	"instvars" : [
 		"equalityRange",
 		"currentAge",
-		"preferMaxScore"
+		"preferMaxScore",
+		"random",
+		"seed"
 	],
 	"name" : "SGMatchSelector",
 	"type" : "normal"

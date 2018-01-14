@@ -1,4 +1,4 @@
-SquareInlayGrammar
+grammars
 squareRule
 	<gtExample> 
 	| points lines pointMap pointsR1 linesR1 pointsR2 linesR2 rule |

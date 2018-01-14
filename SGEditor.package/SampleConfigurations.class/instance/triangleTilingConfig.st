@@ -1,4 +1,4 @@
-config
+tiling
 triangleTilingConfig
 <gtExample> 
 | dsl config grammar rule shape |

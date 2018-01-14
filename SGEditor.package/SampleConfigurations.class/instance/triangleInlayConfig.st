@@ -1,4 +1,4 @@
-config
+inlay
 triangleInlayConfig
 <gtExample> 
 	| config |

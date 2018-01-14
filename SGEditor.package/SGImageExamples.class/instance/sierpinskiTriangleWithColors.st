@@ -1,4 +1,4 @@
-grammars
+examples
 sierpinskiTriangleWithColors
 <script: 'SGImageExamples new sierpinskiTriangleWithColors'>
 | builder |
@@ -7,6 +7,7 @@ builder from: 1 to: 5 by: 1;
 		config: (SampleConfigurations new sierpinskiInlayConfig);
 		doNotFilterIntersections;
 		filterReflections;
+		colour;
 		name: 'sierpinski_triangle_colors';
 		folder: self baseFolder;
 		size: 500@500;

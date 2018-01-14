@@ -1,4 +1,4 @@
-classics
+grammars
 sierpinskiInlay
 <gtExample>
 	| grammar rule |

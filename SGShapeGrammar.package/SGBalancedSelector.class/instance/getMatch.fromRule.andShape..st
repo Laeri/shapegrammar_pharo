@@ -9,7 +9,7 @@ getMatch: matches fromRule: rule andShape: shape
 		do: [ :match | 
 			matchedPoints := match matchedBasePoints.
 			ageSum := 0.
-			matchedPoints do: [ :p | ageSum := ageSum + (p ageOfCreation) ].
+			matchedPoints do: [ :p | ageSum := ageSum + (p ageOfCreation). Transcript show: (p ageOfCreation ) ].
 			matchToAgeSum at: match put: ageSum.
 			ageSumToBin at: ageSum ifAbsent: [ageSumToBin at: ageSum put: OrderedCollection new].
 			(ageSumToBin at: ageSum) add: match.

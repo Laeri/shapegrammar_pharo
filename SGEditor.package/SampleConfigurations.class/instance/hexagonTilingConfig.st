@@ -1,4 +1,4 @@
-config
+tiling
 hexagonTilingConfig
 <gtExample>  
 |config|

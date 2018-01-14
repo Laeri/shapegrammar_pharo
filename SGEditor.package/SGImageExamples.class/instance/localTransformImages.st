@@ -8,7 +8,7 @@ shape := SGShapeExamples new triangle .
 blShape := ExampleShapeElement new.
 self halt.
 blShape shape: shape.
-path := self baseFolder.
+path := self baseFolder,'example_shapes/'.
 builder recreateDirectory: path.
 name := 'original'.
 builder save: blShape to: path, name.

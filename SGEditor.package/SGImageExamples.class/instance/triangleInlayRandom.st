@@ -1,6 +1,6 @@
 examples
-randomChoiceOnTriangleInlay
-	<script: 'SGImageExamples new randomChoiceOnTriangleInlay'>
+triangleInlayRandom
+	<script: 'SGImageExamples new triangleInlayRandom'>
 	| builder |
 	builder := SGImageBuilder new.
 	builder
@@ -10,5 +10,5 @@ randomChoiceOnTriangleInlay
 		name: 'triangle_inlay_random';
 		folder: self baseFolder;
 		size: 500 @ 500;
-		selector: SGRandomSelector new;
+		selector: (SGRandomSelector onSeed: 1);
 		export

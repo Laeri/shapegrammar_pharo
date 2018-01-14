@@ -1,4 +1,4 @@
-grammars
+examples
 sierpinskiTriangle
 <script: 'SGImageExamples new sierpinskiTriangle'>
 | builder |
