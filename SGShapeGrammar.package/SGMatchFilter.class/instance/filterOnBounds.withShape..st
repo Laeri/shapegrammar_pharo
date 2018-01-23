@@ -1,5 +1,5 @@
 filters
-filterOnBounds: matches withRule: aRule onShape: aShape
+filterOnBounds: matches withShape: aShape
 	| tmpP allOutside someOutside |
 	filterAllOutside := false.
 	filterSomeOutside := true.
@@ -8,7 +8,7 @@ filterOnBounds: matches withRule: aRule onShape: aShape
 				reject: [ :aMatch | 
 					allOutside := true.
 					someOutside := false.
-					aRule beta points
+					(self rule) beta points
 						do: [ :betaP | 
 							tmpP := betaP deepCopy.
 							aMatch subToLocalMatrix transform: tmpP.

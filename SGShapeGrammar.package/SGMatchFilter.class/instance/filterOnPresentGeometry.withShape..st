@@ -1,5 +1,5 @@
 filters
-filterPresentGeometryIn: matchings withShape: shape andRule: rule
+filterOnPresentGeometry: matchings withShape: shape
 	| usableRules localToBaseMatrix subToLocalMatrix tmpP pointMatchBlock |
 	"or if any vertex is already present"
 	usableRules := matchings

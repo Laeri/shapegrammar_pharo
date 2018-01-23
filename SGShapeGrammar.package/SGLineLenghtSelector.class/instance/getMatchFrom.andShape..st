@@ -1,5 +1,5 @@
 filtering
-getMatch: matches fromRule: rule andShape: shape
+getMatchFrom: matches andShape: shape
 	| lines1 lines2 length1 length2 lengths1 lengths2 lengthDiff1 lengthDiff2 |
 	"Either do this in alpha shape or to be generated beta shape"
 	"Sort based on total length"

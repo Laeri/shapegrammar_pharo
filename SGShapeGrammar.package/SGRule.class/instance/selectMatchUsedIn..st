@@ -4,9 +4,8 @@ selectMatchUsedIn: shape
 	self update.
 	matchings := self matchingsIn: shape.
 	matchings ifEmpty: [ self error: 'No matchings found for rule' ].
-	usableRules := filter filter: matchings withRule: self onShape: shape.
+	usableRules := filter filter: matchings withShape: shape.
 	matchUsed := matchSelector
-		getMatch: usableRules
-		fromRule: self
+		getMatchFrom: usableRules
 		andShape: shape.
 	^ matchUsed

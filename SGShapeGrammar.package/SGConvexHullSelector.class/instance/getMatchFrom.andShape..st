@@ -1,5 +1,5 @@
 filtering
-getMatch: matches fromRule: rule andShape: shape
+getMatchFrom: matches andShape: shape
 	|hull1 hull2 area1 area2 |
 	
 	matches sort: [ :m1 :m2|

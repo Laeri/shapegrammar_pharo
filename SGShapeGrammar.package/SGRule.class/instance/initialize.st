@@ -2,7 +2,8 @@ initialization
 initialize
 | bounds |
 matchSelector := SGAgeSelector  new.
-filter := SGMatchFilter new.
+matchSelector rule: self.
+filter := SGMatchFilter rule: self.
 bounds := SGPolygon new.
 bounds addPoint: (SGVector x:0.4 y: 0.4).
 bounds addPoint: (SGVector x:0.6 y: 0.4).

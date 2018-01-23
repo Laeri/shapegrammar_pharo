@@ -1,9 +1,8 @@
 initialization
 setState: aBool
-checked := aBool.
+	checked := aBool.
 	aBool
-		ifTrue: [ 
-			self background: Color white.
+		ifTrue: [ self background: Color white.
 			self
 				addChild:
 					(BlLineElement new
@@ -18,5 +17,7 @@ checked := aBool.
 						toAnchor: (BlAbsolutePositionAnchor position: 0 @ self extent y);
 						border: (BlBorder paint: Color red width: 4);
 						yourself) ]
-		ifFalse: [ self background: Color white.self removeChildren ].
-	onToggleBlock ifNotNil: [ onToggleBlock cull: checked ]
+		ifFalse: [ self background: Color white.
+			self removeChildren ].
+	onToggleBlock ifNotNil: [ onToggleBlock cull: checked ].
+	self addBorder

@@ -1,5 +1,5 @@
 filtering
-getMatch: matches fromRule: rule andShape: shape
+getMatchFrom: matches andShape: shape
 bestMatch := matches first.
 matches do:[:match|
 	self storeMatchIfBest: match fromRule: rule.

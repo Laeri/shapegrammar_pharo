@@ -1,3 +1,0 @@
-filtering-options
-shearing
-	^ shearing

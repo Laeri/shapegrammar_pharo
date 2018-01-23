@@ -7,9 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"checked",
-		"onToggleBlock",
-		"textElement",
-		"text"
+		"onToggleBlock"
 	],
 	"name" : "Checkbox",
 	"type" : "normal"

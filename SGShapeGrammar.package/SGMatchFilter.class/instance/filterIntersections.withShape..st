@@ -1,9 +1,9 @@
 filters
-filterIntersections: matches shape: shape toShape: toShape
+filterIntersections: matches withShape: shape 
 	| tmpP1 tmpP2 localToBaseMatrix subToLocalMatrix tmpP3 tmpP4 |
 	 ^ matches
 				reject: [ :match | 
-					toShape lines
+					(rule beta) lines
 						anySatisfy: [ :toLine | 
 							tmpP1 := toLine from deepCopy.
 							tmpP2 := toLine to deepCopy.

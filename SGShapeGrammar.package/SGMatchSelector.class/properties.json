@@ -10,7 +10,8 @@
 		"currentAge",
 		"preferMaxScore",
 		"random",
-		"seed"
+		"seed",
+		"rule"
 	],
 	"name" : "SGMatchSelector",
 	"type" : "normal"

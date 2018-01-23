@@ -63,8 +63,7 @@ createMainRow
 		fromText: 'rotation'
 		onToggleDo: [ :checked | grammar rules first filter rotations: checked ].
 	rotationBox size: 150 @ 25.
-	shearingBox := NamedCheckbox
-		fromText: 'shearing'
+	shearingBox := NamedCheckbox fromText: 'shearing'
 		onToggleDo: [ :checked | grammar rules first filter shearing: checked ].
 	shearingBox size: 150 @ 25.
 	reflectionBox := NamedCheckbox
