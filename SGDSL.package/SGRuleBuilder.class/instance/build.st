@@ -1,8 +1,8 @@
 accessing
-rule
+build
 	| pointMap |
 	pointMap := Dictionary new.
-	rule := SGRule fromShape: alpha shape toShape: beta shape.
+	rule := SGRule fromShape: alpha build toShape: beta build.
 	automap
 		ifTrue: [ rule alpha points
 				do: [ :alphaPoint | 
@@ -18,4 +18,6 @@ rule
 			[ :alphaId :betaId | pointMap at: (alpha pointOfId: alphaId) put: (beta pointOfId: betaId) ].
 	rule alphaToBeta: pointMap.
 	rule update.
+	filter ifNotNil: [ rule filter: filter ].
+	matchSelector ifNotNil: [ rule matchSelector: matchSelector ].
 	^ rule

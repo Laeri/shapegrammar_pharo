@@ -1,3 +1,3 @@
 instance creation
 grammar
-^ grammarBuilder .
+^ grammarBuilder.

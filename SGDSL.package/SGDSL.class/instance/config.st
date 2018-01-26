@@ -1,3 +1,3 @@
 accessing
 config
-^ ConfigurationBuilder new.
+^ SGConfigurationBuilder new.

@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"ruleBuilders",
-		"name"
+		"grammarBuilder",
+		"baseBuilder"
 	],
-	"name" : "GrammarBuilder",
+	"name" : "SGConfigurationBuilder",
 	"type" : "normal"
 }

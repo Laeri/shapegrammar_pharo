@@ -1,6 +1,6 @@
 instance creation
 newRule
 	| ruleBuilder |
-	ruleBuilder := RuleBuilder new.
+	ruleBuilder := SGRuleBuilder new.
 	ruleBuilders add: ruleBuilder.
 	^ ruleBuilder

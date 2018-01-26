@@ -6,9 +6,14 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"points",
-		"idToPoint"
+		"alpha",
+		"beta",
+		"map",
+		"rule",
+		"automap",
+		"filter",
+		"matchSelector"
 	],
-	"name" : "LabelPolygonBuilder",
+	"name" : "SGRuleBuilder",
 	"type" : "normal"
 }

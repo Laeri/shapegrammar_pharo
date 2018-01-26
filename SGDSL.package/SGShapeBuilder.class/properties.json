@@ -12,6 +12,6 @@
 		"shape",
 		"labels"
 	],
-	"name" : "ShapeBuilder",
+	"name" : "SGShapeBuilder",
 	"type" : "normal"
 }

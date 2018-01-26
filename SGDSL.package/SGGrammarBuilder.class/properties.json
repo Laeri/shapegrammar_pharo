@@ -6,12 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"alpha",
-		"beta",
-		"map",
-		"rule",
-		"automap"
+		"ruleBuilders",
+		"name"
 	],
-	"name" : "RuleBuilder",
+	"name" : "SGGrammarBuilder",
 	"type" : "normal"
 }

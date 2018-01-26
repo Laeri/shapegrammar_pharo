@@ -1,4 +1,4 @@
-grammars
+grammarExamples
 triangleInlayConfig
 <gtExample>
 	| dsl rule grammar config |

@@ -1,3 +1,3 @@
 instance creation
 newShape
-^ ShapeBuilder new.
+^ SGShapeBuilder new.

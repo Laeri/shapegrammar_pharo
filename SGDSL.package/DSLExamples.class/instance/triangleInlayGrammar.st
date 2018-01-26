@@ -1,4 +1,4 @@
-TriangleInlayGrammar
+grammarExamples
 triangleInlayGrammar
 	<gtExample>
 	| dsl rule grammar |

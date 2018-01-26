@@ -1,8 +1,8 @@
-examples
+shapeExamples
 shapeWithoutPointIds
 	<gtExample>
 	| shape |
-	shape := ShapeBuilder new
+	shape := SGShapeBuilder new
 		points:
 			{(0 @ 0).
 			(1 @ 0).
@@ -11,5 +11,5 @@ shapeWithoutPointIds
 			{(0 @ 0 -> (1 @ 0)).
 			(1 @ 0 -> (1 @ 1)).
 			(1 @ 1 -> (0 @ 0))};
-		shape.
+		build.
 	^ shape

@@ -1,6 +1,6 @@
 initialization
 newRule
 |builder|
-builder := RuleBuilder new.
+builder := SGRuleBuilder new.
 ruleBuilders add: builder.
 ^ builder.

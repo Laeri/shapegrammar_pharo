@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"grammarBuilder",
-		"baseBuilder"
+		"points",
+		"idToPoint"
 	],
-	"name" : "ConfigurationBuilder",
+	"name" : "SGLabelPolygonBuilder",
 	"type" : "normal"
 }
