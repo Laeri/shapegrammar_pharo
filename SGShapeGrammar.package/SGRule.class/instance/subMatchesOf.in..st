@@ -1,9 +1,10 @@
 testing
 subMatchesOf: subShape in: baseShape
-	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch fromBetaToBase testBlock |
+	| baseToLocalMatrix subTransform subPoints basePoints doPointsMatch matchings pointMatching lineMatching match allLinesMatch fromBetaToBase testBlock subSystem |
 	subPoints := subShape points.
 	basePoints := baseShape points.
-	subTransform := SGMatrix p1: (subPoints at: 1) p2: (subPoints at: 2) p3: (subPoints at: 3).
+	subSystem := self coordinateSystemFrom: subPoints.
+	subTransform := subSystem transformationMatrix .
 	subTransform invert.
 	subTransform transformAllTmp: subPoints.
 	matchings := OrderedCollection new.

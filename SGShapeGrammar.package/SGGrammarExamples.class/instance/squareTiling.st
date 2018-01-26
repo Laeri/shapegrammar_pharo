@@ -2,7 +2,7 @@ as yet unclassified
 squareTiling
 <gtExample>
 	| grammar rule |
-	grammar := GrammarBuilder new.
+	grammar := SGGrammarBuilder new.
 	rule := grammar newRule.
 	rule alpha
 		points:
@@ -39,4 +39,4 @@ squareTiling
 			(#b -> #b).
 			(#c -> #c).
 			(#d -> #d)}.
-	^ grammar grammar
+	^ grammar build

@@ -2,7 +2,7 @@ as yet unclassified
 hexagonTiling
 	<gtExample>
 	| grammar rule |
-	grammar := GrammarBuilder new.
+	grammar := SGGrammarBuilder new.
 	rule := grammar newRule.
 	rule alpha
 		points:
@@ -46,4 +46,4 @@ hexagonTiling
 			(#i -> #j).
 			(#j -> #d)}.
 	rule map: { #a -> #a. #b -> #b. #c -> #c. #d -> #d. #e -> #e. #f -> #f }.
-	^ grammar grammar
+	^ grammar build

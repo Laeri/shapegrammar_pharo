@@ -1,5 +1,5 @@
 filtering
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 | matchToDegree score maxDegrees |
 matchToDegree := Dictionary new.
 maxDegrees := Dictionary new.

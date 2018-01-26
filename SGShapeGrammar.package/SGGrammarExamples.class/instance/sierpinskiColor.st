@@ -2,7 +2,7 @@ classics
 sierpinskiColor
 <gtExample>
 	| grammar rule labelAlpha label1 label2 label3 label4 |
-	grammar := GrammarBuilder new.
+	grammar := SGGrammarBuilder new.
 	rule := grammar newRule.
 	rule alpha
 		points:
@@ -28,4 +28,4 @@ sierpinskiColor
 	#d -> #e. #e -> #f. #f -> #d
 	}.
 	rule map: {#a -> #a. #b -> #b. #c -> #c}.
-	^ grammar grammar
+	^ grammar build

@@ -45,13 +45,13 @@ filter: matches withShape: shape
 	"Check if all points are already present, so no modification is done by geometry, this rule should not be applied in this case"
 	usableRules := self
 		filterOnPresentGeometry: usableRules
-		withShape: shape.
+		inShape: shape.
 	usableRules
 		ifEmpty: [ self error: 'no match present after filtering based on range' ].
 	intersection
-		ifTrue: [ usableRules := self filterIntersections: usableRules withShape: shape.
+		ifTrue: [ usableRules := self filterIntersections: usableRules inShape: shape.
 			usableRules
 				ifEmpty: [ self error: 'no match present after filtering based on intersection' ] ].
 	shouldFilterBounds
-		ifTrue: [ self filterOnBounds: matches withShape: shape ].
+		ifTrue: [ self filterOnBounds: matches inShape: shape ].
 	^ usableRules

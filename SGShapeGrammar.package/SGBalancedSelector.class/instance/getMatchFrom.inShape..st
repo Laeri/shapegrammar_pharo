@@ -1,5 +1,5 @@
 filtering
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 	| matchedPoints ageSum matchToAgeSum ageSumToBin chosenAgeBin sameShapeBins chosenShapeBin chosenShapeBins binToAge bins tmpBins |
 	
 	matchToAgeSum := Dictionary new.

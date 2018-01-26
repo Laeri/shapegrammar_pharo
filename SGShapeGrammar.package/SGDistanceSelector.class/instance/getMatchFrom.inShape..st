@@ -1,5 +1,5 @@
 filtering
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 	| addedVertices distanceSqrt x y currentDistance dx dy distances bestDifference |
 	
 	bestDifference := 10000000000000000000000.

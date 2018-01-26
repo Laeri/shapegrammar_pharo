@@ -1,5 +1,5 @@
 filtering
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 	|hull1 hull2 area1 area2 |
 	
 	matches sort: [ :m1 :m2|

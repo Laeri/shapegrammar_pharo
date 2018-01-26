@@ -2,7 +2,7 @@ grammars
 sierpinskiInlay
 <gtExample>
 	| grammar rule |
-	grammar := GrammarBuilder new.
+	grammar := SGGrammarBuilder new.
 	rule := grammar newRule.
 	rule alpha
 		points:
@@ -22,4 +22,4 @@ sierpinskiInlay
 	#d -> #e. #e -> #f. #f -> #d
 	}.
 	rule map: {#a -> #a. #b -> #b. #c -> #c}.
-	^ grammar grammar
+	^ grammar build

@@ -19,4 +19,4 @@ hexagon
 			(#d -> #e).
 			(#e -> #f).
 			(#f -> #a)}.
-	^ shape shape
+	^ shape build

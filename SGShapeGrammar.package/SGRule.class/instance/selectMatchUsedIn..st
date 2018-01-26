@@ -7,5 +7,5 @@ selectMatchUsedIn: shape
 	usableRules := filter filter: matchings withShape: shape.
 	matchUsed := matchSelector
 		getMatchFrom: usableRules
-		andShape: shape.
+		inShape: shape.
 	^ matchUsed

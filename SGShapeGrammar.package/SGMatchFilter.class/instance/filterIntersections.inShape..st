@@ -1,5 +1,5 @@
 filters
-filterIntersections: matches withShape: shape 
+filterIntersections: matches inShape: shape 
 	| tmpP1 tmpP2 localToBaseMatrix subToLocalMatrix tmpP3 tmpP4 |
 	 ^ matches
 				reject: [ :match | 

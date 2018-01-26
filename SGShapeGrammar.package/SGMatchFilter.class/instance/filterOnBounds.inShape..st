@@ -1,5 +1,5 @@
 filters
-filterOnBounds: matches withShape: aShape
+filterOnBounds: matches inShape: aShape
 	| tmpP allOutside someOutside |
 	filterAllOutside := false.
 	filterSomeOutside := true.

@@ -1,3 +1,3 @@
 filtering
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 ^ self minimumMaxAgeSelectionFrom: matches fromRule: rule  andShape: shape

@@ -1,3 +1,3 @@
 selection
-getMatchFrom: matches andShape: shape
+getMatchFrom: matches inShape: shape
 self subclassResponsibility .
