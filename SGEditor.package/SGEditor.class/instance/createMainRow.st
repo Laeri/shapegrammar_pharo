@@ -62,10 +62,6 @@ createMainRow
 	rotationBox := NamedCheckbox
 		fromText: 'rotation'
 		onToggleDo: [ :checked | grammar rules first filter rotations: checked ].
-	rotationBox size: 150 @ 25.
-	shearingBox := NamedCheckbox fromText: 'shearing'
-		onToggleDo: [ :checked | grammar rules first filter shearing: checked ].
-	shearingBox size: 150 @ 25.
 	reflectionBox := NamedCheckbox
 		fromText: 'reflection'
 		onToggleDo: [ :checked | grammar rules first filter reflections: checked ].
@@ -90,7 +86,6 @@ createMainRow
 	buttonRow addChild: getNextMatchButton.
 	buttonRow addChild: applyRuleButton.
 	rightColumn addChild: intersectionBox.
-	rightColumn addChild: shearingBox.
 	rightColumn addChild: rotationBox.
 	rightColumn addChild: reflectionBox.
 	rightColumn addChild: somePointsPresent.
