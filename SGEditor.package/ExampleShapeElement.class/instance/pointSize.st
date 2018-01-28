@@ -1,3 +1,3 @@
 adding
 pointSize
-^ 50
+^ pointSize 

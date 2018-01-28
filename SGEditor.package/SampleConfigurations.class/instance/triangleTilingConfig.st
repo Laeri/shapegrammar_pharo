@@ -14,5 +14,5 @@ rule map:{#a -> #a. #c -> #c . #d -> #d}.
 shape := config shape.
 shape points: { #a -> (0.25@0). #c ->(0@0.5). #d -> (0.5@0.5) }.
 shape lines: { #a -> #c. #a -> #d. #c -> #d }.
-config := config config.
+config := config build.
 ^ config.

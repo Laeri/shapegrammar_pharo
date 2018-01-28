@@ -37,5 +37,4 @@ initializeShape
 				fromAnchor: (BlElementCenterAnchor element: (thePoints at: aSGLine from));
 				toAnchor: (BlElementCenterAnchor element: (thePoints at: aSGLine to)) ].
 	self removeChildren.
-	self halt.
 	self addChildren: thePoints values , theLines

@@ -13,7 +13,11 @@
 		"secondSelected",
 		"clickSelectionHandler",
 		"showPolygons",
-		"boundingSize"
+		"boundingSize",
+		"lineWidth",
+		"lineColour",
+		"pointRadius",
+		"pointColour"
 	],
 	"name" : "SGShapeElement",
 	"type" : "normal"

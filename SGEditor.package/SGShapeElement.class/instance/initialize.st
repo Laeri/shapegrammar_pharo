@@ -3,6 +3,10 @@ initialize
 	| createLineShortCut showPolygonShortcut exportPngShortcut deleteShortcut |
 	super initialize.
 	boundingSize := 500.
+	pointColour := Color gray alpha: 0.5.
+	lineColour := Color gray alpha: 0.5.
+	lineWidth := 5.
+	pointRadius := 25.
 	showPolygons := false.
 	self layout: BlFitLayout new.
 	self

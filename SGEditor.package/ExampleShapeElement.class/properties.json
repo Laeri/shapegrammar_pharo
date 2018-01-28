@@ -6,7 +6,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"shape"
+		"shape",
+		"pointColour",
+		"lineColour",
+		"lineWidth",
+		"pointSize"
 	],
 	"name" : "ExampleShapeElement",
 	"type" : "normal"

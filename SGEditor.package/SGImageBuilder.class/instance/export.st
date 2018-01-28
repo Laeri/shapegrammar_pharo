@@ -5,8 +5,30 @@ export
 	betaElement := SGShapeElement new.
 	baseElement := SGShapeElement new.
 	backgroundColor ifNotNil: [
-	baseElement background: backgroundColor .
+	baseElement background: backgroundColor.
+	"alphaElement background: backgroundColor .
+	betaElement background: backgroundColor."
 	].
+	pointColour ifNotNil:[
+		baseElement pointColour: pointColour.
+		alphaElement pointColour: pointColour .
+		betaElement pointColour: pointColour.
+		].
+	lineColour ifNotNil: [ 
+		alphaElement lineColour: lineColour.
+		betaElement lineColour: lineColour.
+		baseElement lineColour: lineColour.
+		 ].
+	pointSize ifNotNil: [ 
+		"alphaElement pointRadius: pointSize .
+		betaElement pointRadius: pointSize."
+		baseElement pointRadius: pointSize.
+		 ].
+	lineWidth ifNotNil:[
+		"alphaElement lineWidth: lineWidth .
+		betaElement lineWidth: lineWidth ."
+		baseElement lineWidth: lineWidth .
+		].
 	config grammar rules first filter: filter.
 	config grammar rules first matchSelector: selector.
 	alphaElement size: size.

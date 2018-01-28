@@ -17,7 +17,11 @@
 		"selector",
 		"size",
 		"backgroundColor",
-		"colour"
+		"colour",
+		"pointColour",
+		"pointSize",
+		"lineColour",
+		"lineWidth"
 	],
 	"name" : "SGImageBuilder",
 	"type" : "normal"
