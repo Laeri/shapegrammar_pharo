@@ -1,19 +1,19 @@
 examples
-triangleInlayRandom
-	<script: 'SGImageExamples new triangleInlayRandom'>
+triangleRandomIsBadExample
+	<script: 'SGImageExamples new triangleRandomIsBadExample'>
 	| builder |
 	builder := SGImageBuilder new.
 	builder
-		from: 1 to: 35 by: 5;
+		from: 1 to: 5 by: 1;
 		config: SampleConfigurations new triangleInlayConfig;
 		filterIntersections;
-				pointColour: Color black;
-		pointSize: 5;
+		pointColour: Color black;
+		pointSize: 7;
 		lineColour: Color black;
-		lineWidth: 2;
+		lineWidth: 3;
 		background: Color white;
-		name: 'triangle_inlay_random';
+		name: 'triangle_random_bad';
 		folder: self baseFolder;
 		size: 500 @ 500;
-		selector: (SGRandomSelector onSeed: 1);
+		selector: (SGRandomSelector onSeed: 3);
 		export

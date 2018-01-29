@@ -10,6 +10,7 @@ builder from: 1 to: 25 by: 5;
 		pointSize: 5;
 		lineColour: Color black;
 		lineWidth: 2;
+		background: Color white;
 		name: 'triangle_inlay_age_selector';
 		folder: self baseFolder;
 		size: 500@500;

@@ -10,6 +10,7 @@ builder from: 1 to: 35 by: 5;
 		pointSize: 5;
 		lineColour: Color black;
 		lineWidth: 2;
+		background: Color white;
 		name: 'triangle_inlay_non_uniform';
 		folder: self baseFolder;
 		size: 500@500;

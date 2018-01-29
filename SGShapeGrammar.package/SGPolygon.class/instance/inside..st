@@ -1,7 +1,7 @@
 testing
 inside: aPoint
 	| vecToPoint startPos numIntersections nextIndex |
-	startPos := SGVector x: -150 y: -100.	"some starting position we know is outside of the polygon"
+	startPos := SGVector x: -120 y: -110.	"some starting position we know is outside of the polygon"
 	vecToPoint := SGVector new.
 	vecToPoint
 		x: aPoint x - startPos x;

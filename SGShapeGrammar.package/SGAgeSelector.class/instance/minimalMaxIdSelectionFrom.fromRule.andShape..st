@@ -1,5 +1,5 @@
 accessing
-minimumMaxAgeSelectionFrom: matches fromRule: rule andShape: shape
+minimalMaxIdSelectionFrom: matches fromRule: rule andShape: shape
 | maxAge |
 maxAge := Dictionary new.
 "Use age of creation"

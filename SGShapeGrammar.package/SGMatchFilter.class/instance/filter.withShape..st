@@ -38,20 +38,16 @@ filter: matches withShape: shape
 					reject := false.
 					(rotations and: decomposition angle isZero not)
 						ifTrue: [ reject := true ].
-					(reflections
-						and: (decomposition scale x < 0 or: decomposition scale y < 0))
+					(reflections and: (decomposition scale x < 0 or: decomposition scale y < 0))
 						ifTrue: [ reject := true ].
 					reject ] ].
 	"Check if all points are already present, so no modification is done by geometry, this rule should not be applied in this case"
-	usableRules := self
-		filterOnPresentGeometry: usableRules
-		inShape: shape.
-	usableRules
-		ifEmpty: [ self error: 'no match present after filtering based on range' ].
+	usableRules := self filterOnPresentGeometry: usableRules inShape: shape.
+	usableRules ifEmpty: [ self error: 'no match present after filtering based on range' ].
 	intersection
 		ifTrue: [ usableRules := self filterIntersections: usableRules inShape: shape.
 			usableRules
 				ifEmpty: [ self error: 'no match present after filtering based on intersection' ] ].
-	shouldFilterBounds
+	(bounds isNotNil and: (filterAllOutside or: filterSomeOutside))
 		ifTrue: [ self filterOnBounds: matches inShape: shape ].
 	^ usableRules

@@ -13,5 +13,5 @@ builder from: 1 to: 5 by: 1;
 		name: 'triangle_tiling';
 		folder: self baseFolder;
 		size: 500@500;
-		selector: (SGDegreeSelector new yourself);
+		selector: (SGDegreeSelector new);
 		export.

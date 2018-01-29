@@ -7,4 +7,5 @@ pointsInsideBeta := false. "maybe opt in"
 rotations := false.
 reflections := false.
 shearing := false.
-shouldFilterBounds := false.
+filterAllOutside := false.
+filterSomeOutside := false.
